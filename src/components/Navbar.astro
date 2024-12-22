@@ -2,7 +2,22 @@
 const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    { href: "/services", label: "Services" },
+    {
+        label: "Services",
+        children: [
+            { href: "/services", label: "Overview" },
+            { href: "/retreats", label: "Retreats" },
+            { href: "/speaking", label: "Speaking" },
+        ],
+    },
+    {
+        label: "Learn",
+        children: [
+            { href: "/academy", label: "Academy" },
+            { href: "/courses", label: "Courses" },
+            { href: "/blog", label: "Blog" },
+        ],
+    },
     { href: "/products", label: "Store" },
     { href: "/contact", label: "Contact" },
 ];
@@ -24,13 +39,44 @@ const links = [
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-8">
                 {
-                    links.map(({ href, label }) => (
-                        <a
-                            href={href}
-                            class="text-subtle hover:text-text transition-colors duration-300 font-medium tracking-wide text-sm uppercase hover:text-pine relative after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-pine after:bottom-[-4px] after:left-0 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-center"
-                        >
-                            {label}
-                        </a>
+                    links.map((link) => (
+                        <>
+                            {!link.children ? (
+                                <a
+                                    href={link.href}
+                                    class="text-subtle hover:text-text transition-colors duration-300 font-medium tracking-wide text-sm uppercase hover:text-pine relative after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-pine after:bottom-[-4px] after:left-0 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-center"
+                                >
+                                    {link.label}
+                                </a>
+                            ) : (
+                                <div class="relative group">
+                                    <button class="text-subtle group-hover:text-text transition-colors duration-300 font-medium tracking-wide text-sm uppercase hover:text-pine flex items-center gap-1">
+                                        {link.label}
+                                        <svg
+                                            class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                        >
+                                            <path d="M6 9l6 6 6-6" />
+                                        </svg>
+                                    </button>
+                                    <div class="absolute left-0 top-full pt-2 opacity-0 translate-y-2 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-300">
+                                        <div class="bg-surface/95 backdrop-blur-xl rounded-lg py-2 min-w-[160px] border border-highlight-low shadow-xl">
+                                            {link.children.map((child) => (
+                                                <a
+                                                    href={child.href}
+                                                    class="block px-4 py-2 text-subtle hover:text-pine transition-colors duration-300 text-sm"
+                                                >
+                                                    {child.label}
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+                        </>
                     ))
                 }
             </div>
@@ -60,13 +106,33 @@ const links = [
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 {
-                    links.map(({ href, label }) => (
-                        <a
-                            href={href}
-                            class="block px-3 py-2 text-subtle hover:text-pine transition-colors duration-300 font-medium tracking-wide text-sm uppercase"
-                        >
-                            {label}
-                        </a>
+                    links.map((link) => (
+                        <>
+                            {!link.children ? (
+                                <a
+                                    href={link.href}
+                                    class="block px-3 py-2 text-subtle hover:text-pine transition-colors duration-300 font-medium tracking-wide text-sm uppercase"
+                                >
+                                    {link.label}
+                                </a>
+                            ) : (
+                                <div class="space-y-1">
+                                    <div class="px-3 py-2 text-subtle font-medium tracking-wide text-sm uppercase">
+                                        {link.label}
+                                    </div>
+                                    <div class="pl-6 space-y-1">
+                                        {link.children.map((child) => (
+                                            <a
+                                                href={child.href}
+                                                class="block px-3 py-2 text-subtle hover:text-pine transition-colors duration-300 text-sm"
+                                            >
+                                                {child.label}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </>
                     ))
                 }
             </div>
