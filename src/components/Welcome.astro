@@ -4,95 +4,94 @@ import SocialIcons from "./SocialIcons.astro";
 import FeaturedSection from "./FeaturedSection.astro";
 ---
 
-<div class="min-h-screen flex flex-col container mx-auto">
-	<!-- Social Links -->
-	<SocialIcons />
+<SocialIcons />
 
-	<!-- Hero Section -->
-	<div
-		class="flex-1 flex items-start md:items-center px-4 sm:px-6 relative min-h-screen pt-24 md:pt-40"
-	>
-		<main
-			class="max-w-container-xl w-full mx-auto grid md:grid-cols-1 gap-8 md:gap-12"
-		>
-			<!-- Text Content -->
-			<div class="space-y-12 md:space-y-20">
-				<div class="space-y-8 md:space-y-16">
-					<div
-						class="flex flex-col md:flex-row items-center gap-6 md:gap-8"
+<!-- Hero Section -->
+<div
+	class="flex-1 flex items-start px-4 sm:px-6 relative min-h-screen pt-24 md:pt-40 pb-20"
+>
+	<main class="container mx-auto grid md:grid-cols-1 gap-6 md:gap-12">
+		<!-- Text Content -->
+		<div class="space-y-12 md:space-y-20">
+			<div class="space-y-8 md:space-y-16">
+				<div
+					class="flex flex-col md:flex-row items-center gap-6 md:gap-6"
+				>
+					<h1
+						class="opacity-0 animate-fade-up text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display text-text tracking-tight leading-[1.2] md:leading-[2] text-center md:text-left"
 					>
-						<h1
-							class="opacity-0 animate-fade-up text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display text-text tracking-tight leading-[1.2] md:leading-[2] text-center md:text-left"
-						>
-							Dr. Sita
-						</h1>
+						Dr. Sita
+					</h1>
 
-						<div class="opacity-0 animate-fade-up mt-4 md:mt-0">
-							<div class="relative">
-								<!-- Softer glow effect -->
+					<div class="opacity-0 animate-fade-up mt-4 md:mt-0">
+						<div class="relative">
+							<!-- Softer glow effect -->
+							<div
+								class="absolute -inset-0.5 rounded-full bg-gradient-to-br from-rose/10 via-love/10 to-pine/10 blur-md"
+							>
+							</div>
+							<!-- Portrait container -->
+							<div
+								class="relative rounded-full bg-surface/10 p-[2px]"
+							>
 								<div
-									class="absolute -inset-0.5 rounded-full bg-gradient-to-br from-rose/10 via-love/10 to-pine/10 blur-md"
+									class="rounded-full overflow-hidden w-[7em] md:w-[10em] h-[7em] md:h-[10em] relative"
 								>
-								</div>
-								<!-- Portrait container -->
-								<div
-									class="relative rounded-full bg-surface/10 p-[2px]"
-								>
-									<div
-										class="rounded-full overflow-hidden w-[7em] md:w-[10em] h-[7em] md:h-[10em] relative"
-									>
-										<img
-											src="/portrait.png"
-											alt="Dr. Sita"
-											class="w-full h-full object-cover"
-										/>
-									</div>
+									<img
+										src="/portrait.png"
+										alt="Dr. Sita"
+										class="w-full h-full object-cover"
+									/>
 								</div>
 							</div>
 						</div>
 					</div>
-
-					<p
-						class="opacity-0 animate-fade-up animation-delay-300 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium leading-[1.3] md:leading-[1.5] text-center md:text-left px-2 md:px-0"
-					>
-						<span class="text-rose">Gynecologist</span>,
-						<span class="text-love">Sexual Health Consultant</span>,
-						<span class="text-pine">Youtuber</span>,
-						<span class="text-foam">Wellness Coach</span> &
-						<span class="text-iris">Educator</span>
-					</p>
 				</div>
 
 				<p
-					class="opacity-0 animate-fade-up animation-delay-500 text-lg sm:text-xl md:text-3xl text-subtle/80 leading-[1.6] md:leading-[1.8] max-w-3xl px-2 md:px-0"
+					class="opacity-0 animate-fade-up animation-delay-300 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-center md:text-left px-2 md:px-0"
 				>
-					I empower individuals to take charge of their sexual and
-					reproductive health through comprehensive care, education,
-					and holistic wellness approaches.
+					<span class="text-rose">Gynecologist</span>,
+					<span class="text-love">Sexual Health Consultant</span>,
+					<span class="text-pine">Youtuber</span>,
+					<span class="text-foam">Wellness Coach</span> &
+					<span class="text-iris">Educator</span>
 				</p>
-
-				<div
-					class="opacity-0 animate-fade-up animation-delay-500 flex flex-col sm:flex-row gap-4 md:gap-8 px-2 md:px-0"
-				>
-					<GradientButton href="/about" color="pine" icon="arrow">
-						Learn More
-					</GradientButton>
-					<GradientButton
-						href="https://cal.com/dr-sita"
-						external
-						color="love"
-						icon="calendar"
-					>
-						Book a Consultation
-					</GradientButton>
-				</div>
 			</div>
-		</main>
-	</div>
 
-	<!-- Featured Content Section -->
-	<FeaturedSection />
+			<p
+				class="opacity-0 animate-fade-up animation-delay-500 text-lg sm:text-xl md:text-3xl text-subtle/80 max-w-3xl px-2 md:px-0"
+			>
+				I empower individuals to take charge of their sexual and
+				reproductive health through comprehensive care, education, and
+				holistic wellness approaches.
+			</p>
+
+			<div
+				class="opacity-0 animate-fade-up animation-delay-500 flex flex-col sm:flex-row gap-4 md:gap-8 px-2 md:px-0"
+			>
+				<GradientButton
+					href="/about"
+					color="pine"
+					icon="mdi:arrow-right"
+				>
+					Learn More
+				</GradientButton>
+				<GradientButton
+					href="https://cal.com/dr-sita"
+					external
+					color="love"
+					icon="mdi:calendar"
+				>
+					Book a Consultation
+				</GradientButton>
+			</div>
+		</div>
+	</main>
 </div>
+
+<!-- Featured Content Section -->
+<FeaturedSection />
 
 <style>
 	a {

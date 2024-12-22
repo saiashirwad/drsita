@@ -13,8 +13,7 @@ type Feature = {
         href: string;
     };
     icon: {
-        path: string;
-        viewBox?: string;
+        name: string;
     };
     color: "love" | "pine" | "iris" | "gold";
 };
@@ -33,8 +32,7 @@ const features: Feature[] = [
             href: "/youtube",
         },
         icon: {
-            path: "M14 12L10.5 14V10L14 12Z M3 6h18v12H3z",
-            viewBox: "0 0 24 24",
+            name: "mdi:youtube",
         },
         color: "love",
     },
@@ -51,7 +49,7 @@ const features: Feature[] = [
             href: "/services#couples-therapy",
         },
         icon: {
-            path: "M13 20v-5h-2v5h2zm-2-8h2v2h-2v-2zm10-7v16l-5 2v-2h-2v-2h2v-6h-2V9h2V7h-2V5h2V3h2v2h3zm-14 2V5h2V3h2v2h3v16l-5 2v-2H7v-2h2v-6H7V9h2z",
+            name: "mdi:heart-pulse",
         },
         color: "pine",
     },
@@ -68,7 +66,7 @@ const features: Feature[] = [
             href: "/academy",
         },
         icon: {
-            path: "M12 14l9-5-9-5-9 5 9 5z M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z",
+            name: "mdi:school",
         },
         color: "iris",
     },
@@ -85,14 +83,14 @@ const features: Feature[] = [
             href: "/products",
         },
         icon: {
-            path: "M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z M7 7h0.01",
+            name: "mdi:shopping",
         },
         color: "gold",
     },
 ];
 ---
 
-<section class="w-full max-w-container-xl mx-auto pb-32 sm:px-6">
+<section class="container mx-auto py-16 px-4 sm:px-6">
     <div class="space-y-6">
         {features.map((feature) => <FeatureCard {...feature} />)}
     </div>
