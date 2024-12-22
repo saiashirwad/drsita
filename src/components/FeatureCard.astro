@@ -1,0 +1,184 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    stat?: {
+        value: string;
+        label: string;
+    };
+    link: {
+        text: string;
+        href: string;
+    };
+    icon: {
+        path: string;
+        viewBox?: string;
+    };
+    color: "love" | "pine" | "iris" | "gold";
+}
+
+const { title, description, stat, link, icon, color } = Astro.props;
+---
+
+<div class="relative">
+    <div
+        class="bg-surface/30 rounded-3xl p-6 sm:p-12 border border-highlight-med/10 backdrop-blur-xl"
+    >
+        <!-- Mobile Layout -->
+        <div class="sm:hidden space-y-4 m-8">
+            <!-- Header with Icon -->
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 flex items-center justify-center">
+                    <svg
+                        class={`w-6 h-6 text-${color}`}
+                        viewBox={icon.viewBox || "0 0 24 24"}
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                    >
+                        <path
+                            d={icon.path}
+                            fill="currentColor"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-display text-text">
+                    {title}
+                </h3>
+            </div>
+
+            {
+                stat && (
+                    <div class="flex items-center gap-2">
+                        <span
+                            class={`text-3xl font-bold bg-gradient-to-r from-${color} via-gold to-${color} bg-clip-text text-transparent`}
+                        >
+                            {stat.value}
+                        </span>
+                        <span class="text-lg text-subtle/90">{stat.label}</span>
+                    </div>
+                )
+            }
+
+            <p class="text-base text-subtle/90 leading-relaxed">
+                {description}
+            </p>
+
+            <a
+                href={link.href}
+                class={`inline-flex items-center gap-2 transition-colors duration-300 text-lg ${
+                    color === "love"
+                        ? "text-love hover:text-love"
+                        : color === "pine"
+                          ? "text-pine hover:text-pine"
+                          : color === "iris"
+                            ? "text-iris hover:text-iris"
+                            : "text-gold hover:text-gold"
+                }`}
+            >
+                <span>{link.text}</span>
+                <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path d="M5 12h14m-7-7 7 7-7 7"></path>
+                </svg>
+            </a>
+        </div>
+
+        <!-- Desktop Layout -->
+        <div class="hidden sm:flex items-start gap-8">
+            <div
+                class="w-16 h-16 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300"
+            >
+                <svg
+                    class={`w-8 h-8 ${
+                        color === "love"
+                            ? "text-love"
+                            : color === "pine"
+                              ? "text-pine"
+                              : color === "iris"
+                                ? "text-iris"
+                                : "text-gold"
+                    }`}
+                    viewBox={icon.viewBox || "0 0 24 24"}
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                >
+                    <path
+                        d={icon.path}
+                        fill="currentColor"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linejoin="round"></path>
+                </svg>
+            </div>
+
+            <div class="flex-grow space-y-8">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-4xl font-display text-text">
+                        {title}
+                    </h3>
+                    {
+                        stat && (
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class={`text-5xl font-bold bg-gradient-to-r bg-clip-text text-transparent bg-[length:200%_auto] group-hover:bg-right transition-all duration-500 ${
+                                        color === "love"
+                                            ? "from-love via-gold to-love"
+                                            : color === "pine"
+                                              ? "from-pine via-gold to-pine"
+                                              : color === "iris"
+                                                ? "from-iris via-gold to-iris"
+                                                : "from-gold via-love to-gold"
+                                    }`}
+                                >
+                                    {stat.value}
+                                </span>
+                                <span class="text-2xl text-subtle/90">
+                                    {stat.label}
+                                </span>
+                            </div>
+                        )
+                    }
+                </div>
+                <p class="text-xl text-subtle/90 leading-relaxed">
+                    {description}
+                </p>
+                <a
+                    href={link.href}
+                    class={`inline-flex items-center gap-2 transition-colors duration-300 text-xl group/link ${
+                        color === "love"
+                            ? "text-love hover:text-love"
+                            : color === "pine"
+                              ? "text-pine hover:text-pine"
+                              : color === "iris"
+                                ? "text-iris hover:text-iris"
+                                : "text-gold hover:text-gold"
+                    }`}
+                >
+                    <span
+                        class="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover/link:after:scale-x-100"
+                    >
+                        {link.text}
+                    </span>
+                    <svg
+                        class="w-6 h-6 transform group-hover/link:translate-x-2 transition-transform duration-300"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path d="M5 12h14m-7-7 7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
