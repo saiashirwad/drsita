@@ -98,7 +98,7 @@ import SocialIcons from "./SocialIcons.astro";
 
 <section class="container mx-auto py-8 md:py-32 p-4 md:p-0">
 	<div class="flex flex-col gap-24 md:gap-48">
-		<div class="flex flex-col gap-8">
+		<div class="flex flex-col gap-8 opacity-0 translate-y-8" data-scroll>
 			<p
 				class="text-4xl md:text-6xl lg:text-7xl text-subtle leading-relaxed max-w-5xl"
 				style="line-height: 1.2"
@@ -110,7 +110,7 @@ import SocialIcons from "./SocialIcons.astro";
 			</p>
 		</div>
 
-		<div class="flex flex-col gap-8">
+		<div class="flex flex-col gap-8 opacity-0 translate-y-8" data-scroll>
 			<p
 				class="text-4xl md:text-6xl lg:text-7xl text-subtle leading-relaxed max-w-5xl"
 				style="line-height: 1.2"
@@ -122,7 +122,7 @@ import SocialIcons from "./SocialIcons.astro";
 			</p>
 		</div>
 
-		<div class="flex flex-col gap-8">
+		<div class="flex flex-col gap-8 opacity-0 translate-y-8" data-scroll>
 			<p
 				class="text-4xl md:text-6xl lg:text-7xl text-subtle leading-relaxed max-w-5xl"
 				style="line-height: 1.2"
@@ -134,6 +134,27 @@ import SocialIcons from "./SocialIcons.astro";
 		</div>
 	</div>
 </section>
+
+<script>
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.style.opacity = "1";
+					entry.target.style.transform = "translateY(0)";
+					entry.target.style.transition = "all 0.6s ease-out";
+				}
+			});
+		},
+		{
+			threshold: 0.1,
+		},
+	);
+
+	document
+		.querySelectorAll("[data-scroll]")
+		.forEach((el) => observer.observe(el));
+</script>
 
 <style>
 	a {
