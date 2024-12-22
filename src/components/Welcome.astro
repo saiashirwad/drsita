@@ -108,6 +108,16 @@ import SocialIcons from "./SocialIcons.astro";
 				<span class="text-text">25 years of expertise</span> as a Gynecologist
 				and Wellness Coach.
 			</p>
+			<div>
+				<Button
+					href="/about"
+					color="pine"
+					icon="mdi:user"
+					class="text-lg"
+				>
+					Learn About Dr. Sita
+				</Button>
+			</div>
 		</div>
 
 		<div class="flex flex-col gap-8 opacity-0 translate-y-8" data-scroll>
@@ -120,6 +130,16 @@ import SocialIcons from "./SocialIcons.astro";
 					class="text-text">hundreds of couples</span
 				> rediscover intimacy.
 			</p>
+			<div>
+				<Button
+					href="/services"
+					color="love"
+					icon="mdi:heart"
+					class="text-lg"
+				>
+					Explore our Services
+				</Button>
+			</div>
 		</div>
 
 		<div class="flex flex-col gap-8 opacity-0 translate-y-8" data-scroll>
@@ -131,6 +151,16 @@ import SocialIcons from "./SocialIcons.astro";
 				her YouTube channels, she empowers individuals with essential knowledge
 				for complete wellbeing.
 			</p>
+			<div>
+				<Button
+					href="/youtube"
+					color="gold"
+					icon="mdi:youtube"
+					class="text-lg"
+				>
+					Visit our YouTube Channel
+				</Button>
+			</div>
 		</div>
 	</div>
 </section>
@@ -140,8 +170,11 @@ import SocialIcons from "./SocialIcons.astro";
 		(entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
+					// @ts-ignore
 					entry.target.style.opacity = "1";
+					// @ts-ignore
 					entry.target.style.transform = "translateY(0)";
+					// @ts-ignore
 					entry.target.style.transition = "all 0.6s ease-out";
 				}
 			});
