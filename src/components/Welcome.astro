@@ -67,14 +67,26 @@ import GradientButton from "./GradientButton.astro";
 						</h1>
 
 						<div class="opacity-0 animate-fade-up mt-4 md:mt-0">
-							<div
-								class="rounded-full overflow-hidden w-[7em] md:w-[10em] h-[7em] md:h-[10em] relative"
-							>
-								<img
-									src="/portrait.png"
-									alt="Dr. Sita"
-									class="w-full h-full object-cover"
-								/>
+							<div class="relative">
+								<!-- Softer glow effect -->
+								<div
+									class="absolute -inset-0.5 rounded-full bg-gradient-to-br from-rose/10 via-love/10 to-pine/10 blur-md"
+								>
+								</div>
+								<!-- Portrait container -->
+								<div
+									class="relative rounded-full bg-surface/10 p-[2px]"
+								>
+									<div
+										class="rounded-full overflow-hidden w-[7em] md:w-[10em] h-[7em] md:h-[10em] relative"
+									>
+										<img
+											src="/portrait.png"
+											alt="Dr. Sita"
+											class="w-full h-full object-cover"
+										/>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -644,5 +656,18 @@ import GradientButton from "./GradientButton.astro";
 <style>
 	a {
 		text-decoration: none;
+	}
+
+	@keyframes spin-slow {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.animate-spin-slow {
+		animation: spin-slow 8s linear infinite;
 	}
 </style>
