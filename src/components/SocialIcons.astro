@@ -1,30 +1,34 @@
 ---
 import { Icon } from "astro-icon/components";
+
+const socialLinks = [
+    {
+        href: "https://www.youtube.com/@drsitamindbodycare",
+        label: "YouTube Channel",
+        icon: "mdi:youtube",
+    },
+    {
+        href: "https://www.instagram.com/askdrsita",
+        label: "Instagram Profile",
+        icon: "mdi:instagram",
+    },
+];
 ---
 
 <div class="fixed top-24 right-6 z-50 hidden md:block">
     <div class="flex gap-4 opacity-0 animate-fade-in animation-delay-500">
-        <a
-            href="https://www.youtube.com/@drsitamindbodycare"
-            class="group text-subtle/70 hover:text-pine transition-all duration-300"
-            aria-label="YouTube Channel"
-        >
-            <div
-                class="p-2.5 rounded-full bg-surface/50 group-hover:bg-surface/80 transition-colors duration-300"
-            >
-                <Icon name="mdi:youtube" class="w-5 h-5" />
-            </div>
-        </a>
-        <a
-            href="https://www.instagram.com/askdrsita"
-            class="group text-subtle/70 hover:text-pine transition-all duration-300"
-            aria-label="Instagram Profile"
-        >
-            <div
-                class="p-2.5 rounded-full bg-surface/50 group-hover:bg-surface/80 transition-colors duration-300"
-            >
-                <Icon name="mdi:instagram" class="w-5 h-5" />
-            </div>
-        </a>
+        {
+            socialLinks.map(({ href, label, icon }) => (
+                <a
+                    href={href}
+                    class="group text-subtle/70 hover:text-pine transition-all duration-300"
+                    aria-label={label}
+                >
+                    <div class="p-2.5 rounded-full bg-surface/50 group-hover:bg-surface/80 transition-colors duration-300">
+                        <Icon name={icon} class="w-5 h-5" />
+                    </div>
+                </a>
+            ))
+        }
     </div>
 </div>

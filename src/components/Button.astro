@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 
 interface Props {
     href: string;
-    color?: "pine" | "love" | "foam" | "rose" | "gold" | "iris";
+    color?: "pine" | "love" | "foam" | "rose" | "gold" | "iris" | string;
     class?: string;
     icon?: string | undefined;
     external?: boolean;
@@ -62,7 +62,7 @@ const colors = {
     },
 };
 
-const colorConfig = colors[color];
+const colorConfig = colors[color as keyof typeof colors];
 ---
 
 <a

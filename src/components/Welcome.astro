@@ -1,5 +1,5 @@
 ---
-import GradientButton from "./GradientButton.astro";
+import Button from "./Button.astro";
 import SocialIcons from "./SocialIcons.astro";
 import FeaturedSection from "./FeaturedSection.astro";
 ---
@@ -70,21 +70,17 @@ import FeaturedSection from "./FeaturedSection.astro";
 			<div
 				class="opacity-0 animate-fade-up animation-delay-500 flex flex-col sm:flex-row gap-4 md:gap-8 px-2 md:px-0"
 			>
-				<GradientButton
-					href="/about"
-					color="pine"
-					icon="mdi:arrow-right"
-				>
+				<Button href="/about" color="pine" icon="mdi:arrow-right">
 					Learn More
-				</GradientButton>
-				<GradientButton
+				</Button>
+				<Button
 					href="https://cal.com/dr-sita"
 					external
 					color="love"
 					icon="mdi:calendar"
 				>
 					Book a Consultation
-				</GradientButton>
+				</Button>
 			</div>
 		</div>
 	</main>
