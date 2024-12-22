@@ -1,8 +1,26 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
 import BackgroundShapes from "../components/BackgroundShapes.astro";
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
 import GradientButton from "../components/GradientButton.astro";
+import testimonialData from "../data/testimonials.json";
+
+// Get initial 4 testimonials for the first view
+const initialTestimonials = testimonialData.testimonials.slice(0, 4);
+
+interface Testimonial {
+    id: number;
+    quote: string;
+    author: string;
+    program: string;
+    rating: number;
+    category: string;
+    icon: string;
+    color: string;
+}
+
+// Pass testimonials data to the client
+const allTestimonials = testimonialData.testimonials;
 ---
 
 <Layout title="Testimonials - Dr. Sita">
@@ -11,18 +29,18 @@ import GradientButton from "../components/GradientButton.astro";
     <main class="bg-base min-h-screen">
         <!-- Hero Section -->
         <section
-            class="min-h-[40vh] relative flex items-center pt-32 pb-24 px-6"
+            class="min-h-[40vh] relative flex items-center justify-center pt-32 pb-24 px-6"
         >
             <BackgroundShapes />
             <div class="max-w-6xl mx-auto w-full">
-                <div class="max-w-4xl">
+                <div class="max-w-4xl mx-auto text-center">
                     <h1
                         class="text-6xl md:text-7xl lg:text-8xl font-display text-text tracking-tight opacity-0 animate-fade-up mb-8"
                     >
                         Success Stories
                     </h1>
                     <p
-                        class="text-3xl md:text-4xl text-subtle/90 font-light max-w-3xl opacity-0 animate-fade-up animation-delay-100 leading-relaxed"
+                        class="text-3xl md:text-4xl text-subtle/90 font-light max-w-3xl mx-auto opacity-0 animate-fade-up animation-delay-100 leading-relaxed"
                     >
                         Real experiences from our community of healing and
                         transformation.
@@ -34,15 +52,25 @@ import GradientButton from "../components/GradientButton.astro";
         <!-- Testimonials Grid -->
         <section class="py-24 px-6">
             <div class="max-w-6xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Testimonial Card -->
-                    <div
-                        class="bg-surface/30 rounded-3xl p-8 border border-highlight-med/10 backdrop-blur-xl"
-                    >
-                        <div class="space-y-6">
-                            <div class="flex gap-2">
-                                {
-                                    [...Array(5)].map(() => (
+                <div id="testimonials-grid" class="grid md:grid-cols-2 gap-8">
+                    {
+                        initialTestimonials.map((testimonial) => (
+                            <div class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300">
+                                <div
+                                    class={`bg-${testimonial.color}/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8`}
+                                >
+                                    <svg
+                                        class={`w-8 h-8 text-${testimonial.color}`}
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                    >
+                                        <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                    </svg>
+                                </div>
+                                <div class="flex gap-2 mb-6">
+                                    {[...Array(testimonial.rating)].map(() => (
                                         <svg
                                             class="w-6 h-6 text-gold"
                                             viewBox="0 0 24 24"
@@ -50,134 +78,32 @@ import GradientButton from "../components/GradientButton.astro";
                                         >
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                                         </svg>
-                                    ))
-                                }
+                                    ))}
+                                </div>
+                                <blockquote class="text-xl text-subtle/90 leading-relaxed mb-6">
+                                    "{testimonial.quote}"
+                                </blockquote>
+                                <div class={`text-${testimonial.color}`}>
+                                    <p class="font-display">
+                                        {testimonial.author}
+                                    </p>
+                                    <p class="text-sm text-subtle/70">
+                                        {testimonial.program}
+                                    </p>
+                                </div>
                             </div>
-                            <blockquote
-                                class="text-xl text-subtle/90 leading-relaxed"
-                            >
-                                "Dr. Sita's Batch Therapy program transformed
-                                our relationship. Her holistic approach helped
-                                us overcome challenges we'd been facing for
-                                years."
-                            </blockquote>
-                            <div class="text-foam">
-                                <p class="font-display">Couple from Mumbai</p>
-                                <p class="text-sm text-subtle/70">
-                                    Batch Therapy Program
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                        ))
+                    }
+                </div>
 
-                    <!-- Testimonial Card -->
-                    <div
-                        class="bg-surface/30 rounded-3xl p-8 border border-highlight-med/10 backdrop-blur-xl"
+                <!-- See More Button -->
+                <div class="text-center mt-16">
+                    <button
+                        id="see-more-btn"
+                        class="px-8 py-3 rounded-full bg-surface/50 text-foam hover:bg-surface/80 transition-colors duration-300"
                     >
-                        <div class="space-y-6">
-                            <div class="flex gap-2">
-                                {
-                                    [...Array(5)].map(() => (
-                                        <svg
-                                            class="w-6 h-6 text-gold"
-                                            viewBox="0 0 24 24"
-                                            fill="currentColor"
-                                        >
-                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                                        </svg>
-                                    ))
-                                }
-                            </div>
-                            <blockquote
-                                class="text-xl text-subtle/90 leading-relaxed"
-                            >
-                                "The mindfulness and yoga practices taught in
-                                the retreat helped me reconnect with myself. It
-                                was a life-changing experience."
-                            </blockquote>
-                            <div class="text-iris">
-                                <p class="font-display">
-                                    Individual Participant
-                                </p>
-                                <p class="text-sm text-subtle/70">
-                                    Wellness Retreat
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial Card -->
-                    <div
-                        class="bg-surface/30 rounded-3xl p-8 border border-highlight-med/10 backdrop-blur-xl"
-                    >
-                        <div class="space-y-6">
-                            <div class="flex gap-2">
-                                {
-                                    [...Array(5)].map(() => (
-                                        <svg
-                                            class="w-6 h-6 text-gold"
-                                            viewBox="0 0 24 24"
-                                            fill="currentColor"
-                                        >
-                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                                        </svg>
-                                    ))
-                                }
-                            </div>
-                            <blockquote
-                                class="text-xl text-subtle/90 leading-relaxed"
-                            >
-                                "Dr. Sita's online courses provided invaluable
-                                insights into sexual health and wellness. Her
-                                approach is both professional and
-                                compassionate."
-                            </blockquote>
-                            <div class="text-love">
-                                <p class="font-display">
-                                    Healthcare Professional
-                                </p>
-                                <p class="text-sm text-subtle/70">
-                                    Professional Course
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial Card -->
-                    <div
-                        class="bg-surface/30 rounded-3xl p-8 border border-highlight-med/10 backdrop-blur-xl"
-                    >
-                        <div class="space-y-6">
-                            <div class="flex gap-2">
-                                {
-                                    [...Array(5)].map(() => (
-                                        <svg
-                                            class="w-6 h-6 text-gold"
-                                            viewBox="0 0 24 24"
-                                            fill="currentColor"
-                                        >
-                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                                        </svg>
-                                    ))
-                                }
-                            </div>
-                            <blockquote
-                                class="text-xl text-subtle/90 leading-relaxed"
-                            >
-                                "The one-day awareness program opened our eyes
-                                to the importance of holistic health. We're
-                                grateful for Dr. Sita's guidance."
-                            </blockquote>
-                            <div class="text-gold">
-                                <p class="font-display">
-                                    Couple from Bengaluru
-                                </p>
-                                <p class="text-sm text-subtle/70">
-                                    Awareness Program
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                        See More Testimonials
+                    </button>
                 </div>
             </div>
         </section>
@@ -202,3 +128,62 @@ import GradientButton from "../components/GradientButton.astro";
         </section>
     </main>
 </Layout>
+
+<script define:vars={{ allTestimonials }}>
+    let currentIndex = 4;
+
+    const testimonialGrid = document.getElementById("testimonials-grid");
+    const seeMoreBtn = document.getElementById("see-more-btn");
+
+    if (seeMoreBtn && testimonialGrid) {
+        seeMoreBtn.addEventListener("click", () => {
+            // Get next 4 testimonials
+            const nextTestimonials = allTestimonials.slice(
+                currentIndex,
+                currentIndex + 4,
+            );
+
+            // If no more testimonials to show, hide the button
+            if (currentIndex + 4 >= allTestimonials.length) {
+                seeMoreBtn.style.display = "none";
+            }
+
+            // Add new testimonials to the grid
+            nextTestimonials.forEach((testimonial) => {
+                const testimonialCard = document.createElement("div");
+                testimonialCard.className =
+                    "bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300";
+                testimonialCard.innerHTML = `
+                    <div class="bg-${testimonial.color}/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
+                        <svg class="w-8 h-8 text-${testimonial.color}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                    </div>
+                    <div class="flex gap-2 mb-6">
+                        ${Array(testimonial.rating)
+                            .fill()
+                            .map(
+                                () => `
+                            <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        `,
+                            )
+                            .join("")}
+                    </div>
+                    <blockquote class="text-xl text-subtle/90 leading-relaxed mb-6">
+                        "${testimonial.quote}"
+                    </blockquote>
+                    <div class="text-${testimonial.color}">
+                        <p class="font-display">${testimonial.author}</p>
+                        <p class="text-sm text-subtle/70">${testimonial.program}</p>
+                    </div>
+                `;
+                testimonialGrid.appendChild(testimonialCard);
+            });
+
+            // Update current index
+            currentIndex += 4;
+        });
+    }
+</script>

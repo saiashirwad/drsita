@@ -1,0 +1,204 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "quote": "Dr. Sita's Batch Therapy program transformed our relationship. Her holistic approach helped us overcome challenges we'd been facing for years.",
+      "author": "Couple from Mumbai",
+      "program": "Batch Therapy Program",
+      "rating": 5,
+      "category": "couples",
+      "icon": "chat",
+      "color": "foam"
+    },
+    {
+      "id": 2,
+      "quote": "The mindfulness and yoga practices taught in the retreat helped me reconnect with myself. It was a life-changing experience.",
+      "author": "Individual Participant",
+      "program": "Wellness Retreat",
+      "rating": 5,
+      "category": "wellness",
+      "icon": "smile",
+      "color": "iris"
+    },
+    {
+      "id": 3,
+      "quote": "Dr. Sita's online courses provided invaluable insights into sexual health and wellness. Her approach is both professional and compassionate.",
+      "author": "Healthcare Professional",
+      "program": "Professional Course",
+      "rating": 5,
+      "category": "education",
+      "icon": "shield-check",
+      "color": "love"
+    },
+    {
+      "id": 4,
+      "quote": "The one-day awareness program opened our eyes to the importance of holistic health. We're grateful for Dr. Sita's guidance.",
+      "author": "Couple from Bengaluru",
+      "program": "Awareness Program",
+      "rating": 5,
+      "category": "awareness",
+      "icon": "star",
+      "color": "gold"
+    },
+    {
+      "id": 5,
+      "quote": "After struggling with intimacy issues for years, the personalized therapy sessions with Dr. Sita helped us rebuild our connection.",
+      "author": "Anonymous Couple",
+      "program": "Couples Therapy",
+      "rating": 5,
+      "category": "couples",
+      "icon": "heart",
+      "color": "love"
+    },
+    {
+      "id": 6,
+      "quote": "The holistic approach to mental and physical well-being has completely changed my perspective on health.",
+      "author": "Wellness Enthusiast",
+      "program": "Mind-Body Program",
+      "rating": 5,
+      "category": "wellness",
+      "icon": "sparkles",
+      "color": "iris"
+    },
+    {
+      "id": 7,
+      "quote": "Dr. Sita's expertise in sexual medicine combined with her compassionate approach made all the difference in our treatment.",
+      "author": "Patient from Delhi",
+      "program": "Medical Consultation",
+      "rating": 5,
+      "category": "medical",
+      "icon": "medical",
+      "color": "foam"
+    },
+    {
+      "id": 8,
+      "quote": "The retreat was a perfect blend of education, therapy, and relaxation. We left feeling renewed and better equipped for our relationship.",
+      "author": "Couple from Dubai",
+      "program": "International Retreat",
+      "rating": 5,
+      "category": "retreats",
+      "icon": "sun",
+      "color": "gold"
+    },
+    {
+      "id": 9,
+      "quote": "As a medical professional, the advanced training program enhanced my understanding of holistic sexual health treatment.",
+      "author": "Medical Doctor",
+      "program": "Professional Training",
+      "rating": 5,
+      "category": "education",
+      "icon": "academic",
+      "color": "foam"
+    },
+    {
+      "id": 10,
+      "quote": "The online sessions were incredibly convenient and just as effective. Dr. Sita's digital approach to therapy is revolutionary.",
+      "author": "Remote Patient",
+      "program": "Online Therapy",
+      "rating": 5,
+      "category": "digital",
+      "icon": "computer",
+      "color": "iris"
+    },
+    {
+      "id": 11,
+      "quote": "The pre-marriage counseling program gave us the tools and confidence to build a strong foundation for our relationship.",
+      "author": "Engaged Couple",
+      "program": "Pre-Marriage Counseling",
+      "rating": 5,
+      "category": "couples",
+      "icon": "rings",
+      "color": "love"
+    },
+    {
+      "id": 12,
+      "quote": "Dr. Sita's YouTube content has been instrumental in breaking taboos around sexual health in our community.",
+      "author": "Regular Viewer",
+      "program": "Digital Content",
+      "rating": 5,
+      "category": "digital",
+      "icon": "video",
+      "color": "gold"
+    },
+    {
+      "id": 13,
+      "quote": "The women's wellness workshop addressed crucial aspects of health that are often overlooked in traditional medical settings.",
+      "author": "Workshop Participant",
+      "program": "Women's Wellness",
+      "rating": 5,
+      "category": "wellness",
+      "icon": "flower",
+      "color": "love"
+    },
+    {
+      "id": 14,
+      "quote": "The combination of traditional and modern therapeutic approaches in Batch Therapy makes it uniquely effective.",
+      "author": "Therapy Participant",
+      "program": "Batch Therapy",
+      "rating": 5,
+      "category": "therapy",
+      "icon": "puzzle",
+      "color": "foam"
+    },
+    {
+      "id": 15,
+      "quote": "Dr. Sita's approach to mental health and its connection to physical well-being has helped me achieve better overall health.",
+      "author": "Mental Health Patient",
+      "program": "Mental Health Services",
+      "rating": 5,
+      "category": "mental-health",
+      "icon": "brain",
+      "color": "iris"
+    },
+    {
+      "id": 16,
+      "quote": "The family counseling sessions helped us navigate complex dynamics with understanding and compassion.",
+      "author": "Family from Hyderabad",
+      "program": "Family Counseling",
+      "rating": 5,
+      "category": "family",
+      "icon": "users",
+      "color": "gold"
+    },
+    {
+      "id": 17,
+      "quote": "The mindfulness techniques taught in the program have become an essential part of our daily routine.",
+      "author": "Mindfulness Practitioner",
+      "program": "Mindfulness Training",
+      "rating": 5,
+      "category": "mindfulness",
+      "icon": "meditation",
+      "color": "love"
+    },
+    {
+      "id": 18,
+      "quote": "Dr. Sita's holistic approach to sexual wellness has helped us overcome challenges we thought were insurmountable.",
+      "author": "Long-term Patient",
+      "program": "Sexual Wellness",
+      "rating": 5,
+      "category": "wellness",
+      "icon": "heart-pulse",
+      "color": "foam"
+    },
+    {
+      "id": 19,
+      "quote": "The corporate wellness program brought valuable insights about health and work-life balance to our organization.",
+      "author": "Corporate Client",
+      "program": "Corporate Wellness",
+      "rating": 5,
+      "category": "corporate",
+      "icon": "briefcase",
+      "color": "iris"
+    },
+    {
+      "id": 20,
+      "quote": "The support group sessions created a safe space for sharing and healing that was truly transformative.",
+      "author": "Support Group Member",
+      "program": "Support Group",
+      "rating": 5,
+      "category": "support",
+      "icon": "users-group",
+      "color": "gold"
+    }
+  ]
+}
