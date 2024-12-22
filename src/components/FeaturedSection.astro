@@ -1,5 +1,5 @@
 ---
-import FeatureCard from "./FeatureCard.astro";
+import { Icon } from "astro-icon/components";
 
 type Feature = {
     title: string;
@@ -37,7 +37,7 @@ const features: Feature[] = [
         color: "love",
     },
     {
-        title: "Couple's Therapy",
+        title: "Couple Therapy",
         description:
             "Pioneer in treating unconsummated marriages and intimate health challenges through our innovative therapeutic approach, combining medical expertise with holistic healing.",
         stat: {
@@ -90,8 +90,47 @@ const features: Feature[] = [
 ];
 ---
 
-<section class="container mx-auto py-16 px-4 sm:px-6">
-    <div class="space-y-6">
-        {features.map((feature) => <FeatureCard {...feature} />)}
+<section class="container mx-auto py-24 px-4 sm:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {
+            features.map((feature) => (
+                <div class="group h-full">
+                    <div
+                        class={`bg-surface h-full p-8 rounded-xl shadow-lg border-2 border-${feature.color}/20 flex flex-col`}
+                    >
+                        <div class="flex items-center justify-between mb-6">
+                            <div
+                                class={`p-3 rounded-lg bg-${feature.color}/10`}
+                            >
+                                <span class={`text-${feature.color} text-2xl`}>
+                                    <Icon name={feature.icon.name} />
+                                </span>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-2xl font-bold text-text">
+                                    {feature.stat.value}
+                                </span>
+                                <span class="text-sm text-subtle">
+                                    {feature.stat.label}
+                                </span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text mb-3">
+                            {feature.title}
+                        </h3>
+                        <p class="text-muted mb-6 flex-grow line-clamp-3">
+                            {feature.description}
+                        </p>
+                        <a
+                            href={feature.link.href}
+                            class={`inline-flex items-center text-${feature.color} hover:underline mt-auto`}
+                        >
+                            {feature.link.text}
+                            <span class="ml-2">→</span>
+                        </a>
+                    </div>
+                </div>
+            ))
+        }
     </div>
 </section>
