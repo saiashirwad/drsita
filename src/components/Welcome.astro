@@ -8,121 +8,158 @@ import SocialIcons from "./SocialIcons.astro";
 <SocialIcons />
 
 <!-- Hero Section -->
-<div class="px-4 sm:px-6 relative min-h-screen pt-24 lg:pt-40 pb-20">
-	<main class="container mx-auto grid md:grid-cols-1 gap-6 md:gap-12">
-		<!-- Text Content -->
-		<div class="space-y-12 md:space-y-20">
-			<div class="space-y-8 md:space-y-16">
-				<div
-					class="flex flex-col md:flex-row items-center gap-6 md:gap-6"
+<div
+	class="px-4 sm:px-6 relative min-h-screen pt-24 lg:pt-40 pb-20 container mx-auto grid md:grid-cols-1 gap-6 md:gap-12"
+>
+	<!-- Text Content -->
+	<div class="space-y-12 md:space-y-20">
+		<div class="space-y-8 md:space-y-16">
+			<div class="flex flex-col md:flex-row items-center gap-6 md:gap-6">
+				<h1
+					class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display text-text tracking-tight leading-[1.2] md:leading-[2] text-center md:text-left"
 				>
-					<h1
-						class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display text-text tracking-tight leading-[1.2] md:leading-[2] text-center md:text-left"
-					>
-						Dr. Sita
-					</h1>
+					Dr. Sita
+				</h1>
 
-					<div class="mt-4 md:mt-0">
-						<div class="relative">
-							<!-- Softer glow effect -->
+				<div class="mt-4 md:mt-0">
+					<div class="relative">
+						<!-- Softer glow effect -->
+						<div
+							class="absolute -inset-0.5 rounded-full bg-gradient-to-br from-rose/20 via-love/20 to-pine/20 blur-md"
+						>
+						</div>
+						<!-- Portrait container -->
+						<div
+							class="relative rounded-full bg-surface/10 p-[2px]"
+						>
 							<div
-								class="absolute -inset-0.5 rounded-full bg-gradient-to-br from-rose/20 via-love/20 to-pine/20 blur-md"
+								class="rounded-full overflow-hidden w-[7em] md:w-[10em] h-[7em] md:h-[10em] relative"
 							>
-							</div>
-							<!-- Portrait container -->
-							<div
-								class="relative rounded-full bg-surface/10 p-[2px]"
-							>
-								<div
-									class="rounded-full overflow-hidden w-[7em] md:w-[10em] h-[7em] md:h-[10em] relative"
-								>
-									<img
-										src="/portrait.png"
-										alt="Dr. Sita"
-										class="w-full h-full object-cover"
-									/>
-								</div>
+								<img
+									src="/portrait.png"
+									alt="Dr. Sita"
+									class="w-full h-full object-cover"
+								/>
 							</div>
 						</div>
 					</div>
 				</div>
-
-				<p
-					class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-center md:text-left px-2 md:px-0 leading-loose"
-				>
-					<span
-						class="inline-block text-rose animate-fade-in opacity-0"
-						style="animation-delay: 0s">Gynecologist,</span
-					>
-					<span
-						class="inline-block text-love animate-fade-in opacity-0"
-						style="animation-delay: 0.5s"
-						>Sexual Health Consultant,</span
-					>
-					<span
-						class="inline-block text-pine animate-fade-in opacity-0"
-						style="animation-delay: 1s">Youtuber,</span
-					>
-					<span
-						class="inline-block text-foam animate-fade-in opacity-0"
-						style="animation-delay: 1.5s">Wellness Coach,</span
-					>
-					<span
-						class="inline-block text-iris animate-fade-in opacity-0"
-						style="animation-delay: 2s">Educator</span
-					>
-				</p>
 			</div>
 
-			<div
-				class="flex flex-col sm:flex-row gap-4 md:gap-8 px-2 md:px-0 animate-fade-in opacity-0"
-				style="animation-delay: 2.5s"
+			<p
+				class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-center md:text-left px-2 md:px-0 leading-loose"
 			>
-				<Button
-					href="/about"
-					color="gold"
-					icon="mdi:arrow-right"
-					class="text-lg"
+				<span
+					class="inline-block text-rose animate-fade-in opacity-0"
+					style="animation-delay: 0s">Gynecologist,</span
 				>
-					Learn More
-				</Button>
-				<Button
-					href="https://cal.com/dr-sita"
-					external
-					color="love"
-					icon="mdi:calendar"
-					class="text-lg"
+				<span
+					class="inline-block text-love animate-fade-in opacity-0"
+					style="animation-delay: 0.5s"
+					>Sexual Health Consultant,</span
 				>
-					Book a Consultation
-				</Button>
-			</div>
+				<span
+					class="inline-block text-pine animate-fade-in opacity-0"
+					style="animation-delay: 1s">Youtuber,</span
+				>
+				<span
+					class="inline-block text-foam animate-fade-in opacity-0"
+					style="animation-delay: 1.5s">Wellness Coach,</span
+				>
+				<span
+					class="inline-block text-iris animate-fade-in opacity-0"
+					style="animation-delay: 2s">Educator</span
+				>
+			</p>
 		</div>
-	</main>
+
+		<div
+			class="flex flex-col sm:flex-row gap-4 md:gap-8 px-2 md:px-0 animate-fade-in opacity-0"
+			style="animation-delay: 2.5s"
+		>
+			<Button
+				href="/about"
+				color="gold"
+				icon="mdi:arrow-right"
+				class="text-lg"
+			>
+				Learn More
+			</Button>
+			<Button
+				href="https://cal.com/dr-sita"
+				external
+				color="love"
+				icon="mdi:calendar"
+				class="text-lg"
+			>
+				Book a Consultation
+			</Button>
+		</div>
+	</div>
 </div>
 
-<section
-	class="container mx-auto flex flex-col md:flex-row items-center justify-center gap-12 px-4 md:px-0"
->
+<section class="container mx-auto py-16 md:py-24">
 	<div
-		class="w-full md:w-2/5 bg-surface rounded-xl aspect-square flex items-center justify-center"
+		class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-12"
 	>
-		<span class="text-subtle">Image Placeholder</span>
-	</div>
-	<div class="w-full md:w-1/2">
-		<p
-			class="text-base md:text-2xl text-subtle/90"
-			style="line-height: 1.5;"
-		>
-			Dr. Sitalakshmi A bridges modern medicine with holistic wellness,
-			bringing over 25 years of expertise as a Gynecologist and Sexual
-			Health Consultant. Her innovative group therapy approach brings
-			couples together in supportive batches, transforming lives through a
-			unique integration of evidence-based medicine with mindfulness,
-			yoga, and acupuncture. Reaching 1.3M+ subscribers through her
-			YouTube channels while serving as an educator and wellness coach,
-			she empowers individuals with essential knowledge and tools for
-			complete physical, emotional and mental wellbeing.
-		</p>
+		<div class="w-full md:w-2/5">
+			<div class="relative">
+				<div class="relative overflow-hidden rounded-2xl shadow-lg">
+					<div
+						class="absolute inset-0 bg-surface/10 backdrop-blur-[2px]"
+					>
+					</div>
+					<img
+						src="/dr-sita-2.png"
+						alt="Dr. Sita"
+						class="w-full h-full object-cover aspect-square transform scale-105 transition-transform duration-700 hover:scale-110"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<div class="w-full md:w-1/2 space-y-8">
+			<p
+				class="text-lg md:text-xl text-subtle/90 leading-relaxed"
+				style="line-height: 1.75;"
+			>
+				Dr. Sitalakshmi bridges modern medicine with holistic wellness,
+				bringing over 25 years of expertise as a Gynecologist and Sexual
+				Health Consultant. Her innovative group therapy approach brings
+				couples together in supportive batches, transforming lives
+				through a unique integration of evidence-based medicine with
+				mindfulness, yoga, and acupuncture. Reaching 1.3M+ subscribers
+				through her YouTube channels while serving as an educator and
+				wellness coach, she empowers individuals with essential
+				knowledge and tools for complete physical, emotional and mental
+				wellbeing.
+			</p>
+
+			<div class="flex items-center gap-6">
+				<a
+					href="https://www.youtube.com/@drsitamindbodycare"
+					class="group text-subtle hover:text-pine transition-all duration-300"
+					aria-label="YouTube Channel"
+				>
+					<div
+						class="p-3 rounded-full bg-surface/50 group-hover:bg-surface/80 group-hover:scale-110 transition-all duration-300"
+					>
+						<Icon name="mdi:youtube" class="w-6 h-6" />
+					</div>
+				</a>
+				<a
+					href="https://www.instagram.com/askdrsita"
+					class="group text-subtle hover:text-pine transition-all duration-300"
+					aria-label="Instagram Profile"
+				>
+					<div
+						class="p-3 rounded-full bg-surface/50 group-hover:bg-surface/80 group-hover:scale-110 transition-all duration-300"
+					>
+						<Icon name="mdi:instagram" class="w-6 h-6" />
+					</div>
+				</a>
+			</div>
+		</div>
 	</div>
 </section>
 
