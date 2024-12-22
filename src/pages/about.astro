@@ -140,14 +140,26 @@ import BackgroundShapes from "../components/BackgroundShapes.astro";
         </section>
 
         <!-- CTA Section -->
-        <section class="py-24 px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-display text-text mb-8">
-                    Ready to take charge of your health?
-                </h2>
-                <GradientButton href="/contact" color="love" icon="calendar">
-                    Schedule a Consultation
-                </GradientButton>
+        <section class="py-32 px-4 sm:px-6 bg-surface/30">
+            <div class="max-w-container-lg mx-auto text-center">
+                <div class="space-y-12 max-w-3xl mx-auto">
+                    <h2 class="text-5xl md:text-6xl font-display text-text">
+                        Ready to take charge of your health?
+                    </h2>
+                    <p class="text-2xl text-subtle/90 leading-relaxed">
+                        Schedule a consultation and begin your journey towards
+                        holistic wellness.
+                    </p>
+                    <div class="pt-4">
+                        <GradientButton
+                            href="/contact"
+                            color="love"
+                            icon="calendar"
+                        >
+                            Schedule a Consultation
+                        </GradientButton>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
