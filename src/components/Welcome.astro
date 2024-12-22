@@ -55,26 +55,29 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 	<div class="flex-1 flex items-center px-4 sm:px-6 relative min-h-screen">
 		<BackgroundShapes />
 		<main
-			class="max-w-container-xl w-full mx-auto grid md:grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center"
+			class="max-w-container-xl w-full mx-auto grid md:grid-cols-1 gap-8 md:gap-12"
 		>
 			<!-- Text Content -->
-			<div class="space-y-8 md:space-y-12">
-				<div class="space-y-4 md:space-y-6">
+			<div class="space-y-20">
+				<div class="space-y-16">
 					<h1
-						class="opacity-0 animate-fade-up text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display text-text tracking-tight"
+						class="opacity-0 animate-fade-up text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display text-text tracking-tight leading-[2]"
 					>
 						Dr. Sita
 					</h1>
 					<p
-						class="opacity-0 animate-fade-up animation-delay-300 text-2xl sm:text-3xl md:text-4xl text-subtle/90 font-light"
+						class="opacity-0 animate-fade-up animation-delay-300 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-[3]"
 					>
-						Sexual Health Consultant, Youtuber, Wellness coach &
-						Educator
+						<span class="text-rose">Gynecologist</span>,
+						<span class="text-love">Sexual Health Consultant</span>,
+						<span class="text-pine">Youtuber</span>,
+						<span class="text-foam">Wellness Coach</span> &
+						<span class="text-iris">Educator</span>
 					</p>
 				</div>
 
 				<p
-					class="opacity-0 animate-fade-up animation-delay-500 text-xl sm:text-2xl text-subtle leading-relaxed max-w-xl"
+					class="opacity-0 animate-fade-up animation-delay-500 text-xl sm:text-2xl md:text-3xl text-subtle/80 leading-[3.2] max-w-3xl"
 				>
 					I empower individuals to take charge of their sexual and
 					reproductive health through comprehensive care, education,
@@ -82,7 +85,7 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 				</p>
 
 				<div
-					class="opacity-0 animate-fade-up animation-delay-500 flex flex-col sm:flex-row gap-4 pt-4"
+					class="opacity-0 animate-fade-up animation-delay-500 flex flex-col sm:flex-row gap-8"
 				>
 					<GradientButton href="/about" color="pine" icon="arrow">
 						Learn More
@@ -96,15 +99,6 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 						Book a Consultation
 					</GradientButton>
 				</div>
-			</div>
-
-			<!-- Image/Visual Side -->
-			<div class="relative hidden lg:flex items-center justify-center">
-				<img
-					src="portrait.png"
-					alt="Dr. Sita"
-					class="w-[40vh] h-[40vh] rounded-full opacity-0 animate-fade-in animation-delay-500 ring-4 ring-subtle/20 object-cover"
-				/>
 			</div>
 		</main>
 	</div>
