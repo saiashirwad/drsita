@@ -1,6 +1,6 @@
 ---
 import "../global.css";
-import Footer from "../components/Footer.astro";
+import BackgroundShapes from "../components/BackgroundShapes.astro";
 ---
 
 <!doctype html>
@@ -16,9 +16,11 @@ import Footer from "../components/Footer.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Dr. Sita | Sexual Health & Wellness</title>
 	</head>
-	<body class="bg-base text-text font-inter">
-		<slot />
-		<Footer />
+	<body class="bg-base text-text font-inter relative">
+		<BackgroundShapes />
+		<div class="relative z-10">
+			<slot />
+		</div>
 	</body>
 </html>
 

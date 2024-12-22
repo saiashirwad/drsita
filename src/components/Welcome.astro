@@ -1,12 +1,8 @@
 ---
 import GradientButton from "./GradientButton.astro";
-import Navbar from "./Navbar.astro";
-import BackgroundShapes from "./BackgroundShapes.astro";
 ---
 
-<Navbar />
-
-<div class="min-h-screen flex flex-col bg-base">
+<div class="min-h-screen flex flex-col">
 	<!-- Social Links -->
 	<div class="fixed top-24 right-6 z-50 hidden md:block">
 		<div class="flex gap-4 opacity-0 animate-fade-in animation-delay-500">
@@ -55,7 +51,6 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 	<div
 		class="flex-1 flex items-start md:items-center px-4 sm:px-6 relative min-h-screen pt-24 md:pt-40"
 	>
-		<BackgroundShapes />
 		<main
 			class="max-w-container-xl w-full mx-auto grid md:grid-cols-1 gap-8 md:gap-12"
 		>
