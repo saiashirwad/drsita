@@ -8,6 +8,7 @@ interface Props {
     class?: string;
     icon?: string | undefined;
     external?: boolean;
+    style?: string;
 }
 
 const {
@@ -16,6 +17,7 @@ const {
     class: className = "",
     icon,
     external,
+    style,
 } = Astro.props;
 
 const colors = {
@@ -91,6 +93,7 @@ const colorConfig = colors[color as keyof typeof colors];
             <Icon
                 name={icon}
                 class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"
+                style={style}
             />
         )
     }
