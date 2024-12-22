@@ -110,164 +110,289 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 	</div>
 
 	<!-- Featured Content Section -->
-	<section class="relative mt-24 py-32 px-6">
-		<div class="absolute inset-0 bg-surface/30 backdrop-blur-sm"></div>
-		<div class="max-w-6xl mx-auto">
-			<h2
-				class="text-4xl font-display text-text mb-16 text-center relative"
+	<section class="w-full max-w-5xl mx-auto pt-32">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 h-[800px]">
+			<!-- YouTube Channel - Large Card -->
+			<div
+				class="group relative transform hover:-translate-y-2 transition-all duration-300 md:row-span-2"
 			>
-				Featured Content
-			</h2>
-
-			<div class="grid md:grid-cols-3 gap-8 relative">
-				<!-- YouTube Channel -->
 				<div
-					class="bg-base/40 rounded-2xl p-8 hover:bg-base/60 transition-colors duration-300"
+					class="absolute inset-0 bg-gradient-to-br from-love/20 via-transparent to-base/90 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"
 				>
-					<div class="text-love mb-4">
-						<svg
-							class="w-12 h-12"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="1.5"
+				</div>
+				<div
+					class="relative bg-surface/30 rounded-3xl p-12 h-full border border-highlight-med/10 backdrop-blur-xl shadow-2xl shadow-love/5 group-hover:border-love/20 group-hover:bg-surface/40 transition-all duration-300"
+				>
+					<div class="h-full flex flex-col">
+						<div
+							class="bg-love/10 w-20 h-20 rounded-2xl flex items-center justify-center mb-8 transform group-hover:scale-110 transition-transform duration-300"
 						>
-							<!-- YouTube Play Button Icon -->
-							<path
-								d="M14 12L10.5 14V10L14 12Z"
-								fill="currentColor"
+							<svg
+								class="w-10 h-10 text-love"
+								viewBox="0 0 24 24"
+								fill="none"
 								stroke="currentColor"
 								stroke-width="1.5"
-								stroke-linejoin="round"></path>
-							<!-- Rounded Rectangle -->
-							<rect
-								x="3"
-								y="6"
-								width="18"
-								height="12"
-								rx="2"
-								stroke="currentColor"></rect>
-						</svg>
-					</div>
-					<h3 class="text-2xl font-display text-text mb-3">
-						YouTube Channel
-					</h3>
-					<div class="flex items-center gap-2 mb-4">
-						<span class="text-3xl font-bold text-love">1M+</span>
-						<span class="text-lg text-subtle">subscribers</span>
-					</div>
-					<p class="text-lg text-subtle mb-6">
-						Join our growing community learning about sexual health
-						and wellness through engaging video content.
-					</p>
-					<a
-						href="https://www.youtube.com/@drsitamindbodycare"
-						class="text-love hover:text-love/80 inline-flex items-center gap-2 transition-colors duration-300 text-lg"
-					>
-						Watch Latest Videos
-						<svg
-							class="w-4 h-4"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-						>
-							<path d="M5 12h14m-7-7 7 7-7 7"></path>
-						</svg>
-					</a>
-				</div>
+							>
+								<path
+									d="M14 12L10.5 14V10L14 12Z"
+									fill="currentColor"
+									stroke="currentColor"
+									stroke-width="1.5"
+									stroke-linejoin="round"></path>
+								<rect
+									x="3"
+									y="6"
+									width="18"
+									height="12"
+									rx="2"
+									stroke="currentColor"></rect>
+							</svg>
+						</div>
 
-				<!-- Online Courses -->
-				<div
-					class="bg-base/40 rounded-2xl p-8 hover:bg-base/60 transition-colors duration-300"
-				>
-					<div class="text-iris mb-4">
-						<svg
-							class="w-12 h-12"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="1.5"
-						>
-							<path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-							<path
-								d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-							></path>
-							<path
-								d="M12 14l-6.16-3.422a12.083 12.083 0 00-.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 016.824-2.998 12.078 12.078 0 00-.665-6.479L12 14z"
-							></path>
-						</svg>
-					</div>
-					<h3 class="text-2xl font-display text-text mb-3">
-						Online Courses
-					</h3>
-					<div class="flex items-center gap-2 mb-4">
-						<span class="text-3xl font-bold text-iris">10+</span>
-						<span class="text-lg text-subtle">courses</span>
-					</div>
-					<p class="text-lg text-subtle mb-6">
-						Learn at your own pace with our comprehensive online
-						courses on sexual health and wellness.
-					</p>
-					<a
-						href="/courses"
-						class="text-iris hover:text-iris/80 inline-flex items-center gap-2 transition-colors duration-300 text-lg"
-					>
-						Browse Courses
-						<svg
-							class="w-4 h-4"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-						>
-							<path d="M5 12h14m-7-7 7 7-7 7"></path>
-						</svg>
-					</a>
-				</div>
+						<div class="flex-grow">
+							<h3 class="text-4xl font-display text-text mb-4">
+								YouTube Channel
+							</h3>
+							<div class="flex items-center gap-3 mb-6">
+								<span
+									class="text-5xl font-bold bg-gradient-to-r from-love via-gold to-love bg-clip-text text-transparent bg-[length:200%_auto] group-hover:bg-right transition-all duration-500"
+									>1M+</span
+								>
+								<span class="text-2xl text-subtle/90"
+									>subscribers</span
+								>
+							</div>
+							<p
+								class="text-xl text-subtle/90 leading-relaxed mb-8"
+							>
+								Join our growing community learning about sexual
+								health and wellness through engaging video
+								content.
+							</p>
+						</div>
 
-				<!-- SiRa Products -->
+						<a
+							href="https://www.youtube.com/@drsitamindbodycare"
+							class="inline-flex items-center gap-2 text-love hover:text-love transition-colors duration-300 text-xl group/link"
+						>
+							<span
+								class="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover/link:after:scale-x-100"
+								>Watch Latest Videos</span
+							>
+							<svg
+								class="w-6 h-6 transform group-hover/link:translate-x-2 transition-transform duration-300"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path d="M5 12h14m-7-7 7 7-7 7"></path>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Conference Speaking -->
+			<div
+				class="group relative transform hover:-translate-y-2 transition-all duration-300 h-full"
+			>
 				<div
-					class="bg-base/40 rounded-2xl p-8 hover:bg-base/60 transition-colors duration-300"
+					class="absolute inset-0 bg-gradient-to-br from-foam/20 via-transparent to-base/90 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"
 				>
-					<div class="text-gold mb-4">
-						<svg
-							class="w-12 h-12"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="1.5"
+				</div>
+				<div
+					class="relative bg-surface/30 rounded-3xl p-8 h-full border border-highlight-med/10 backdrop-blur-xl shadow-2xl shadow-foam/5 group-hover:border-foam/20 group-hover:bg-surface/40 transition-all duration-300"
+				>
+					<div class="flex flex-col h-full">
+						<div
+							class="bg-foam/10 w-16 h-16 rounded-2xl flex-shrink-0 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300"
 						>
-							<path
-								d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
-							></path>
-							<line x1="7" y1="7" x2="7.01" y2="7"></line>
-						</svg>
+							<svg
+								class="w-8 h-8 text-foam"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.5"
+							>
+								<path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+								<path
+									d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+								></path>
+							</svg>
+						</div>
+
+						<div>
+							<h3 class="text-2xl font-display text-text mb-2">
+								Conference Speaking
+							</h3>
+							<p
+								class="text-lg text-subtle/90 leading-relaxed mb-4"
+							>
+								Keynote speaker at international health
+								conferences
+							</p>
+							<a
+								href="/speaking"
+								class="inline-flex items-center gap-2 text-foam hover:text-foam transition-colors duration-300 text-lg group/link"
+							>
+								<span
+									class="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover/link:after:scale-x-100"
+									>View Speaking</span
+								>
+								<svg
+									class="w-5 h-5 transform group-hover/link:translate-x-2 transition-transform duration-300"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d="M5 12h14m-7-7 7 7-7 7"></path>
+								</svg>
+							</a>
+						</div>
 					</div>
-					<h3 class="text-2xl font-display text-text mb-3">
-						SiRa Products
-					</h3>
-					<div class="flex items-center gap-2 mb-4">
-						<span class="text-3xl font-bold text-gold">20+</span>
-						<span class="text-lg text-subtle">products</span>
-					</div>
-					<p class="text-lg text-subtle mb-6">
-						Discover our line of carefully curated health products
-						and supplements.
-					</p>
-					<a
-						href="/products"
-						class="text-gold hover:text-gold/80 inline-flex items-center gap-2 transition-colors duration-300 text-lg"
-					>
-						View Products
-						<svg
-							class="w-4 h-4"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="1.5"
+				</div>
+			</div>
+
+			<!-- Online Courses -->
+			<div
+				class="group relative transform hover:-translate-y-2 transition-all duration-300 h-full"
+			>
+				<div
+					class="absolute inset-0 bg-gradient-to-br from-iris/20 via-transparent to-base/90 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"
+				>
+				</div>
+				<div
+					class="relative bg-surface/30 rounded-3xl p-8 h-full border border-highlight-med/10 backdrop-blur-xl shadow-2xl shadow-iris/5 group-hover:border-iris/20 group-hover:bg-surface/40 transition-all duration-300"
+				>
+					<div class="flex flex-col h-full">
+						<div
+							class="bg-iris/10 w-16 h-16 rounded-2xl flex-shrink-0 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300"
 						>
-							<path d="M5 12h14m-7-7 7 7-7 7"></path>
-						</svg>
-					</a>
+							<svg
+								class="w-8 h-8 text-iris"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.5"
+							>
+								<path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+								<path
+									d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998a12.078 12.078 0 01.665-6.479L12 14z"
+								></path>
+							</svg>
+						</div>
+
+						<div>
+							<h3 class="text-2xl font-display text-text mb-2">
+								Online Courses
+							</h3>
+							<div class="flex items-center gap-2 mb-4">
+								<span
+									class="text-3xl font-bold bg-gradient-to-r from-iris via-foam to-iris bg-clip-text text-transparent bg-[length:200%_auto] group-hover:bg-right transition-all duration-500"
+									>10+</span
+								>
+								<span class="text-lg text-subtle/90"
+									>courses</span
+								>
+							</div>
+							<a
+								href="/courses"
+								class="inline-flex items-center gap-2 text-iris hover:text-iris transition-colors duration-300 text-lg group/link"
+							>
+								<span
+									class="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover/link:after:scale-x-100"
+									>Browse Courses</span
+								>
+								<svg
+									class="w-5 h-5 transform group-hover/link:translate-x-2 transition-transform duration-300"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d="M5 12h14m-7-7 7 7-7 7"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- SiRa Products -->
+			<div
+				class="group relative transform hover:-translate-y-2 transition-all duration-300 md:col-span-2"
+			>
+				<div
+					class="absolute inset-0 bg-gradient-to-br from-gold/20 via-transparent to-base/90 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"
+				>
+				</div>
+				<div
+					class="relative bg-surface/30 rounded-3xl p-8 border border-highlight-med/10 backdrop-blur-xl shadow-2xl shadow-gold/5 group-hover:border-gold/20 group-hover:bg-surface/40 transition-all duration-300"
+				>
+					<div class="flex items-start gap-6">
+						<div
+							class="bg-gold/10 w-16 h-16 rounded-2xl flex-shrink-0 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300"
+						>
+							<svg
+								class="w-8 h-8 text-gold"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.5"
+							>
+								<path
+									d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+								></path>
+								<line x1="7" y1="7" x2="7.01" y2="7"></line>
+							</svg>
+						</div>
+
+						<div class="flex-grow">
+							<div class="flex items-center justify-between mb-4">
+								<div>
+									<h3
+										class="text-2xl font-display text-text mb-2"
+									>
+										SiRa Products
+									</h3>
+									<div class="flex items-center gap-2">
+										<span
+											class="text-3xl font-bold bg-gradient-to-r from-gold via-rose to-gold bg-clip-text text-transparent bg-[length:200%_auto] group-hover:bg-right transition-all duration-500"
+											>20+</span
+										>
+										<span class="text-lg text-subtle/90"
+											>products</span
+										>
+									</div>
+								</div>
+								<a
+									href="/products"
+									class="inline-flex items-center gap-2 text-gold hover:text-gold transition-colors duration-300 text-lg group/link"
+								>
+									<span
+										class="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover/link:after:scale-x-100"
+										>View Products</span
+									>
+									<svg
+										class="w-5 h-5 transform group-hover/link:translate-x-2 transition-transform duration-300"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path d="M5 12h14m-7-7 7 7-7 7"></path>
+									</svg>
+								</a>
+							</div>
+							<p class="text-lg text-subtle/90 leading-relaxed">
+								Discover our line of carefully curated health
+								products and supplements.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

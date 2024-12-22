@@ -1,0 +1,124 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import BackgroundShapes from "../components/BackgroundShapes.astro";
+import GradientButton from "../components/GradientButton.astro";
+---
+
+<Layout title="Speaking - Dr. Sita">
+    <Navbar />
+
+    <main class="bg-base min-h-screen">
+        <!-- Hero Section -->
+        <section
+            class="min-h-[60vh] relative flex items-center pt-32 pb-24 px-6"
+        >
+            <BackgroundShapes />
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="max-w-4xl">
+                    <h1
+                        class="text-6xl md:text-7xl lg:text-8xl font-display text-text tracking-tight opacity-0 animate-fade-up mb-8"
+                    >
+                        Conference Speaking
+                    </h1>
+                    <p
+                        class="text-3xl md:text-4xl text-subtle/90 font-light max-w-3xl opacity-0 animate-fade-up animation-delay-100 leading-relaxed"
+                    >
+                        Bringing expertise in sexual health and wellness to
+                        global audiences through engaging talks and
+                        presentations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Talks -->
+        <section class="py-24 px-6 bg-surface/50">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-display text-text mb-16">
+                    Recent Speaking Engagements
+                </h2>
+
+                <div class="grid gap-12">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-3 h-3 rounded-full bg-foam"></div>
+                            <h3 class="text-3xl font-display text-foam">
+                                International Women's Health Summit 2023
+                            </h3>
+                        </div>
+                        <p class="text-2xl text-subtle/90 leading-relaxed pl-7">
+                            Keynote speaker on "Breaking Barriers in Sexual
+                            Health Education"
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-3 h-3 rounded-full bg-love"></div>
+                            <h3 class="text-3xl font-display text-love">
+                                TEDx Kerala 2023
+                            </h3>
+                        </div>
+                        <p class="text-2xl text-subtle/90 leading-relaxed pl-7">
+                            "Revolutionizing Health Education Through Digital
+                            Media"
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-3 h-3 rounded-full bg-iris"></div>
+                            <h3 class="text-3xl font-display text-iris">
+                                Global Wellness Conference 2022
+                            </h3>
+                        </div>
+                        <p class="text-2xl text-subtle/90 leading-relaxed pl-7">
+                            Panel discussion on "Holistic Approaches to Women's
+                            Health"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Topics Section -->
+        <section class="py-24 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-display text-text mb-16">
+                    Speaking Topics
+                </h2>
+
+                <div class="grid sm:grid-cols-2 gap-8">
+                    {
+                        [
+                            "Sexual Health Education",
+                            "Women's Wellness",
+                            "Digital Health Communication",
+                            "Holistic Healthcare",
+                            "Breaking Health Taboos",
+                            "Medical Content Creation",
+                        ].map((item) => (
+                            <div class="flex items-center gap-4 text-subtle/90">
+                                <div class="w-3 h-3 rounded-full bg-foam" />
+                                <span class="text-2xl">{item}</span>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-display text-text mb-8">
+                    Interested in having Dr. Sita speak at your event?
+                </h2>
+                <GradientButton href="/contact" color="love" icon="calendar">
+                    Get in Touch
+                </GradientButton>
+            </div>
+        </section>
+    </main>
+</Layout>
