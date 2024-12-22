@@ -18,16 +18,16 @@ import FeaturedSection from "./FeaturedSection.astro";
 					class="flex flex-col md:flex-row items-center gap-6 md:gap-6"
 				>
 					<h1
-						class="opacity-0 animate-fade-up text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display text-text tracking-tight leading-[1.2] md:leading-[2] text-center md:text-left"
+						class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display text-text tracking-tight leading-[1.2] md:leading-[2] text-center md:text-left"
 					>
 						Dr. Sita
 					</h1>
 
-					<div class="opacity-0 animate-fade-up mt-4 md:mt-0">
-						<div class="relative">
+					<div class="mt-4 md:mt-0">
+						<div class="relative animate-fade-in">
 							<!-- Softer glow effect -->
 							<div
-								class="absolute -inset-0.5 rounded-full bg-gradient-to-br from-rose/10 via-love/10 to-pine/10 blur-md"
+								class="absolute -inset-0.5 rounded-full bg-gradient-to-br from-rose/20 via-love/20 to-pine/20 blur-md"
 							>
 							</div>
 							<!-- Portrait container -->
@@ -49,19 +49,32 @@ import FeaturedSection from "./FeaturedSection.astro";
 				</div>
 
 				<p
-					class="opacity-0 animate-fade-up animation-delay-300 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-center md:text-left px-2 md:px-0"
+					class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-center md:text-left px-2 md:px-0"
 				>
-					<span class="text-rose">Gynecologist</span>,
-					<span class="text-love">Sexual Health Consultant</span>,
-					<span class="text-pine">Youtuber</span>,
-					<span class="text-foam">Wellness Coach</span> &
-					<span class="text-iris">Educator</span>
+					<span
+						class="inline-block hover:scale-[1.02] transition-transform duration-300 text-rose"
+						>Gynecologist</span
+					>,
+					<span
+						class="inline-block hover:scale-[1.02] transition-transform duration-300 text-love"
+						>Sexual Health Consultant</span
+					>,
+					<span
+						class="inline-block hover:scale-[1.02] transition-transform duration-300 text-pine"
+						>Youtuber</span
+					>,
+					<span
+						class="inline-block hover:scale-[1.02] transition-transform duration-300 text-foam"
+						>Wellness Coach</span
+					> &
+					<span
+						class="inline-block hover:scale-[1.02] transition-transform duration-300 text-iris"
+						>Educator</span
+					>
 				</p>
 			</div>
 
-			<div
-				class="opacity-0 animate-fade-up animation-delay-500 flex flex-col sm:flex-row gap-4 md:gap-8 px-2 md:px-0"
-			>
+			<div class="flex flex-col sm:flex-row gap-4 md:gap-8 px-2 md:px-0">
 				<Button href="/about" color="pine" icon="mdi:arrow-right">
 					Learn More
 				</Button>
