@@ -10,6 +10,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	:root {
+		/* Rose Pine Moon (Dark) Theme Colors */
+		--color-base: 232.2 211 232;
+		--color-surface: 233 225 233;
+		--color-overlay: 38 35 58;
+		--color-muted: 110 106 134;
+		--color-subtle: 144 140 170;
+		--color-text: 224 222 244;
+		--color-love: 235 111 146;
+		--color-gold: 246 193 119;
+		--color-rose: 235 188 186;
+		--color-pine: 49 116 143;
+		--color-foam: 156 207 216;
+		--color-iris: 196 167 231;
+		--color-highlight-low: 33 32 46;
+		--color-highlight-med: 64 61 82;
+		--color-highlight-high: 82 79 103;
+	}
+
+	body {
+		@apply bg-base text-text;
+		background-color: #232136; /* Rose Pine Moon base color */
+	}
+}
+
 :root {
 	color-scheme: light dark;
 
@@ -27,19 +53,6 @@
 	--content-height: calc(
 		100vh - var(--banner-height) - var(--header-height) - (var(--page-top) * 2)
 	);
-
-	--color-base: 32deg 57% 95%;
-	--color-surface: 35deg 100% 98%;
-	--color-overlay: 33deg 43% 91%;
-	--color-muted: 257deg 9% 61%;
-	--color-subtle: 248deg 12% 52%;
-	--color-text: 248deg 19% 40%;
-	--color-love: 343deg 35% 55%;
-	--color-gold: 35deg 81% 56%;
-	--color-rose: 3deg 53% 67%;
-	--color-pine: 197deg 53% 34%;
-	--color-foam: 189deg 30% 48%;
-	--color-iris: 268deg 21% 57%;
 
 	--astro-code-color-text: hsl(var(--color-text));
 	--astro-code-color-background: hsl(var(--color-surface));
@@ -318,4 +331,32 @@ details summary::-webkit-details-marker {
 
 .animation-delay-500 {
 	animation-delay: 500ms;
+}
+
+@keyframes fade-up {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.animate-fade-up {
+	animation: fade-up 1s ease forwards;
+}
+
+.animate-fade-in {
+	animation: fade-in 1s ease forwards;
 }
