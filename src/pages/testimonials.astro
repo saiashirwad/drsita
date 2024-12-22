@@ -9,14 +9,14 @@ import Layout from "../layouts/Layout.astro";
 const initialTestimonials = testimonialData.testimonials.slice(0, 4);
 
 interface Testimonial {
-    id: number;
-    quote: string;
-    author: string;
-    program: string;
-    rating: number;
-    category: string;
-    icon: string;
-    color: string;
+  id: number;
+  quote: string;
+  author: string;
+  program: string;
+  rating: number;
+  category: string;
+  icon: string;
+  color: string;
 }
 
 // Pass testimonials data to the client
@@ -24,140 +24,132 @@ const allTestimonials = testimonialData.testimonials;
 ---
 
 <Layout title="Testimonials - Dr. Sita">
-    <Navbar />
+  <Navbar />
 
-    <main class="bg-base min-h-screen">
-        <!-- Hero Section -->
-        <section
-            class="min-h-[40vh] relative flex items-center justify-center pt-32 pb-24 px-6"
-        >
-            <BackgroundShapes />
-            <div class="max-w-6xl mx-auto w-full">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h1
-                        class="text-6xl md:text-7xl lg:text-8xl font-display text-text tracking-tight opacity-0 animate-fade-up mb-8"
-                    >
-                        Success Stories
-                    </h1>
-                    <p
-                        class="text-3xl md:text-4xl text-subtle/90 font-light max-w-3xl mx-auto opacity-0 animate-fade-up animation-delay-100 leading-relaxed"
-                    >
-                        Real experiences from our community of healing and
-                        transformation.
-                    </p>
-                </div>
-            </div>
-        </section>
+  <main class="bg-base min-h-screen">
+    <!-- Hero Section -->
+    <section
+      class="min-h-[40vh] relative flex items-center justify-center pt-32 pb-24 px-6"
+    >
+      <BackgroundShapes />
+      <div class="max-w-6xl mx-auto w-full">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1
+            class="text-6xl md:text-7xl lg:text-8xl font-display text-text tracking-tight opacity-0 animate-fade-up mb-8"
+          >
+            Success Stories
+          </h1>
+          <p
+            class="text-3xl md:text-4xl text-subtle/90 font-light max-w-3xl mx-auto opacity-0 animate-fade-up animation-delay-100 leading-relaxed"
+          >
+            Real experiences from our community of healing and transformation.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Testimonials Grid -->
-        <section class="py-24 px-6">
-            <div class="max-w-6xl mx-auto">
-                <div id="testimonials-grid" class="grid md:grid-cols-2 gap-8">
-                    {
-                        initialTestimonials.map((testimonial) => (
-                            <div class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300">
-                                <div
-                                    class={`bg-${testimonial.color}/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8`}
-                                >
-                                    <Icon
-                                        name="mdi:message-text"
-                                        class={`w-8 h-8 text-${testimonial.color}`}
-                                    />
-                                </div>
-                                <div class="flex gap-2 mb-6">
-                                    {[...Array(testimonial.rating)].map(() => (
-                                        <Icon
-                                            name="mdi:star"
-                                            class="w-6 h-6 text-gold"
-                                        />
-                                    ))}
-                                </div>
-                                <blockquote class="text-xl text-subtle/90 leading-relaxed mb-6">
-                                    "{testimonial.quote}"
-                                </blockquote>
-                                <div class={`text-${testimonial.color}`}>
-                                    <p class="font-display">
-                                        {testimonial.author}
-                                    </p>
-                                    <p class="text-sm text-subtle/70">
-                                        {testimonial.program}
-                                    </p>
-                                </div>
-                            </div>
-                        ))
-                    }
+    <!-- Testimonials Grid -->
+    <section class="py-24 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div id="testimonials-grid" class="grid md:grid-cols-2 gap-8">
+          {
+            initialTestimonials.map((testimonial) => (
+              <div class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300">
+                <div
+                  class={`bg-${testimonial.color}/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8`}
+                >
+                  <Icon
+                    name="mdi:message-text"
+                    class={`w-8 h-8 text-${testimonial.color}`}
+                  />
                 </div>
+                <div class="flex gap-2 mb-6">
+                  {[...Array(testimonial.rating)].map(() => (
+                    <Icon name="mdi:star" class="w-6 h-6 text-gold" />
+                  ))}
+                </div>
+                <blockquote class="text-xl text-subtle/90 leading-relaxed mb-6">
+                  "{testimonial.quote}"
+                </blockquote>
+                <div class={`text-${testimonial.color}`}>
+                  <p class="font-display">{testimonial.author}</p>
+                  <p class="text-sm text-subtle/70">{testimonial.program}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
 
-                <!-- See More Button -->
-                <div class="text-center mt-16">
-                    <button
-                        id="see-more-btn"
-                        class="px-8 py-3 rounded-full bg-surface/50 text-foam hover:bg-surface/80 transition-colors duration-300"
-                    >
-                        See More Testimonials
-                    </button>
-                </div>
-            </div>
-        </section>
+        <!-- See More Button -->
+        <div class="text-center mt-16">
+          <button
+            id="see-more-btn"
+            class="px-8 py-3 rounded-full bg-surface/50 text-foam hover:bg-surface/80 transition-colors duration-300"
+          >
+            See More Testimonials
+          </button>
+        </div>
+      </div>
+    </section>
 
-        <!-- Video Testimonials -->
-        <section class="py-24 px-6 bg-surface/30">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-display text-text mb-8">
-                    Video Testimonials
-                </h2>
-                <p class="text-2xl text-subtle/90 mb-12">
-                    Watch stories of transformation from our community members.
-                </p>
-                <div class="relative aspect-video rounded-3xl overflow-hidden">
-                    <div
-                        class="absolute inset-0 bg-surface/30 backdrop-blur-sm flex items-center justify-center"
-                    >
-                        <p class="text-xl text-subtle/90">Coming Soon</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Video Testimonials -->
+    <section class="py-24 px-6 bg-surface/30">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-display text-text mb-8">
+          Video Testimonials
+        </h2>
+        <p class="text-2xl text-subtle/90 mb-12">
+          Watch stories of transformation from our community members.
+        </p>
+        <div class="relative aspect-video rounded-3xl overflow-hidden">
+          <div
+            class="absolute inset-0 bg-surface/30 backdrop-blur-sm flex items-center justify-center"
+          >
+            <p class="text-xl text-subtle/90">Coming Soon</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
 
 <script define:vars={{ allTestimonials }}>
-    let currentIndex = 4;
+  let currentIndex = 4;
 
-    const testimonialGrid = document.getElementById("testimonials-grid");
-    const seeMoreBtn = document.getElementById("see-more-btn");
+  const testimonialGrid = document.getElementById("testimonials-grid");
+  const seeMoreBtn = document.getElementById("see-more-btn");
 
-    if (seeMoreBtn && testimonialGrid) {
-        seeMoreBtn.addEventListener("click", () => {
-            // Get next 4 testimonials
-            const nextTestimonials = allTestimonials.slice(
-                currentIndex,
-                currentIndex + 4,
-            );
+  if (seeMoreBtn && testimonialGrid) {
+    seeMoreBtn.addEventListener("click", () => {
+      // Get next 4 testimonials
+      const nextTestimonials = allTestimonials.slice(
+        currentIndex,
+        currentIndex + 4,
+      );
 
-            // If no more testimonials to show, hide the button
-            if (currentIndex + 4 >= allTestimonials.length) {
-                seeMoreBtn.style.display = "none";
-            }
+      // If no more testimonials to show, hide the button
+      if (currentIndex + 4 >= allTestimonials.length) {
+        seeMoreBtn.style.display = "none";
+      }
 
-            // Add new testimonials to the grid
-            nextTestimonials.forEach((testimonial) => {
-                const testimonialCard = document.createElement("div");
-                testimonialCard.className =
-                    "bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300";
-                testimonialCard.innerHTML = `
+      // Add new testimonials to the grid
+      nextTestimonials.forEach((testimonial) => {
+        const testimonialCard = document.createElement("div");
+        testimonialCard.className =
+          "bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300";
+        testimonialCard.innerHTML = `
                     <div class="bg-${testimonial.color}/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
                         <astro-icon name="mdi:message-text" class="w-8 h-8 text-${testimonial.color}"></astro-icon>
                     </div>
                     <div class="flex gap-2 mb-6">
                         ${Array(testimonial.rating)
-                            .fill()
-                            .map(
-                                () => `
+                          .fill()
+                          .map(
+                            () => `
                             <astro-icon name="mdi:star" class="w-6 h-6 text-gold"></astro-icon>
                         `,
-                            )
-                            .join("")}
+                          )
+                          .join("")}
                     </div>
                     <blockquote class="text-xl text-subtle/90 leading-relaxed mb-6">
                         "${testimonial.quote}"
@@ -167,11 +159,11 @@ const allTestimonials = testimonialData.testimonials;
                         <p class="text-sm text-subtle/70">${testimonial.program}</p>
                     </div>
                 `;
-                testimonialGrid.appendChild(testimonialCard);
-            });
+        testimonialGrid.appendChild(testimonialCard);
+      });
 
-            // Update current index
-            currentIndex += 4;
-        });
-    }
+      // Update current index
+      currentIndex += 4;
+    });
+  }
 </script>

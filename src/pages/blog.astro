@@ -1,342 +1,313 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
 import BackgroundShapes from "../components/BackgroundShapes.astro";
-import Button from "../components/Button.astro";
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Blog - Dr. Sita">
-    <Navbar />
+  <Navbar />
 
-    <main class="bg-base min-h-screen">
-        <!-- Hero Section -->
-        <section
-            class="min-h-[40vh] relative flex items-center justify-center pt-32 pb-24 px-4 sm:px-6"
-        >
-            <BackgroundShapes />
-            <div class="container mx-auto w-full">
-                <div class="container mx-auto text-center">
-                    <h1
-                        class="text-6xl md:text-7xl lg:text-8xl font-display text-text tracking-tight opacity-0 animate-fade-up mb-8"
-                    >
-                        Blog & Resources
-                    </h1>
-                    <p
-                        class="text-3xl md:text-4xl text-subtle/90 font-light opacity-0 animate-fade-up animation-delay-100 leading-relaxed"
-                    >
-                        Expert insights on health, wellness, and relationships.
-                    </p>
-                </div>
-            </div>
-        </section>
+  <main class="bg-base min-h-screen">
+    <!-- Hero Section -->
+    <section
+      class="min-h-[40vh] relative flex items-center justify-center pt-32 pb-24 px-4 sm:px-6"
+    >
+      <BackgroundShapes />
+      <div class="container mx-auto w-full">
+        <div class="container mx-auto text-center">
+          <h1
+            class="text-6xl md:text-7xl lg:text-8xl font-display text-text tracking-tight opacity-0 animate-fade-up mb-8"
+          >
+            Blog & Resources
+          </h1>
+          <p
+            class="text-3xl md:text-4xl text-subtle/90 font-light opacity-0 animate-fade-up animation-delay-100 leading-relaxed"
+          >
+            Expert insights on health, wellness, and relationships.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Categories -->
-        <section class="py-12 px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="flex flex-wrap gap-4 justify-center">
-                    <button
-                        class="px-6 py-2 rounded-full bg-surface/50 text-foam hover:bg-surface/80 transition-colors duration-300"
-                    >
-                        All Topics
-                    </button>
-                    <button
-                        class="px-6 py-2 rounded-full bg-surface/50 text-subtle/90 hover:bg-surface/80 transition-colors duration-300"
-                    >
-                        Health & Nutrition
-                    </button>
-                    <button
-                        class="px-6 py-2 rounded-full bg-surface/50 text-subtle/90 hover:bg-surface/80 transition-colors duration-300"
-                    >
-                        Psychosexual Health
-                    </button>
-                    <button
-                        class="px-6 py-2 rounded-full bg-surface/50 text-subtle/90 hover:bg-surface/80 transition-colors duration-300"
-                    >
-                        Social Issues
-                    </button>
-                    <button
-                        class="px-6 py-2 rounded-full bg-surface/50 text-subtle/90 hover:bg-surface/80 transition-colors duration-300"
-                    >
-                        Mindfulness
-                    </button>
-                </div>
-            </div>
-        </section>
+    <!-- Categories -->
+    <section class="py-12 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-wrap gap-4 justify-center">
+          <button
+            class="px-6 py-2 rounded-full bg-surface/50 text-foam hover:bg-surface/80 transition-colors duration-300"
+          >
+            All Topics
+          </button>
+          <button
+            class="px-6 py-2 rounded-full bg-surface/50 text-subtle/90 hover:bg-surface/80 transition-colors duration-300"
+          >
+            Health & Nutrition
+          </button>
+          <button
+            class="px-6 py-2 rounded-full bg-surface/50 text-subtle/90 hover:bg-surface/80 transition-colors duration-300"
+          >
+            Psychosexual Health
+          </button>
+          <button
+            class="px-6 py-2 rounded-full bg-surface/50 text-subtle/90 hover:bg-surface/80 transition-colors duration-300"
+          >
+            Social Issues
+          </button>
+          <button
+            class="px-6 py-2 rounded-full bg-surface/50 text-subtle/90 hover:bg-surface/80 transition-colors duration-300"
+          >
+            Mindfulness
+          </button>
+        </div>
+      </div>
+    </section>
 
-        <!-- Featured Articles -->
-        <section class="py-24 px-6">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-display text-text mb-12">
-                    Featured Articles
-                </h2>
+    <!-- Featured Articles -->
+    <section class="py-24 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-display text-text mb-12">Featured Articles</h2>
 
-                <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Article Card -->
+          <div
+            class="bg-surface/30 rounded-[32px] overflow-hidden border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300"
+          >
+            <div class="aspect-video w-full bg-foam/10 relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg
+                  class="w-16 h-16 text-foam"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
                 >
-                    <!-- Article Card -->
-                    <div
-                        class="bg-surface/30 rounded-[32px] overflow-hidden border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300"
-                    >
-                        <div class="aspect-video w-full bg-foam/10 relative">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center"
-                            >
-                                <svg
-                                    class="w-16 h-16 text-foam"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                >
-                                    <path
-                                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <div class="absolute top-4 left-4">
-                                <span
-                                    class="px-3 py-1 rounded-full text-sm bg-foam/10 text-foam border border-foam/20"
-                                >
-                                    Health
-                                </span>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-display text-text mb-4">
-                                Understanding Sexual Health: A Holistic Approach
-                            </h3>
-                            <p class="text-lg text-subtle/90 mb-6">
-                                Explore the interconnected aspects of physical,
-                                emotional, and mental well-being in sexual
-                                health.
-                            </p>
-                            <a
-                                href="#"
-                                class="inline-flex items-center text-foam hover:text-foam/80 transition-colors"
-                            >
-                                Read more
-                                <svg
-                                    class="w-5 h-5 ml-2"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Article Card -->
-                    <div
-                        class="bg-surface/30 rounded-[32px] overflow-hidden border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300"
-                    >
-                        <div class="aspect-video w-full bg-love/10 relative">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center"
-                            >
-                                <svg
-                                    class="w-16 h-16 text-love"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                >
-                                    <path
-                                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <div class="absolute top-4 left-4">
-                                <span
-                                    class="px-3 py-1 rounded-full text-sm bg-love/10 text-love border border-love/20"
-                                >
-                                    Relationships
-                                </span>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-display text-text mb-4">
-                                Building Strong Foundations in Marriage
-                            </h3>
-                            <p class="text-lg text-subtle/90 mb-6">
-                                Key insights into creating and maintaining
-                                healthy, fulfilling relationships.
-                            </p>
-                            <a
-                                href="#"
-                                class="inline-flex items-center text-love hover:text-love/80 transition-colors"
-                            >
-                                Read more
-                                <svg
-                                    class="w-5 h-5 ml-2"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Article Card -->
-                    <div
-                        class="bg-surface/30 rounded-[32px] overflow-hidden border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300"
-                    >
-                        <div class="aspect-video w-full bg-iris/10 relative">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center"
-                            >
-                                <svg
-                                    class="w-16 h-16 text-iris"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                >
-                                    <path
-                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <div class="absolute top-4 left-4">
-                                <span
-                                    class="px-3 py-1 rounded-full text-sm bg-iris/10 text-iris border border-iris/20"
-                                >
-                                    Mindfulness
-                                </span>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-display text-text mb-4">
-                                Mindfulness in Daily Life
-                            </h3>
-                            <p class="text-lg text-subtle/90 mb-6">
-                                Practical techniques for incorporating
-                                mindfulness into your daily routine.
-                            </p>
-                            <a
-                                href="#"
-                                class="inline-flex items-center text-iris hover:text-iris/80 transition-colors"
-                            >
-                                Read more
-                                <svg
-                                    class="w-5 h-5 ml-2"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                  <path
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  ></path>
+                </svg>
+              </div>
+              <div class="absolute top-4 left-4">
+                <span
+                  class="px-3 py-1 rounded-full text-sm bg-foam/10 text-foam border border-foam/20"
+                >
+                  Health
+                </span>
+              </div>
             </div>
-        </section>
-
-        <!-- Resources -->
-        <section class="py-24 px-6 bg-surface/30">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl font-display text-text mb-12">
-                    Free Resources
-                </h2>
-
-                <div class="grid grid-cols-1 gap-8">
-                    <div
-                        class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300"
-                    >
-                        <div
-                            class="bg-foam/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8"
-                        >
-                            <svg
-                                class="w-8 h-8 text-foam"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                            >
-                                <path
-                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                                ></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-3xl font-display text-text mb-4">
-                            E-Books
-                        </h3>
-                        <p class="text-xl text-subtle/90 leading-relaxed mb-6">
-                            Download our collection of free e-books on various
-                            health and wellness topics.
-                        </p>
-                        <a
-                            href="#"
-                            class="inline-flex items-center text-foam hover:text-foam/80 transition-colors"
-                        >
-                            Browse E-Books
-                            <svg
-                                class="w-5 h-5 ml-2"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                            >
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <div
-                        class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300"
-                    >
-                        <div
-                            class="bg-gold/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8"
-                        >
-                            <svg
-                                class="w-8 h-8 text-gold"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="1.5"
-                            >
-                                <path
-                                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-                                ></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-3xl font-display text-text mb-4">
-                            Video Guides
-                        </h3>
-                        <p class="text-xl text-subtle/90 leading-relaxed mb-6">
-                            Access our library of educational videos and
-                            tutorials.
-                        </p>
-                        <a
-                            href="#"
-                            class="inline-flex items-center text-gold hover:text-gold/80 transition-colors"
-                        >
-                            Watch Videos
-                            <svg
-                                class="w-5 h-5 ml-2"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                            >
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-display text-text mb-4">
+                Understanding Sexual Health: A Holistic Approach
+              </h3>
+              <p class="text-lg text-subtle/90 mb-6">
+                Explore the interconnected aspects of physical, emotional, and
+                mental well-being in sexual health.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-foam hover:text-foam/80 transition-colors"
+              >
+                Read more
+                <svg
+                  class="w-5 h-5 ml-2"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </a>
             </div>
-        </section>
-    </main>
+          </div>
+
+          <!-- Article Card -->
+          <div
+            class="bg-surface/30 rounded-[32px] overflow-hidden border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300"
+          >
+            <div class="aspect-video w-full bg-love/10 relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg
+                  class="w-16 h-16 text-love"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="absolute top-4 left-4">
+                <span
+                  class="px-3 py-1 rounded-full text-sm bg-love/10 text-love border border-love/20"
+                >
+                  Relationships
+                </span>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-display text-text mb-4">
+                Building Strong Foundations in Marriage
+              </h3>
+              <p class="text-lg text-subtle/90 mb-6">
+                Key insights into creating and maintaining healthy, fulfilling
+                relationships.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-love hover:text-love/80 transition-colors"
+              >
+                Read more
+                <svg
+                  class="w-5 h-5 ml-2"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Article Card -->
+          <div
+            class="bg-surface/30 rounded-[32px] overflow-hidden border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300"
+          >
+            <div class="aspect-video w-full bg-iris/10 relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg
+                  class="w-16 h-16 text-iris"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div class="absolute top-4 left-4">
+                <span
+                  class="px-3 py-1 rounded-full text-sm bg-iris/10 text-iris border border-iris/20"
+                >
+                  Mindfulness
+                </span>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-display text-text mb-4">
+                Mindfulness in Daily Life
+              </h3>
+              <p class="text-lg text-subtle/90 mb-6">
+                Practical techniques for incorporating mindfulness into your
+                daily routine.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-iris hover:text-iris/80 transition-colors"
+              >
+                Read more
+                <svg
+                  class="w-5 h-5 ml-2"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="py-24 px-6 bg-surface/30">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-display text-text mb-12">Free Resources</h2>
+
+        <div class="grid grid-cols-1 gap-8">
+          <div
+            class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300"
+          >
+            <div
+              class="bg-foam/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8"
+            >
+              <svg
+                class="w-8 h-8 text-foam"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-3xl font-display text-text mb-4">E-Books</h3>
+            <p class="text-xl text-subtle/90 leading-relaxed mb-6">
+              Download our collection of free e-books on various health and
+              wellness topics.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center text-foam hover:text-foam/80 transition-colors"
+            >
+              Browse E-Books
+              <svg class="w-5 h-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div
+            class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300"
+          >
+            <div
+              class="bg-gold/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8"
+            >
+              <svg
+                class="w-8 h-8 text-gold"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-3xl font-display text-text mb-4">Video Guides</h3>
+            <p class="text-xl text-subtle/90 leading-relaxed mb-6">
+              Access our library of educational videos and tutorials.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center text-gold hover:text-gold/80 transition-colors"
+            >
+              Watch Videos
+              <svg class="w-5 h-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>

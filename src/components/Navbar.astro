@@ -2,27 +2,27 @@
 import { Icon } from "astro-icon/components";
 
 type Link = {
-    href: string;
-    label: string;
-    children?: Link[];
+  href: string;
+  label: string;
+  children?: Link[];
 };
 
 const links: Link[] = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    {
-        href: "/services",
-        label: "Services",
-    },
-    {
-        href: "/academy",
-        label: "Academy",
-    },
-    { href: "/blog", label: "Blog" },
-    { href: "/testimonials", label: "Testimonials" },
-    { href: "/speaking", label: "Speaking" },
-    { href: "/products", label: "Store" },
-    { href: "/contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  {
+    href: "/services",
+    label: "Services",
+  },
+  {
+    href: "/academy",
+    label: "Academy",
+  },
+  { href: "/blog", label: "Blog" },
+  { href: "/testimonials", label: "Testimonials" },
+  { href: "/speaking", label: "Speaking" },
+  { href: "/products", label: "Store" },
+  { href: "/contact", label: "Contact" },
 ];
 
 // Get the current path
@@ -30,132 +30,128 @@ const currentPath = Astro.url.pathname;
 ---
 
 <nav
-    class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-lg border-b border-highlight-low"
+  class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-lg border-b border-highlight-low"
 >
-    <div class="container mx-auto px-4 md:px-0">
-        <div class="flex items-center justify-between h-12">
-            <!-- Logo -->
-            <a
-                href="/"
-                class="text-text hover:text-pine transition-colors duration-300"
-            >
-                <h1 class="text-base font-display text-subtle">Dr. Sita</h1>
-            </a>
+  <div class="container mx-auto px-4 md:px-0">
+    <div class="flex items-center justify-between h-12">
+      <!-- Logo -->
+      <a
+        href="/"
+        class="text-text hover:text-pine transition-colors duration-300"
+      >
+        <h1 class="text-base font-display text-subtle">Dr. Sita</h1>
+      </a>
 
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center justify-end gap-8">
-                {
-                    links.map((link) => (
-                        <>
-                            {!link.children ? (
-                                <a
-                                    href={link.href}
-                                    class={`relative text-subtle hover:text-text transition-colors
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center justify-end gap-8">
+        {
+          links.map((link) => (
+            <>
+              {!link.children ? (
+                <a
+                  href={link.href}
+                  class={`relative text-subtle hover:text-text transition-colors
                                         ${currentPath === link.href ? "text-text" : ""}`}
-                                >
-                                    {link.label}
-                                </a>
-                            ) : (
-                                <div class="relative group">
-                                    <button class="text-subtle group-hover:text-text transition-colors duration-300 font-medium tracking-wide text-sm hover:text-pine flex items-center gap-1">
-                                        {link.label}
-                                        <Icon
-                                            name="mdi:chevron-down"
-                                            class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300"
-                                        />
-                                    </button>
-                                    <div class="absolute left-0 top-full pt-2 opacity-0 translate-y-2 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-300">
-                                        <div class="bg-surface/95 backdrop-blur-xl rounded-lg py-2 min-w-[160px] border border-highlight-low shadow-xl">
-                                            {link.children.map((child) => (
-                                                <a
-                                                    href={child.href}
-                                                    class="block px-4 py-2 text-subtle hover:text-pine transition-colors duration-300 text-sm"
-                                                >
-                                                    {child.label}
-                                                </a>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-                        </>
-                    ))
-                }
-            </div>
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <div class="relative group">
+                  <button class="text-subtle group-hover:text-text transition-colors duration-300 font-medium tracking-wide text-sm hover:text-pine flex items-center gap-1">
+                    {link.label}
+                    <Icon
+                      name="mdi:chevron-down"
+                      class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300"
+                    />
+                  </button>
+                  <div class="absolute left-0 top-full pt-2 opacity-0 translate-y-2 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-300">
+                    <div class="bg-surface/95 backdrop-blur-xl rounded-lg py-2 min-w-[160px] border border-highlight-low shadow-xl">
+                      {link.children.map((child) => (
+                        <a
+                          href={child.href}
+                          class="block px-4 py-2 text-subtle hover:text-pine transition-colors duration-300 text-sm"
+                        >
+                          {child.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </>
+          ))
+        }
+      </div>
 
-            <!-- Mobile Menu Button -->
-            <button
-                class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-subtle hover:text-text hover:bg-highlight-low transition-colors duration-300"
-                aria-label="Menu"
-                id="mobile-menu-button"
-                aria-expanded="false"
-            >
-                <Icon name="mdi:menu" class="w-6 h-6" id="menu-open-icon" />
-                <Icon
-                    name="mdi:close"
-                    class="w-6 h-6 hidden"
-                    id="menu-close-icon"
-                />
-            </button>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <div
-            class="md:hidden fixed inset-0 top-16 bg-surface/95 backdrop-blur-xl transform transition-transform duration-300 translate-x-full"
-            id="mobile-menu"
-        >
-            <div
-                class="px-2 pt-2 pb-3 space-y-1 h-[calc(100vh-4rem)] overflow-y-auto"
-            >
-                {
-                    links.map((link) => (
-                        <>
-                            {!link.children ? (
-                                <a
-                                    href={link.href}
-                                    class="block px-3 py-2 text-subtle hover:text-pine transition-colors duration-300 font-medium tracking-wide text-sm rounded-md hover:bg-highlight-low"
-                                >
-                                    {link.label}
-                                </a>
-                            ) : (
-                                <div class="space-y-1">
-                                    <div class="px-3 py-2 text-subtle font-medium tracking-wide text-sm">
-                                        {link.label}
-                                    </div>
-                                    <div class="pl-6 space-y-1">
-                                        {link.children.map((child) => (
-                                            <a
-                                                href={child.href}
-                                                class="block px-3 py-2 text-subtle hover:text-pine transition-colors duration-300 text-sm rounded-md hover:bg-highlight-low"
-                                            >
-                                                {child.label}
-                                            </a>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-                        </>
-                    ))
-                }
-            </div>
-        </div>
+      <!-- Mobile Menu Button -->
+      <button
+        class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-subtle hover:text-text hover:bg-highlight-low transition-colors duration-300"
+        aria-label="Menu"
+        id="mobile-menu-button"
+        aria-expanded="false"
+      >
+        <Icon name="mdi:menu" class="w-6 h-6" id="menu-open-icon" />
+        <Icon name="mdi:close" class="w-6 h-6 hidden" id="menu-close-icon" />
+      </button>
     </div>
+
+    <!-- Mobile Navigation -->
+    <div
+      class="md:hidden fixed inset-0 top-16 bg-surface/95 backdrop-blur-xl transform transition-transform duration-300 translate-x-full"
+      id="mobile-menu"
+    >
+      <div
+        class="px-2 pt-2 pb-3 space-y-1 h-[calc(100vh-4rem)] overflow-y-auto"
+      >
+        {
+          links.map((link) => (
+            <>
+              {!link.children ? (
+                <a
+                  href={link.href}
+                  class="block px-3 py-2 text-subtle hover:text-pine transition-colors duration-300 font-medium tracking-wide text-sm rounded-md hover:bg-highlight-low"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <div class="space-y-1">
+                  <div class="px-3 py-2 text-subtle font-medium tracking-wide text-sm">
+                    {link.label}
+                  </div>
+                  <div class="pl-6 space-y-1">
+                    {link.children.map((child) => (
+                      <a
+                        href={child.href}
+                        class="block px-3 py-2 text-subtle hover:text-pine transition-colors duration-300 text-sm rounded-md hover:bg-highlight-low"
+                      >
+                        {child.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </>
+          ))
+        }
+      </div>
+    </div>
+  </div>
 </nav>
 
 <script>
-    const mobileMenuButton = document.getElementById("mobile-menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const menuOpenIcon = document.getElementById("menu-open-icon");
-    const menuCloseIcon = document.getElementById("menu-close-icon");
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuOpenIcon = document.getElementById("menu-open-icon");
+  const menuCloseIcon = document.getElementById("menu-close-icon");
 
-    let isMenuOpen = false;
+  let isMenuOpen = false;
 
-    mobileMenuButton?.addEventListener("click", () => {
-        isMenuOpen = !isMenuOpen;
-        mobileMenu?.classList.toggle("translate-x-full");
-        menuOpenIcon?.classList.toggle("hidden");
-        menuCloseIcon?.classList.toggle("hidden");
-        mobileMenuButton.setAttribute("aria-expanded", isMenuOpen.toString());
-        document.body.style.overflow = isMenuOpen ? "hidden" : "";
-    });
+  mobileMenuButton?.addEventListener("click", () => {
+    isMenuOpen = !isMenuOpen;
+    mobileMenu?.classList.toggle("translate-x-full");
+    menuOpenIcon?.classList.toggle("hidden");
+    menuCloseIcon?.classList.toggle("hidden");
+    mobileMenuButton.setAttribute("aria-expanded", isMenuOpen.toString());
+    document.body.style.overflow = isMenuOpen ? "hidden" : "";
+  });
 </script>

@@ -3,98 +3,98 @@ import { Icon } from "astro-icon/components";
 import type { Colors } from "../utils/colors";
 
 interface Props {
-    href: string;
-    color?: Colors;
-    class?: string;
-    icon?: string | undefined;
-    external?: boolean;
-    style?: string;
+  href: string;
+  color?: Colors;
+  class?: string;
+  icon?: string | undefined;
+  external?: boolean;
+  style?: string;
 }
 
 const {
-    href,
-    color = "pine",
-    class: className = "",
-    icon,
-    external,
-    style,
+  href,
+  color = "pine",
+  class: className = "",
+  icon,
+  external,
+  style,
 } = Astro.props;
 
 const colors = {
-    pine: {
-        bg: "bg-pine/10",
-        hover: "hover:bg-pine/20",
-        text: "text-pine",
-        border: "border-pine/20",
-        hoverBorder: "hover:border-pine/30",
-    },
-    love: {
-        bg: "bg-love/10",
-        hover: "hover:bg-love/20",
-        text: "text-love",
-        border: "border-love/20",
-        hoverBorder: "hover:border-love/30",
-    },
-    foam: {
-        bg: "bg-foam/10",
-        hover: "hover:bg-foam/20",
-        text: "text-foam",
-        border: "border-foam/20",
-        hoverBorder: "hover:border-foam/30",
-    },
-    rose: {
-        bg: "bg-rose/10",
-        hover: "hover:bg-rose/20",
-        text: "text-rose",
-        border: "border-rose/20",
-        hoverBorder: "hover:border-rose/30",
-    },
-    gold: {
-        bg: "bg-gold/10",
-        hover: "hover:bg-gold/20",
-        text: "text-gold",
-        border: "border-gold/20",
-        hoverBorder: "hover:border-gold/30",
-    },
-    iris: {
-        bg: "bg-iris/10",
-        hover: "hover:bg-iris/20",
-        text: "text-iris",
-        border: "border-iris/20",
-        hoverBorder: "hover:border-iris/30",
-    },
+  pine: {
+    bg: "bg-pine/10",
+    hover: "hover:bg-pine/20",
+    text: "text-pine",
+    border: "border-pine/20",
+    hoverBorder: "hover:border-pine/30",
+  },
+  love: {
+    bg: "bg-love/10",
+    hover: "hover:bg-love/20",
+    text: "text-love",
+    border: "border-love/20",
+    hoverBorder: "hover:border-love/30",
+  },
+  foam: {
+    bg: "bg-foam/10",
+    hover: "hover:bg-foam/20",
+    text: "text-foam",
+    border: "border-foam/20",
+    hoverBorder: "hover:border-foam/30",
+  },
+  rose: {
+    bg: "bg-rose/10",
+    hover: "hover:bg-rose/20",
+    text: "text-rose",
+    border: "border-rose/20",
+    hoverBorder: "hover:border-rose/30",
+  },
+  gold: {
+    bg: "bg-gold/10",
+    hover: "hover:bg-gold/20",
+    text: "text-gold",
+    border: "border-gold/20",
+    hoverBorder: "hover:border-gold/30",
+  },
+  iris: {
+    bg: "bg-iris/10",
+    hover: "hover:bg-iris/20",
+    text: "text-iris",
+    border: "border-iris/20",
+    hoverBorder: "hover:border-iris/30",
+  },
 };
 
 const colorConfig = colors[color as keyof typeof colors];
 ---
 
 <a
-    href={href}
-    {...external && { target: "_blank", rel: "noopener noreferrer" }}
-    class:list={[
-        "group relative px-8 py-3",
-        colorConfig.bg,
-        colorConfig.text,
-        "rounded-full border",
-        colorConfig.border,
-        colorConfig.hover,
-        colorConfig.hoverBorder,
-        "transition-all duration-300",
-        "font-medium text-base tracking-wide",
-        "inline-flex items-center gap-2",
-        className,
-    ]}
+  href={href}
+  {...external && { target: "_blank", rel: "noopener noreferrer" }}
+  class:list={[
+    "group relative px-8 py-3",
+    colorConfig.bg,
+    colorConfig.text,
+    "rounded-full border",
+    colorConfig.border,
+    colorConfig.hover,
+    colorConfig.hoverBorder,
+    "transition-all duration-300",
+    "font-medium text-base tracking-wide",
+    "inline-flex items-center gap-2",
+    className,
+  ]}
 >
-    <span class="relative z-10">
-        <slot />
-    </span>
-    {
-        icon && (
-            <Icon
-                name={icon}
-                class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"
-                style={style}
-            />
-        )
-    }
+  <span class="relative z-10">
+    <slot />
+  </span>
+  {
+    icon && (
+      <Icon
+        name={icon}
+        class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"
+        style={style}
+      />
+    )
+  }
 </a>

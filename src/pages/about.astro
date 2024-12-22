@@ -1,175 +1,172 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Navbar from "../components/Navbar.astro";
+import Button from "../components/Button.astro";
 import Hero from "../components/Hero.astro";
+import Navbar from "../components/Navbar.astro";
 import Section from "../components/Section.astro";
 import SectionHeader from "../components/SectionHeader.astro";
-import BackgroundShapes from "../components/BackgroundShapes.astro";
-import Button from "../components/Button.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import type { Colors } from "../utils/colors";
 
 type Hero = {
-    title: string;
-    subtitle: string;
-    cta: {
-        text: string;
-        href: string;
-        color: Colors;
-        icon: string;
-    };
+  title: string;
+  subtitle: string;
+  cta: {
+    text: string;
+    href: string;
+    color: Colors;
+    icon: string;
+  };
 };
 const hero: Hero = {
-    title: "Hi, I'm Dr. Sita",
-    subtitle:
-        "I empower individuals to take charge of their sexual and reproductive health through comprehensive care and education.",
-    cta: {
-        text: "Get to know more about me",
-        href: "#story",
-        color: "pine",
-        icon: "mdi:arrow-right",
-    },
+  title: "Hi, I'm Dr. Sita",
+  subtitle:
+    "I empower individuals to take charge of their sexual and reproductive health through comprehensive care and education.",
+  cta: {
+    text: "Get to know more about me",
+    href: "#story",
+    color: "pine",
+    icon: "mdi:arrow-right",
+  },
 };
 
 const story = {
-    title: "How I got where I am now",
-    paragraphs: [
-        "As a distinguished Sexual Health Consultant and Gynecologist based in Kerala, India, I've dedicated my career to breaking barriers in sexual health education and care. My journey began with a vision to create a more open and informed society where discussions about sexual health are normalized and accessible.",
-        "Through my YouTube channel \"Dr Sita's Mind Body Care\" and social media presence, I've found innovative ways to reach and educate people about important health topics. This platform has allowed me to extend my impact beyond the clinic, creating a community where learning about health is engaging and accessible.",
-    ],
+  title: "How I got where I am now",
+  paragraphs: [
+    "As a distinguished Sexual Health Consultant and Gynecologist based in Kerala, India, I've dedicated my career to breaking barriers in sexual health education and care. My journey began with a vision to create a more open and informed society where discussions about sexual health are normalized and accessible.",
+    "Through my YouTube channel \"Dr Sita's Mind Body Care\" and social media presence, I've found innovative ways to reach and educate people about important health topics. This platform has allowed me to extend my impact beyond the clinic, creating a community where learning about health is engaging and accessible.",
+  ],
 };
 
 const values = {
-    title: "Here are the values I live by",
-    items: [
-        {
-            title: "Empowerment through Education",
-            description:
-                "Knowledge is the key to better health decisions. I believe in making medical knowledge accessible and understandable to everyone.",
-            color: "foam",
-        },
-        {
-            title: "Holistic Wellness",
-            description:
-                "True health encompasses both body and mind. I approach healthcare with a comprehensive perspective that considers all aspects of wellbeing.",
-            color: "love",
-        },
-        {
-            title: "Breaking Taboos",
-            description:
-                "Open discussions about sexual health are essential for a healthier society. I work to create safe spaces for these important conversations.",
-            color: "iris",
-        },
-    ],
+  title: "Here are the values I live by",
+  items: [
+    {
+      title: "Empowerment through Education",
+      description:
+        "Knowledge is the key to better health decisions. I believe in making medical knowledge accessible and understandable to everyone.",
+      color: "foam",
+    },
+    {
+      title: "Holistic Wellness",
+      description:
+        "True health encompasses both body and mind. I approach healthcare with a comprehensive perspective that considers all aspects of wellbeing.",
+      color: "love",
+    },
+    {
+      title: "Breaking Taboos",
+      description:
+        "Open discussions about sexual health are essential for a healthier society. I work to create safe spaces for these important conversations.",
+      color: "iris",
+    },
+  ],
 };
 
 const expertise = {
-    title: "Areas of Expertise",
-    areas: [
-        "Sexual Health Consultation",
-        "Gynecological Care",
-        "Women's Wellness",
-        "Holistic Health Education",
-        "Preventive Healthcare",
-        "Wellness Coaching",
-    ],
+  title: "Areas of Expertise",
+  areas: [
+    "Sexual Health Consultation",
+    "Gynecological Care",
+    "Women's Wellness",
+    "Holistic Health Education",
+    "Preventive Healthcare",
+    "Wellness Coaching",
+  ],
 };
 
 type Cta = {
-    title: string;
-    subtitle: string;
-    button: {
-        text: string;
-        href: string;
-        color: Colors;
-        icon: string;
-    };
+  title: string;
+  subtitle: string;
+  button: {
+    text: string;
+    href: string;
+    color: Colors;
+    icon: string;
+  };
 };
 const cta: Cta = {
-    title: "Ready to take charge of your health?",
-    subtitle:
-        "Schedule a consultation and begin your journey towards holistic wellness.",
-    button: {
-        text: "Schedule a Consultation",
-        href: "/contact",
-        color: "love",
-        icon: "mdi:calendar",
-    },
+  title: "Ready to take charge of your health?",
+  subtitle:
+    "Schedule a consultation and begin your journey towards holistic wellness.",
+  button: {
+    text: "Schedule a Consultation",
+    href: "/contact",
+    color: "love",
+    icon: "mdi:calendar",
+  },
 };
 ---
 
 <BaseLayout title="About | Dr. Sita">
-    <Navbar />
+  <Navbar />
 
-    <main>
-        <Hero title={hero.title} subtitle={hero.subtitle} action={hero.cta} />
+  <main>
+    <Hero title={hero.title} subtitle={hero.subtitle} action={hero.cta} />
 
-        <!-- Story Section -->
-        <Section>
-            <SectionHeader title={story.title} />
-            <div class="prose prose-xl prose-invert">
-                {
-                    story.paragraphs.map((paragraph) => (
-                        <p class="text-2xl text-subtle/90 leading-relaxed mb-8">
-                            {paragraph}
-                        </p>
-                    ))
-                }
+    <!-- Story Section -->
+    <Section>
+      <SectionHeader title={story.title} />
+      <div class="prose prose-xl prose-invert">
+        {
+          story.paragraphs.map((paragraph) => (
+            <p class="text-2xl text-subtle/90 leading-relaxed mb-8">
+              {paragraph}
+            </p>
+          ))
+        }
+      </div>
+    </Section>
+
+    <!-- Values Section -->
+    <Section>
+      <SectionHeader title={values.title} class="mb-16" />
+      <div class="grid gap-16">
+        {
+          values.items.map((value) => (
+            <div class="space-y-6">
+              <h3 class={`text-2xl font-display`}>{value.title}</h3>
+              <p class="text-2xl text-subtle/90 leading-relaxed">
+                {value.description}
+              </p>
             </div>
-        </Section>
+          ))
+        }
+      </div>
+    </Section>
 
-        <!-- Values Section -->
-        <Section>
-            <SectionHeader title={values.title} class="mb-16" />
-            <div class="grid gap-16">
-                {
-                    values.items.map((value) => (
-                        <div class="space-y-6">
-                            <h3 class={`text-2xl font-display`}>
-                                {value.title}
-                            </h3>
-                            <p class="text-2xl text-subtle/90 leading-relaxed">
-                                {value.description}
-                            </p>
-                        </div>
-                    ))
-                }
+    <!-- Areas of Expertise -->
+    <Section>
+      <SectionHeader title={expertise.title} class="mb-16" />
+      <div class="grid sm:grid-cols-2 gap-8">
+        {
+          expertise.areas.map((item) => (
+            <div class="flex items-center gap-4 text-subtle/90">
+              <div class="w-3 h-3 rounded-full bg-foam" />
+              <span class="text-2xl">{item}</span>
             </div>
-        </Section>
+          ))
+        }
+      </div>
+    </Section>
 
-        <!-- Areas of Expertise -->
-        <Section>
-            <SectionHeader title={expertise.title} class="mb-16" />
-            <div class="grid sm:grid-cols-2 gap-8">
-                {
-                    expertise.areas.map((item) => (
-                        <div class="flex items-center gap-4 text-subtle/90">
-                            <div class="w-3 h-3 rounded-full bg-foam" />
-                            <span class="text-2xl">{item}</span>
-                        </div>
-                    ))
-                }
-            </div>
-        </Section>
-
-        <!-- CTA Section -->
-        <Section class="py-32">
-            <div class="text-center space-y-12">
-                <h2 class="text-5xl md:text-6xl font-display text-text">
-                    {cta.title}
-                </h2>
-                <p class="text-2xl text-subtle/90 leading-relaxed">
-                    {cta.subtitle}
-                </p>
-                <div class="pt-4">
-                    <Button
-                        href={cta.button.href}
-                        color={cta.button.color}
-                        icon={cta.button.icon}
-                    >
-                        {cta.button.text}
-                    </Button>
-                </div>
-            </div>
-        </Section>
-    </main>
+    <!-- CTA Section -->
+    <Section class="py-32">
+      <div class="text-center space-y-12">
+        <h2 class="text-5xl md:text-6xl font-display text-text">
+          {cta.title}
+        </h2>
+        <p class="text-2xl text-subtle/90 leading-relaxed">
+          {cta.subtitle}
+        </p>
+        <div class="pt-4">
+          <Button
+            href={cta.button.href}
+            color={cta.button.color}
+            icon={cta.button.icon}
+          >
+            {cta.button.text}
+          </Button>
+        </div>
+      </div>
+    </Section>
+  </main>
 </BaseLayout>
