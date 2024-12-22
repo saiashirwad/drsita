@@ -4,9 +4,16 @@ interface Props {
     color?: "pine" | "love";
     class?: string;
     icon?: "arrow" | "calendar" | undefined;
+    external?: boolean;
 }
 
-const { href, color = "pine", class: className = "", icon } = Astro.props;
+const {
+    href,
+    color = "pine",
+    class: className = "",
+    icon,
+    external,
+} = Astro.props;
 
 const colors = {
     pine: {
@@ -43,6 +50,7 @@ const colorConfig = colors[color];
 
 <a
     href={href}
+    {...external && { target: "_blank", rel: "noopener noreferrer" }}
     class:list={[
         "group relative px-8 py-3",
         colorConfig.bg,

@@ -2,75 +2,153 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import GradientButton from "../components/GradientButton.astro";
+import BackgroundShapes from "../components/BackgroundShapes.astro";
 ---
 
 <Layout title="About - Dr. Sita">
     <Navbar />
 
-    <main class="min-h-screen pt-32 pb-24 px-6 bg-base">
-        <div class="max-w-3xl mx-auto">
-            <h1
-                class="text-4xl md:text-5xl font-display text-text mb-8 tracking-tight text-center"
-            >
-                About Dr. Sita
-            </h1>
-
-            <div class="prose prose-invert mx-auto">
-                <div class="bg-surface/50 rounded-2xl p-8 shadow-xl mb-12">
-                    <h2 class="text-2xl font-display text-text mb-4">
-                        Professional Background
-                    </h2>
-                    <p class="text-subtle leading-relaxed mb-6">
-                        Dr. Sita is a distinguished Sexual Health Consultant and
-                        Gynecologist with extensive experience in women's health
-                        and wellness. With a practice based in Kerala, India,
-                        she has dedicated her career to providing comprehensive
-                        care that bridges traditional medicine with holistic
-                        wellness approaches.
+    <main class="bg-base">
+        <!-- Hero Section -->
+        <section
+            class="min-h-[80vh] relative flex items-center pt-32 pb-24 px-6"
+        >
+            <BackgroundShapes />
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="max-w-4xl">
+                    <h1
+                        class="text-6xl md:text-7xl lg:text-8xl font-display text-text tracking-tight opacity-0 animate-fade-up mb-8"
+                    >
+                        Hi, I'm Dr. Sita
+                    </h1>
+                    <p
+                        class="text-3xl md:text-4xl text-subtle/90 font-light max-w-3xl opacity-0 animate-fade-up animation-delay-100 leading-relaxed"
+                    >
+                        I empower individuals to take charge of their sexual and
+                        reproductive health through comprehensive care and
+                        education.
                     </p>
-                    <p class="text-subtle leading-relaxed">
-                        As a wellness coach and educator, she is passionate
-                        about empowering individuals with knowledge about sexual
-                        health and well-being through her YouTube channel "Dr
-                        Sita's Mind Body Care" and various social media
-                        platforms.
+                    <div
+                        class="mt-12 opacity-0 animate-fade-up animation-delay-200"
+                    >
+                        <GradientButton href="#story" color="pine" icon="arrow">
+                            Get to know more about me
+                        </GradientButton>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section id="story" class="py-24 px-6 bg-surface/50">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-display text-text mb-12">
+                    How I got where I am now
+                </h2>
+
+                <div class="prose prose-lg prose-invert">
+                    <p class="text-xl text-subtle leading-relaxed">
+                        As a distinguished Sexual Health Consultant and
+                        Gynecologist based in Kerala, India, I've dedicated my
+                        career to breaking barriers in sexual health education
+                        and care. My journey began with a vision to create a
+                        more open and informed society where discussions about
+                        sexual health are normalized and accessible.
                     </p>
-                </div>
 
-                <div class="bg-surface/50 rounded-2xl p-8 shadow-xl mb-12">
-                    <h2 class="text-2xl font-display text-text mb-4">
-                        Areas of Expertise
-                    </h2>
-                    <ul class="space-y-3 text-subtle">
-                        <li>• Sexual Health Consultation</li>
-                        <li>• Gynecological Care</li>
-                        <li>• Women's Wellness</li>
-                        <li>• Holistic Health Education</li>
-                        <li>• Preventive Healthcare</li>
-                    </ul>
-                </div>
-
-                <div class="bg-surface/50 rounded-2xl p-8 shadow-xl">
-                    <h2 class="text-2xl font-display text-text mb-4">
-                        Mission
-                    </h2>
-                    <p class="text-subtle leading-relaxed">
-                        Dr. Sita's mission is to provide comprehensive
-                        healthcare while educating and empowering individuals to
-                        take charge of their sexual and reproductive health.
-                        Through her practice and educational content, she aims
-                        to break taboos and create open discussions about sexual
-                        health in society.
+                    <p class="text-xl text-subtle leading-relaxed">
+                        Through my YouTube channel "Dr Sita's Mind Body Care"
+                        and social media presence, I've found innovative ways to
+                        reach and educate people about important health topics.
+                        This platform has allowed me to extend my impact beyond
+                        the clinic, creating a community where learning about
+                        health is engaging and accessible.
                     </p>
                 </div>
             </div>
+        </section>
 
-            <div class="text-center mt-12">
-                <GradientButton href="/contact" color="love">
+        <!-- Values Section -->
+        <section class="py-24 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-display text-text mb-12">
+                    Here are the values I live by
+                </h2>
+
+                <div class="grid gap-12">
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-display text-foam">
+                            Empowerment through Education
+                        </h3>
+                        <p class="text-subtle leading-relaxed">
+                            Knowledge is the key to better health decisions. I
+                            believe in making medical knowledge accessible and
+                            understandable to everyone.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-display text-love">
+                            Holistic Wellness
+                        </h3>
+                        <p class="text-subtle leading-relaxed">
+                            True health encompasses both body and mind. I
+                            approach healthcare with a comprehensive perspective
+                            that considers all aspects of wellbeing.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-display text-iris">
+                            Breaking Taboos
+                        </h3>
+                        <p class="text-subtle leading-relaxed">
+                            Open discussions about sexual health are essential
+                            for a healthier society. I work to create safe
+                            spaces for these important conversations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Areas of Expertise -->
+        <section class="py-24 px-6 bg-surface/50">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-display text-text mb-12">
+                    Areas of Expertise
+                </h2>
+
+                <div class="grid sm:grid-cols-2 gap-8">
+                    {
+                        [
+                            "Sexual Health Consultation",
+                            "Gynecological Care",
+                            "Women's Wellness",
+                            "Holistic Health Education",
+                            "Preventive Healthcare",
+                            "Wellness Coaching",
+                        ].map((item) => (
+                            <div class="flex items-center gap-3 text-subtle">
+                                <div class="w-2 h-2 rounded-full bg-foam" />
+                                <span class="text-lg">{item}</span>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-display text-text mb-8">
+                    Ready to take charge of your health?
+                </h2>
+                <GradientButton href="/contact" color="love" icon="calendar">
                     Schedule a Consultation
                 </GradientButton>
             </div>
-        </div>
+        </section>
     </main>
 </Layout>
-
