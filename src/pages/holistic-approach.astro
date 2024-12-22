@@ -1,384 +1,347 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
-import BackgroundShapes from "../components/BackgroundShapes.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
 import Button from "../components/Button.astro";
 ---
 
-<Layout title="Holistic Approach - Dr. Sita">
+<BaseLayout title="Holistic Approach - Dr. Sita">
     <Navbar />
 
-    <main class="bg-base min-h-screen">
-        <!-- Hero Section -->
-        <section
-            class="min-h-[60vh] relative flex items-center justify-center pt-32 pb-24 px-4 sm:px-6"
-        >
-            <BackgroundShapes />
-            <div class="container mx-auto w-full">
-                <div class="container mx-auto text-center">
-                    <h1
-                        class="text-6xl md:text-7xl lg:text-8xl font-display text-text tracking-tight opacity-0 animate-fade-up mb-8"
-                    >
-                        Holistic Approach
-                    </h1>
-                    <p
-                        class="text-3xl md:text-4xl text-subtle/90 font-light opacity-0 animate-fade-up animation-delay-100 leading-relaxed"
-                    >
-                        Integrating mind, body, and spirit for comprehensive
-                        healing and wellness.
-                    </p>
-                </div>
-            </div>
-        </section>
+    <main>
+        <Hero
+            title="Holistic Approach"
+            subtitle="Integrating mind, body, and spirit for comprehensive healing and wellness."
+        />
 
         <!-- Overview Section -->
-        <section class="py-24 px-4 sm:px-6">
-            <div class="container mx-auto">
-                <div
-                    class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
-                >
-                    <h2 class="text-4xl font-display text-text mb-8">
-                        Our Holistic Philosophy
-                    </h2>
-                    <p class="text-xl text-subtle/90 leading-relaxed mb-8">
-                        At Dr. Sita's Mind Body Care, we believe in treating the
-                        whole person, not just symptoms. Our holistic approach
-                        combines traditional medical knowledge with
-                        complementary therapies to achieve optimal health and
-                        wellness. We understand that physical, emotional, and
-                        mental well-being are interconnected, and true healing
-                        requires addressing all aspects of health.
-                    </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                        <div>
-                            <h3 class="text-2xl font-display text-foam mb-4">
-                                Core Principles
-                            </h3>
-                            <ul class="space-y-4">
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+        <Section>
+            <div
+                class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
+            >
+                <SectionHeader title="Our Holistic Philosophy" class="mb-8" />
+                <p class="text-xl text-subtle/90 leading-relaxed mb-8">
+                    At Dr. Sita's Mind Body Care, we believe in treating the
+                    whole person, not just symptoms. Our holistic approach
+                    combines traditional medical knowledge with complementary
+                    therapies to achieve optimal health and wellness. We
+                    understand that physical, emotional, and mental well-being
+                    are interconnected, and true healing requires addressing all
+                    aspects of health.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                    <div>
+                        <h3 class="text-2xl font-display text-foam mb-4">
+                            Core Principles
+                        </h3>
+                        <ul class="space-y-4">
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-foam mt-2.5"
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-foam mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Integration of mind-body-spirit
-                                        connection</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+                                </div>
+                                <span
+                                    >Integration of mind-body-spirit connection</span
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-foam mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Evidence-based complementary therapies</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-foam mt-2.5"
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-foam mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Personalized treatment plans</span>
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+                                </div>
+                                <span
+                                    >Evidence-based complementary therapies</span
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-foam mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Focus on prevention and wellness</span
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-display text-iris mb-4">
-                                Benefits
-                            </h3>
-                            <ul class="space-y-4">
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-foam mt-2.5"
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-iris mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Improved overall well-being</span>
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+                                </div>
+                                <span>Personalized treatment plans</span>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-foam mt-2.5"
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-iris mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Better stress management</span>
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+                                </div>
+                                <span>Focus on prevention and wellness</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-display text-iris mb-4">
+                            Benefits
+                        </h3>
+                        <ul class="space-y-4">
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-iris mt-2.5"
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-iris mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Enhanced emotional balance</span>
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+                                </div>
+                                <span>Improved overall well-being</span>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-iris mt-2.5"
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-iris mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Sustainable health improvements</span>
-                                </li>
-                            </ul>
-                        </div>
+                                </div>
+                                <span>Better stress management</span>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-iris mt-2.5"
+                                >
+                                </div>
+                                <span>Enhanced emotional balance</span>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-iris mt-2.5"
+                                >
+                                </div>
+                                <span>Sustainable health improvements</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
 
         <!-- Treatment Methods Section -->
-        <section class="py-24 px-4 sm:px-6">
-            <div class="container mx-auto">
-                <h2 class="text-4xl font-display text-text mb-12">
-                    Our Treatment Methods
-                </h2>
-
-                <div class="grid grid-cols-1 gap-8">
-                    <div
-                        class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
-                    >
-                        <h3 class="text-3xl font-display text-foam mb-6">
-                            Mindfulness and Meditation
-                        </h3>
-                        <p class="text-xl text-subtle/90 leading-relaxed mb-6">
-                            Our mindfulness practices help you develop greater
-                            awareness, reduce stress, and improve emotional
-                            regulation. Through guided meditation and
-                            mindfulness exercises, you'll learn to stay present
-                            and manage anxiety effectively.
-                        </p>
-                        <div class="mt-8">
-                            <h4 class="text-xl font-display text-foam mb-4">
-                                Techniques Include:
-                            </h4>
-                            <ul class="space-y-4">
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-foam mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Breath awareness meditation</span>
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-foam mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Body scan meditation</span>
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-foam mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Loving-kindness meditation</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
-                    >
-                        <h3 class="text-3xl font-display text-iris mb-6">
-                            Yoga and Movement Therapy
-                        </h3>
-                        <p class="text-xl text-subtle/90 leading-relaxed mb-6">
-                            Our yoga programs combine physical postures,
-                            breathing exercises, and meditation to promote
-                            physical strength, flexibility, and mental clarity.
-                            Sessions are tailored to your comfort level and
-                            specific needs.
-                        </p>
-                        <div class="mt-8">
-                            <h4 class="text-xl font-display text-iris mb-4">
-                                Components:
-                            </h4>
-                            <ul class="space-y-4">
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-iris mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Gentle yoga sequences</span>
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-iris mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Pranayama (breathing exercises)</span>
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-iris mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Restorative poses</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
-                    >
-                        <h3 class="text-3xl font-display text-love mb-6">
-                            Acupuncture and Energy Work
-                        </h3>
-                        <p class="text-xl text-subtle/90 leading-relaxed mb-6">
-                            Our acupuncture treatments help balance the body's
-                            energy systems, reduce pain, and promote natural
-                            healing. Combined with traditional energy work,
-                            these therapies support both physical and emotional
-                            well-being.
-                        </p>
-                        <div class="mt-8">
-                            <h4 class="text-xl font-display text-love mb-4">
-                                Benefits:
-                            </h4>
-                            <ul class="space-y-4">
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-love mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Stress and anxiety reduction</span>
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-love mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Pain management</span>
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-love mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Improved energy flow</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Integration Section -->
-        <section class="py-24 px-4 sm:px-6">
-            <div class="container mx-auto">
+        <Section>
+            <SectionHeader title="Our Treatment Methods" />
+            <div class="grid grid-cols-1 gap-8">
                 <div
                     class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
                 >
-                    <h2 class="text-4xl font-display text-text mb-8">
-                        Integrative Approach
-                    </h2>
-                    <p class="text-xl text-subtle/90 leading-relaxed mb-8">
-                        Our treatments are carefully integrated to provide
-                        comprehensive care. We combine different modalities
-                        based on your specific needs and goals, ensuring a
-                        balanced and effective healing journey.
+                    <h3 class="text-3xl font-display text-foam mb-6">
+                        Mindfulness and Meditation
+                    </h3>
+                    <p class="text-xl text-subtle/90 leading-relaxed mb-6">
+                        Our mindfulness practices help you develop greater
+                        awareness, reduce stress, and improve emotional
+                        regulation. Through guided meditation and mindfulness
+                        exercises, you'll learn to stay present and manage
+                        anxiety effectively.
                     </p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div>
-                            <h3 class="text-2xl font-display text-foam mb-4">
-                                Assessment
-                            </h3>
-                            <p class="text-lg text-subtle/90 leading-relaxed">
-                                Thorough evaluation of your physical, emotional,
-                                and lifestyle factors to create a personalized
-                                treatment plan.
-                            </p>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-display text-iris mb-4">
-                                Treatment
-                            </h3>
-                            <p class="text-lg text-subtle/90 leading-relaxed">
-                                Combination of therapies tailored to address
-                                your specific concerns and support overall
-                                wellness.
-                            </p>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-display text-love mb-4">
-                                Support
-                            </h3>
-                            <p class="text-lg text-subtle/90 leading-relaxed">
-                                Ongoing guidance and adjustments to ensure
-                                optimal results and sustainable health
-                                improvements.
-                            </p>
-                        </div>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-display text-foam mb-4">
+                            Techniques Include:
+                        </h4>
+                        <ul class="space-y-4">
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-foam mt-2.5"
+                                >
+                                </div>
+                                <span>Breath awareness meditation</span>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-foam mt-2.5"
+                                >
+                                </div>
+                                <span>Body scan meditation</span>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-foam mt-2.5"
+                                >
+                                </div>
+                                <span>Loving-kindness meditation</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
+                >
+                    <h3 class="text-3xl font-display text-iris mb-6">
+                        Yoga and Movement Therapy
+                    </h3>
+                    <p class="text-xl text-subtle/90 leading-relaxed mb-6">
+                        Our yoga programs combine physical postures, breathing
+                        exercises, and meditation to promote physical strength,
+                        flexibility, and mental clarity. Sessions are tailored
+                        to your comfort level and specific needs.
+                    </p>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-display text-iris mb-4">
+                            Components:
+                        </h4>
+                        <ul class="space-y-4">
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-iris mt-2.5"
+                                >
+                                </div>
+                                <span>Gentle yoga sequences</span>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-iris mt-2.5"
+                                >
+                                </div>
+                                <span>Pranayama (breathing exercises)</span>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-iris mt-2.5"
+                                >
+                                </div>
+                                <span>Restorative poses</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
+                >
+                    <h3 class="text-3xl font-display text-love mb-6">
+                        Acupuncture and Energy Work
+                    </h3>
+                    <p class="text-xl text-subtle/90 leading-relaxed mb-6">
+                        Our acupuncture treatments help balance the body's
+                        energy systems, reduce pain, and promote natural
+                        healing. Combined with traditional energy work, these
+                        therapies support both physical and emotional
+                        well-being.
+                    </p>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-display text-love mb-4">
+                            Benefits:
+                        </h4>
+                        <ul class="space-y-4">
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-love mt-2.5"
+                                >
+                                </div>
+                                <span>Stress and anxiety reduction</span>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-love mt-2.5"
+                                >
+                                </div>
+                                <span>Pain management</span>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-love mt-2.5"
+                                >
+                                </div>
+                                <span>Improved energy flow</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
 
-        <!-- CTA Section -->
-        <section class="py-24 px-4 sm:px-6">
-            <div class="container mx-auto">
-                <div
-                    class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl text-center"
-                >
-                    <h2
-                        class="text-4xl md:text-5xl font-display text-text mb-8"
-                    >
-                        Begin Your Healing Journey
-                    </h2>
-                    <p
-                        class="text-xl text-subtle/90 leading-relaxed mb-8 max-w-2xl mx-auto"
-                    >
-                        Experience the transformative power of our holistic
-                        approach. Schedule a consultation to discover how we can
-                        support your wellness goals.
-                    </p>
-                    <Button href="/contact" color="love" icon="mdi:calendar">
-                        Schedule a Consultation
-                    </Button>
+        <!-- Integration Section -->
+        <Section>
+            <div
+                class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
+            >
+                <SectionHeader title="Integrative Approach" class="mb-8" />
+                <p class="text-xl text-subtle/90 leading-relaxed mb-8">
+                    Our treatments are carefully integrated to provide
+                    comprehensive care. We combine different modalities based on
+                    your specific needs and goals, ensuring a balanced and
+                    effective healing journey.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-display text-foam mb-4">
+                            Assessment
+                        </h3>
+                        <p class="text-lg text-subtle/90 leading-relaxed">
+                            Thorough evaluation of your physical, emotional, and
+                            lifestyle factors to create a personalized treatment
+                            plan.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-display text-iris mb-4">
+                            Treatment
+                        </h3>
+                        <p class="text-lg text-subtle/90 leading-relaxed">
+                            Combination of therapies tailored to address your
+                            specific concerns and support overall wellness.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-display text-love mb-4">
+                            Support
+                        </h3>
+                        <p class="text-lg text-subtle/90 leading-relaxed">
+                            Ongoing guidance and adjustments to ensure optimal
+                            results and sustainable health improvements.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </Section>
+
+        <!-- CTA Section -->
+        <Section class="py-32">
+            <div
+                class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl text-center"
+            >
+                <h2 class="text-4xl md:text-5xl font-display text-text mb-8">
+                    Begin Your Healing Journey
+                </h2>
+                <p
+                    class="text-xl text-subtle/90 leading-relaxed mb-8 max-w-2xl mx-auto"
+                >
+                    Experience the transformative power of our holistic
+                    approach. Schedule a consultation to discover how we can
+                    support your wellness goals.
+                </p>
+                <Button href="/contact" color="love" icon="mdi:calendar">
+                    Schedule a Consultation
+                </Button>
+            </div>
+        </Section>
     </main>
-</Layout>
+</BaseLayout>

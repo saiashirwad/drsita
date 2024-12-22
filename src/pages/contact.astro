@@ -1,40 +1,39 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
-import BackgroundShapes from "../components/BackgroundShapes.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
 import Button from "../components/Button.astro";
 ---
 
-<Layout title="Contact - Dr. Sita">
+<BaseLayout title="Contact - Dr. Sita">
     <Navbar />
 
-    <main
-        class="min-h-screen bg-base flex items-center justify-center px-4 sm:px-6"
-    >
-        <BackgroundShapes />
-
-        <div class="max-w-container-sm mx-auto text-center">
-            <h1
-                class="text-6xl md:text-7xl font-display text-text tracking-tight opacity-0 animate-fade-up mb-8"
-            >
-                Get in Touch
-            </h1>
-            <p
-                class="text-2xl text-subtle/90 font-light opacity-0 animate-fade-up animation-delay-100 leading-relaxed mb-12"
-            >
-                Schedule a consultation and take the first step towards better
-                health and wellness
-            </p>
-            <div class="opacity-0 animate-fade-up animation-delay-200">
-                <Button
-                    href="https://cal.com/dr-sita"
-                    external
-                    color="love"
-                    icon="mdi:calendar"
+    <main>
+        <Section class="min-h-[80vh] flex items-center justify-center">
+            <div class="text-center">
+                <h1
+                    class="text-6xl md:text-7xl font-display text-text tracking-tight opacity-0 animate-fade-up mb-8"
                 >
-                    Schedule a Consultation
-                </Button>
+                    Get in Touch
+                </h1>
+                <p
+                    class="text-2xl text-subtle/90 font-light opacity-0 animate-fade-up animation-delay-100 leading-relaxed mb-12"
+                >
+                    Schedule a consultation and take the first step towards
+                    better health and wellness
+                </p>
+                <div class="opacity-0 animate-fade-up animation-delay-200">
+                    <Button
+                        href="https://cal.com/dr-sita"
+                        external
+                        color="love"
+                        icon="mdi:calendar"
+                    >
+                        Schedule a Consultation
+                    </Button>
+                </div>
             </div>
-        </div>
+        </Section>
     </main>
-</Layout>
+</BaseLayout>

@@ -1,373 +1,333 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
-import BackgroundShapes from "../components/BackgroundShapes.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
 import Button from "../components/Button.astro";
 ---
 
-<Layout title="Couples Therapy - Dr. Sita">
+<BaseLayout title="Couples Therapy - Dr. Sita">
     <Navbar />
 
-    <main class="bg-base min-h-screen">
-        <!-- Hero Section -->
-        <section
-            class="min-h-[60vh] relative flex items-center justify-center pt-32 pb-24 px-4 sm:px-6"
-        >
-            <BackgroundShapes />
-            <div class="container mx-auto w-full">
-                <div class="container mx-auto text-center">
-                    <h1
-                        class="text-6xl md:text-7xl lg:text-8xl font-display text-text tracking-tight opacity-0 animate-fade-up mb-8"
-                    >
-                        Couples Therapy
-                    </h1>
-                    <p
-                        class="text-3xl md:text-4xl text-subtle/90 font-light opacity-0 animate-fade-up animation-delay-100 leading-relaxed"
-                    >
-                        Rediscover intimacy, strengthen bonds, and build a
-                        healthier relationship together.
-                    </p>
-                </div>
-            </div>
-        </section>
+    <main>
+        <Hero
+            title="Couples Therapy"
+            subtitle="Rediscover intimacy, strengthen bonds, and build a healthier relationship together."
+        />
 
         <!-- Overview Section -->
-        <section class="py-24 px-4 sm:px-6">
-            <div class="container mx-auto">
+        <Section>
+            <div
+                class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
+            >
+                <SectionHeader
+                    title="Our Approach to Couples Therapy"
+                    class="mb-8"
+                />
+                <p class="text-xl text-subtle/90 leading-relaxed mb-8">
+                    At Dr. Sita's Mind Body Care, we understand that every
+                    couple's journey is unique. Our couples therapy program
+                    combines evidence-based practices with holistic approaches
+                    to address intimacy challenges, communication barriers, and
+                    relationship dynamics.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                    <div>
+                        <h3 class="text-2xl font-display text-foam mb-4">
+                            Who Can Benefit
+                        </h3>
+                        <ul class="space-y-4">
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-foam mt-2.5"
+                                >
+                                </div>
+                                <span>Couples with unconsummated marriages</span
+                                >
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-foam mt-2.5"
+                                >
+                                </div>
+                                <span
+                                    >Partners experiencing intimacy challenges</span
+                                >
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-foam mt-2.5"
+                                >
+                                </div>
+                                <span
+                                    >Couples seeking to strengthen their
+                                    emotional connection</span
+                                >
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-foam mt-2.5"
+                                >
+                                </div>
+                                <span
+                                    >Those dealing with sexual dysfunction or
+                                    anxiety</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-display text-iris mb-4">
+                            What to Expect
+                        </h3>
+                        <ul class="space-y-4">
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-iris mt-2.5"
+                                >
+                                </div>
+                                <span
+                                    >Safe, judgment-free environment for open
+                                    discussion</span
+                                >
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-iris mt-2.5"
+                                >
+                                </div>
+                                <span
+                                    >Personalized treatment plans based on your
+                                    specific needs</span
+                                >
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-iris mt-2.5"
+                                >
+                                </div>
+                                <span
+                                    >Integration of mindfulness and relaxation
+                                    techniques</span
+                                >
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-iris mt-2.5"
+                                >
+                                </div>
+                                <span
+                                    >Regular progress assessment and plan
+                                    adjustments</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </Section>
+
+        <!-- Treatment Programs Section -->
+        <Section>
+            <SectionHeader title="Our Treatment Programs" />
+            <div class="grid grid-cols-1 gap-8">
                 <div
                     class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
                 >
-                    <h2 class="text-4xl font-display text-text mb-8">
-                        Our Approach to Couples Therapy
-                    </h2>
-                    <p class="text-xl text-subtle/90 leading-relaxed mb-8">
-                        At Dr. Sita's Mind Body Care, we understand that every
-                        couple's journey is unique. Our couples therapy program
-                        combines evidence-based practices with holistic
-                        approaches to address intimacy challenges, communication
-                        barriers, and relationship dynamics.
+                    <h3 class="text-3xl font-display text-foam mb-6">
+                        Batch Therapy for Couples
+                    </h3>
+                    <p class="text-xl text-subtle/90 leading-relaxed mb-6">
+                        Our signature Batch Therapy program is a comprehensive
+                        approach to addressing intimacy challenges and
+                        unconsummated marriages. This program combines
+                        counseling, education, and practical techniques to help
+                        couples overcome physical and emotional barriers.
                     </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                        <div>
-                            <h3 class="text-2xl font-display text-foam mb-4">
-                                Who Can Benefit
-                            </h3>
-                            <ul class="space-y-4">
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+                    <div class="mt-8">
+                        <h4 class="text-xl font-display text-foam mb-4">
+                            Program Components:
+                        </h4>
+                        <ul class="space-y-4">
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-foam mt-2.5"
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-foam mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Couples with unconsummated marriages</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+                                </div>
+                                <span
+                                    >Individual and couples counseling sessions</span
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-foam mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Partners experiencing intimacy
-                                        challenges</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-foam mt-2.5"
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-foam mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Couples seeking to strengthen their
-                                        emotional connection</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+                                </div>
+                                <span
+                                    >Educational workshops on intimacy and
+                                    sexuality</span
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-foam mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Those dealing with sexual dysfunction
-                                        or anxiety</span
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-display text-iris mb-4">
-                                What to Expect
-                            </h3>
-                            <ul class="space-y-4">
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-foam mt-2.5"
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-iris mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Safe, judgment-free environment for
-                                        open discussion</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+                                </div>
+                                <span>Mindfulness and relaxation exercises</span
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-iris mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Personalized treatment plans based on
-                                        your specific needs</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-foam mt-2.5"
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-iris mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Integration of mindfulness and
-                                        relaxation techniques</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
+                                </div>
+                                <span
+                                    >Practical techniques for building intimacy</span
                                 >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-iris mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Regular progress assessment and plan
-                                        adjustments</span
-                                    >
-                                </li>
-                            </ul>
-                        </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
+                >
+                    <h3 class="text-3xl font-display text-iris mb-6">
+                        Relationship Enhancement Program
+                    </h3>
+                    <p class="text-xl text-subtle/90 leading-relaxed mb-6">
+                        Designed for couples looking to deepen their connection
+                        and improve their relationship quality. This program
+                        focuses on communication, emotional intimacy, and mutual
+                        understanding.
+                    </p>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-display text-iris mb-4">
+                            Key Focus Areas:
+                        </h4>
+                        <ul class="space-y-4">
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-iris mt-2.5"
+                                >
+                                </div>
+                                <span>Effective communication strategies</span>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-iris mt-2.5"
+                                >
+                                </div>
+                                <span>Emotional connection building</span>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-iris mt-2.5"
+                                >
+                                </div>
+                                <span>Conflict resolution skills</span>
+                            </li>
+                            <li
+                                class="flex items-start gap-3 text-lg text-subtle/90"
+                            >
+                                <div
+                                    class="w-2 h-2 rounded-full bg-iris mt-2.5"
+                                >
+                                </div>
+                                <span>Trust and vulnerability exercises</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Treatment Programs Section -->
-        <section class="py-24 px-4 sm:px-6">
-            <div class="container mx-auto">
-                <h2 class="text-4xl font-display text-text mb-12">
-                    Our Treatment Programs
-                </h2>
-
-                <div class="grid grid-cols-1 gap-8">
-                    <div
-                        class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
-                    >
-                        <h3 class="text-3xl font-display text-foam mb-6">
-                            Batch Therapy for Couples
-                        </h3>
-                        <p class="text-xl text-subtle/90 leading-relaxed mb-6">
-                            Our signature Batch Therapy program is a
-                            comprehensive approach to addressing intimacy
-                            challenges and unconsummated marriages. This program
-                            combines counseling, education, and practical
-                            techniques to help couples overcome physical and
-                            emotional barriers.
-                        </p>
-                        <div class="mt-8">
-                            <h4 class="text-xl font-display text-foam mb-4">
-                                Program Components:
-                            </h4>
-                            <ul class="space-y-4">
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-foam mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Individual and couples counseling
-                                        sessions</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-foam mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Educational workshops on intimacy and
-                                        sexuality</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-foam mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Mindfulness and relaxation exercises</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-foam mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Practical techniques for building
-                                        intimacy</span
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
-                    >
-                        <h3 class="text-3xl font-display text-iris mb-6">
-                            Relationship Enhancement Program
-                        </h3>
-                        <p class="text-xl text-subtle/90 leading-relaxed mb-6">
-                            Designed for couples looking to deepen their
-                            connection and improve their relationship quality.
-                            This program focuses on communication, emotional
-                            intimacy, and mutual understanding.
-                        </p>
-                        <div class="mt-8">
-                            <h4 class="text-xl font-display text-iris mb-4">
-                                Key Focus Areas:
-                            </h4>
-                            <ul class="space-y-4">
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-iris mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Effective communication strategies</span
-                                    >
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-iris mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Emotional connection building</span>
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-iris mt-2.5"
-                                    >
-                                    </div>
-                                    <span>Conflict resolution skills</span>
-                                </li>
-                                <li
-                                    class="flex items-start gap-3 text-lg text-subtle/90"
-                                >
-                                    <div
-                                        class="w-2 h-2 rounded-full bg-iris mt-2.5"
-                                    >
-                                    </div>
-                                    <span
-                                        >Trust and vulnerability exercises</span
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </Section>
 
         <!-- Success Stories Section -->
-        <section class="py-24 px-4 sm:px-6">
-            <div class="container mx-auto">
-                <h2 class="text-4xl font-display text-text mb-12">
-                    Success Stories
-                </h2>
-                <div class="grid grid-cols-1 gap-8">
-                    <div
-                        class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
-                    >
-                        <div class="space-y-8">
-                            <blockquote
-                                class="text-xl text-subtle/90 leading-relaxed"
-                            >
-                                "Dr. Sita's couples therapy program transformed
-                                our relationship. Her holistic approach helped
-                                us overcome our intimacy challenges and build a
-                                stronger connection. We're grateful for her
-                                guidance and support."
-                                <footer class="mt-4 text-lg text-foam">
-                                    - Couple from Bangalore
-                                </footer>
-                            </blockquote>
-                            <blockquote
-                                class="text-xl text-subtle/90 leading-relaxed"
-                            >
-                                "The Batch Therapy program was exactly what we
-                                needed. It provided us with practical tools and
-                                techniques while addressing the emotional
-                                aspects of our relationship. Highly
-                                recommended!"
-                                <footer class="mt-4 text-lg text-foam">
-                                    - Couple from Mumbai
-                                </footer>
-                            </blockquote>
-                        </div>
+        <Section>
+            <SectionHeader title="Success Stories" />
+            <div class="grid grid-cols-1 gap-8">
+                <div
+                    class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
+                >
+                    <div class="space-y-8">
+                        <blockquote
+                            class="text-xl text-subtle/90 leading-relaxed"
+                        >
+                            "Dr. Sita's couples therapy program transformed our
+                            relationship. Her holistic approach helped us
+                            overcome our intimacy challenges and build a
+                            stronger connection. We're grateful for her guidance
+                            and support."
+                            <footer class="mt-4 text-lg text-foam">
+                                - Couple from Bangalore
+                            </footer>
+                        </blockquote>
+                        <blockquote
+                            class="text-xl text-subtle/90 leading-relaxed"
+                        >
+                            "The Batch Therapy program was exactly what we
+                            needed. It provided us with practical tools and
+                            techniques while addressing the emotional aspects of
+                            our relationship. Highly recommended!"
+                            <footer class="mt-4 text-lg text-foam">
+                                - Couple from Mumbai
+                            </footer>
+                        </blockquote>
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
 
         <!-- CTA Section -->
-        <section class="py-24 px-4 sm:px-6">
-            <div class="container mx-auto">
-                <div
-                    class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl text-center"
+        <Section class="py-32">
+            <div
+                class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl text-center"
+            >
+                <h2 class="text-4xl md:text-5xl font-display text-text mb-8">
+                    Ready to start your journey together?
+                </h2>
+                <p
+                    class="text-xl text-subtle/90 leading-relaxed mb-8 max-w-2xl mx-auto"
                 >
-                    <h2
-                        class="text-4xl md:text-5xl font-display text-text mb-8"
-                    >
-                        Ready to start your journey together?
-                    </h2>
-                    <p
-                        class="text-xl text-subtle/90 leading-relaxed mb-8 max-w-2xl mx-auto"
-                    >
-                        Take the first step towards a stronger, more intimate
-                        relationship. Schedule a consultation to discuss how our
-                        couples therapy programs can help you.
-                    </p>
-                    <Button href="/contact" color="love" icon="mdi:calendar">
-                        Schedule a Consultation
-                    </Button>
-                </div>
+                    Take the first step towards a stronger, more intimate
+                    relationship. Schedule a consultation to discuss how our
+                    couples therapy programs can help you.
+                </p>
+                <Button href="/contact" color="love" icon="mdi:calendar">
+                    Schedule a Consultation
+                </Button>
             </div>
-        </section>
+        </Section>
     </main>
-</Layout>
+</BaseLayout>
