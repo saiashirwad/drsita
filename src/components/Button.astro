@@ -1,9 +1,10 @@
 ---
 import { Icon } from "astro-icon/components";
+import type { Colors } from "../utils/colors";
 
 interface Props {
     href: string;
-    color?: "pine" | "love" | "foam" | "rose" | "gold" | "iris" | string;
+    color?: Colors;
     class?: string;
     icon?: string | undefined;
     external?: boolean;

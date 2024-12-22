@@ -3,8 +3,19 @@ import BackgroundShapes from "../components/BackgroundShapes.astro";
 import Button from "../components/Button.astro";
 import Navbar from "../components/Navbar.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import type { Colors } from "../utils/colors";
 
-const hero = {
+type Hero = {
+    title: string;
+    subtitle: string;
+    cta: {
+        text: string;
+        href: string;
+        color: Colors;
+        icon: string;
+    };
+};
+const hero: Hero = {
     title: "Hi, I'm Dr. Sita",
     subtitle:
         "I empower individuals to take charge of their sexual and reproductive health through comprehensive care and education.",
@@ -60,7 +71,17 @@ const expertise = {
     ],
 };
 
-const cta = {
+type Cta = {
+    title: string;
+    subtitle: string;
+    button: {
+        text: string;
+        href: string;
+        color: Colors;
+        icon: string;
+    };
+};
+const cta: Cta = {
     title: "Ready to take charge of your health?",
     subtitle:
         "Schedule a consultation and begin your journey towards holistic wellness.",
