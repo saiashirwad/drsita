@@ -1,0 +1,249 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import BackgroundShapes from "../components/BackgroundShapes.astro";
+import GradientButton from "../components/GradientButton.astro";
+---
+
+<Layout title="Academy - Dr. Sita">
+    <Navbar />
+
+    <main class="bg-base min-h-screen">
+        <!-- Hero Section -->
+        <section
+            class="min-h-[60vh] relative flex items-center justify-center pt-32 pb-24 px-4 sm:px-6"
+        >
+            <BackgroundShapes />
+            <div class="max-w-container-xl mx-auto w-full">
+                <div class="max-w-container-md mx-auto text-center">
+                    <h1
+                        class="text-6xl md:text-7xl lg:text-8xl font-display text-text tracking-tight opacity-0 animate-fade-up mb-8"
+                    >
+                        Dr. Sita's Academy
+                    </h1>
+                    <p
+                        class="text-3xl md:text-4xl text-subtle/90 font-light opacity-0 animate-fade-up animation-delay-100 leading-relaxed"
+                    >
+                        A dedicated platform for self-paced learning and
+                        professional growth.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Public Courses -->
+        <section class="py-24 px-6 bg-surface/30">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl font-display text-text mb-16">
+                    Courses for the Public
+                </h2>
+
+                <div class="grid gap-8">
+                    <div
+                        class="bg-surface/30 rounded-3xl p-8 border border-highlight-med/10 backdrop-blur-xl"
+                    >
+                        <h3 class="text-3xl font-display text-foam mb-6">
+                            Pregnancy & Parenthood
+                        </h3>
+                        <div class="grid gap-4 pl-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-foam"></div>
+                                <span class="text-xl text-subtle/90"
+                                    >Trimester-wise Pregnancy Guide</span
+                                >
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-foam"></div>
+                                <span class="text-xl text-subtle/90"
+                                    >Pre-pregnancy Care</span
+                                >
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-foam"></div>
+                                <span class="text-xl text-subtle/90"
+                                    >Post-pregnancy Care</span
+                                >
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-foam"></div>
+                                <span class="text-xl text-subtle/90"
+                                    >Child Protection and Safety</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-surface/30 rounded-3xl p-8 border border-highlight-med/10 backdrop-blur-xl"
+                    >
+                        <h3 class="text-3xl font-display text-love mb-6">
+                            Wellness & Relationships
+                        </h3>
+                        <div class="grid gap-4 pl-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-love"></div>
+                                <span class="text-xl text-subtle/90"
+                                    >Sexual Wellness and Relationship
+                                    Enhancement</span
+                                >
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-love"></div>
+                                <span class="text-xl text-subtle/90"
+                                    >Weight Management</span
+                                >
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-love"></div>
+                                <span class="text-xl text-subtle/90"
+                                    >Mindfulness Practices</span
+                                >
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-love"></div>
+                                <span class="text-xl text-subtle/90"
+                                    >Mental Health Programs</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Courses -->
+        <section class="py-24 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl font-display text-text mb-16">
+                    For Healthcare Professionals
+                </h2>
+
+                <div class="grid gap-8">
+                    <div
+                        class="bg-surface/30 rounded-3xl p-8 border border-highlight-med/10 backdrop-blur-xl"
+                    >
+                        <div class="flex items-start gap-6">
+                            <div
+                                class="bg-iris/10 w-16 h-16 rounded-2xl flex items-center justify-center"
+                            >
+                                <svg
+                                    class="w-8 h-8 text-iris"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                >
+                                    <path
+                                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-3xl font-display text-text mb-4"
+                                >
+                                    Communication Skills in Clinical Practice
+                                </h3>
+                                <p
+                                    class="text-xl text-subtle/90 leading-relaxed"
+                                >
+                                    Master empathetic communication to build
+                                    trust and rapport with patients. Learn
+                                    effective consultation techniques.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-surface/30 rounded-3xl p-8 border border-highlight-med/10 backdrop-blur-xl"
+                    >
+                        <div class="flex items-start gap-6">
+                            <div
+                                class="bg-gold/10 w-16 h-16 rounded-2xl flex items-center justify-center"
+                            >
+                                <svg
+                                    class="w-8 h-8 text-gold"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                >
+                                    <path
+                                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-3xl font-display text-text mb-4"
+                                >
+                                    Mental Health for Doctors
+                                </h3>
+                                <p
+                                    class="text-xl text-subtle/90 leading-relaxed"
+                                >
+                                    Address burnout and emotional challenges in
+                                    medical practice. Learn stress management
+                                    techniques.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-surface/30 rounded-3xl p-8 border border-highlight-med/10 backdrop-blur-xl"
+                    >
+                        <div class="flex items-start gap-6">
+                            <div
+                                class="bg-foam/10 w-16 h-16 rounded-2xl flex items-center justify-center"
+                            >
+                                <svg
+                                    class="w-8 h-8 text-foam"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                >
+                                    <path
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-3xl font-display text-text mb-4"
+                                >
+                                    Work-Life Balance
+                                </h3>
+                                <p
+                                    class="text-xl text-subtle/90 leading-relaxed"
+                                >
+                                    Practical strategies for balancing personal
+                                    and professional responsibilities in
+                                    healthcare.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Webinars -->
+        <section class="py-24 px-4 sm:px-6 bg-surface/30">
+            <div class="max-w-container-lg mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-display text-text mb-8">
+                    Live Webinars & Interactive Sessions
+                </h2>
+                <p class="text-2xl text-subtle/90 mb-12">
+                    Join our live sessions for real-time learning and
+                    interaction with Dr. Sita and other experts.
+                </p>
+                <GradientButton href="/contact" color="iris" icon="calendar">
+                    Register for Updates
+                </GradientButton>
+            </div>
+        </section>
+    </main>
+</Layout>

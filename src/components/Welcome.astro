@@ -55,7 +55,7 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 	<div class="flex-1 flex items-center px-4 sm:px-6 relative min-h-screen">
 		<BackgroundShapes />
 		<main
-			class="max-w-6xl w-full mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center"
+			class="max-w-container-xl w-full mx-auto grid md:grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center"
 		>
 			<!-- Text Content -->
 			<div class="space-y-8 md:space-y-12">
@@ -99,22 +99,22 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 			</div>
 
 			<!-- Image/Visual Side -->
-			<div class="relative hidden md:flex items-center justify-center">
+			<div class="relative hidden lg:flex items-center justify-center">
 				<img
 					src="portrait.png"
 					alt="Dr. Sita"
-					class="w-auto h-[50vh] md:h-[60vh] rounded-full opacity-0 animate-fade-in animation-delay-500 ring-4 ring-subtle/20"
+					class="w-[40vh] h-[40vh] rounded-full opacity-0 animate-fade-in animation-delay-500 ring-4 ring-subtle/20 object-cover"
 				/>
 			</div>
 		</main>
 	</div>
 
 	<!-- Featured Content Section -->
-	<section class="w-full max-w-5xl mx-auto pt-32">
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 h-[800px]">
+	<section class="w-full max-w-container-lg mx-auto pb-32 px-4 sm:px-6">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 			<!-- YouTube Channel - Large Card -->
 			<div
-				class="group relative transform hover:-translate-y-2 transition-all duration-300 md:row-span-2"
+				class="group relative transform hover:-translate-y-2 transition-all duration-300 md:row-span-2 h-auto"
 			>
 				<div
 					class="absolute inset-0 bg-gradient-to-br from-love/20 via-transparent to-base/90 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"
@@ -196,7 +196,7 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 
 			<!-- Conference Speaking -->
 			<div
-				class="group relative transform hover:-translate-y-2 transition-all duration-300 h-full"
+				class="group relative transform hover:-translate-y-2 transition-all duration-300 h-auto"
 			>
 				<div
 					class="absolute inset-0 bg-gradient-to-br from-foam/20 via-transparent to-base/90 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"
@@ -258,7 +258,7 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 
 			<!-- Online Courses -->
 			<div
-				class="group relative transform hover:-translate-y-2 transition-all duration-300 h-full"
+				class="group relative transform hover:-translate-y-2 transition-all duration-300 h-auto"
 			>
 				<div
 					class="absolute inset-0 bg-gradient-to-br from-iris/20 via-transparent to-base/90 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"
@@ -323,7 +323,7 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 
 			<!-- SiRa Products -->
 			<div
-				class="group relative transform hover:-translate-y-2 transition-all duration-300 md:col-span-2"
+				class="group relative transform hover:-translate-y-2 transition-all duration-300 md:col-span-2 h-auto"
 			>
 				<div
 					class="absolute inset-0 bg-gradient-to-br from-gold/20 via-transparent to-base/90 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"

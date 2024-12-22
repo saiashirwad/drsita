@@ -1,0 +1,204 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import BackgroundShapes from "../components/BackgroundShapes.astro";
+import GradientButton from "../components/GradientButton.astro";
+---
+
+<Layout title="Testimonials - Dr. Sita">
+    <Navbar />
+
+    <main class="bg-base min-h-screen">
+        <!-- Hero Section -->
+        <section
+            class="min-h-[40vh] relative flex items-center pt-32 pb-24 px-6"
+        >
+            <BackgroundShapes />
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="max-w-4xl">
+                    <h1
+                        class="text-6xl md:text-7xl lg:text-8xl font-display text-text tracking-tight opacity-0 animate-fade-up mb-8"
+                    >
+                        Success Stories
+                    </h1>
+                    <p
+                        class="text-3xl md:text-4xl text-subtle/90 font-light max-w-3xl opacity-0 animate-fade-up animation-delay-100 leading-relaxed"
+                    >
+                        Real experiences from our community of healing and
+                        transformation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Grid -->
+        <section class="py-24 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Testimonial Card -->
+                    <div
+                        class="bg-surface/30 rounded-3xl p-8 border border-highlight-med/10 backdrop-blur-xl"
+                    >
+                        <div class="space-y-6">
+                            <div class="flex gap-2">
+                                {
+                                    [...Array(5)].map(() => (
+                                        <svg
+                                            class="w-6 h-6 text-gold"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                        >
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                        </svg>
+                                    ))
+                                }
+                            </div>
+                            <blockquote
+                                class="text-xl text-subtle/90 leading-relaxed"
+                            >
+                                "Dr. Sita's Batch Therapy program transformed
+                                our relationship. Her holistic approach helped
+                                us overcome challenges we'd been facing for
+                                years."
+                            </blockquote>
+                            <div class="text-foam">
+                                <p class="font-display">Couple from Mumbai</p>
+                                <p class="text-sm text-subtle/70">
+                                    Batch Therapy Program
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Card -->
+                    <div
+                        class="bg-surface/30 rounded-3xl p-8 border border-highlight-med/10 backdrop-blur-xl"
+                    >
+                        <div class="space-y-6">
+                            <div class="flex gap-2">
+                                {
+                                    [...Array(5)].map(() => (
+                                        <svg
+                                            class="w-6 h-6 text-gold"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                        >
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                        </svg>
+                                    ))
+                                }
+                            </div>
+                            <blockquote
+                                class="text-xl text-subtle/90 leading-relaxed"
+                            >
+                                "The mindfulness and yoga practices taught in
+                                the retreat helped me reconnect with myself. It
+                                was a life-changing experience."
+                            </blockquote>
+                            <div class="text-iris">
+                                <p class="font-display">
+                                    Individual Participant
+                                </p>
+                                <p class="text-sm text-subtle/70">
+                                    Wellness Retreat
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Card -->
+                    <div
+                        class="bg-surface/30 rounded-3xl p-8 border border-highlight-med/10 backdrop-blur-xl"
+                    >
+                        <div class="space-y-6">
+                            <div class="flex gap-2">
+                                {
+                                    [...Array(5)].map(() => (
+                                        <svg
+                                            class="w-6 h-6 text-gold"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                        >
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                        </svg>
+                                    ))
+                                }
+                            </div>
+                            <blockquote
+                                class="text-xl text-subtle/90 leading-relaxed"
+                            >
+                                "Dr. Sita's online courses provided invaluable
+                                insights into sexual health and wellness. Her
+                                approach is both professional and
+                                compassionate."
+                            </blockquote>
+                            <div class="text-love">
+                                <p class="font-display">
+                                    Healthcare Professional
+                                </p>
+                                <p class="text-sm text-subtle/70">
+                                    Professional Course
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Card -->
+                    <div
+                        class="bg-surface/30 rounded-3xl p-8 border border-highlight-med/10 backdrop-blur-xl"
+                    >
+                        <div class="space-y-6">
+                            <div class="flex gap-2">
+                                {
+                                    [...Array(5)].map(() => (
+                                        <svg
+                                            class="w-6 h-6 text-gold"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                        >
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                        </svg>
+                                    ))
+                                }
+                            </div>
+                            <blockquote
+                                class="text-xl text-subtle/90 leading-relaxed"
+                            >
+                                "The one-day awareness program opened our eyes
+                                to the importance of holistic health. We're
+                                grateful for Dr. Sita's guidance."
+                            </blockquote>
+                            <div class="text-gold">
+                                <p class="font-display">
+                                    Couple from Bengaluru
+                                </p>
+                                <p class="text-sm text-subtle/70">
+                                    Awareness Program
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Testimonials -->
+        <section class="py-24 px-6 bg-surface/30">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-display text-text mb-8">
+                    Video Testimonials
+                </h2>
+                <p class="text-2xl text-subtle/90 mb-12">
+                    Watch stories of transformation from our community members.
+                </p>
+                <div class="relative aspect-video rounded-3xl overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-surface/30 backdrop-blur-sm flex items-center justify-center"
+                    >
+                        <p class="text-xl text-subtle/90">Coming Soon</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

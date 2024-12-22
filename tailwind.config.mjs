@@ -14,6 +14,11 @@ module.exports = {
 			},
 			maxWidth: {
 				content: "var(--content-width)",
+				"container-sm": "var(--container-sm)",
+				"container-md": "var(--container-md)",
+				"container-lg": "var(--container-lg)",
+				"container-xl": "var(--container-xl)",
+				"container-2xl": "var(--container-2xl)",
 			},
 			minHeight: {
 				content: "var(--content-height)",
