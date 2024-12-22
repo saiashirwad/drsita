@@ -1,0 +1,316 @@
+@font-face {
+	font-family: "Pier Sans";
+	font-display: fallback;
+	font-style: normal;
+	font-weight: bold;
+	src: url("/assets/fonts/PierSans-Bold.otf") format("opentype");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	color-scheme: light dark;
+
+	--page-top: 48px;
+	--page-gutter: 24px;
+	--banner-height: 40px;
+	--header-height: 72px;
+	--footer-height: 96px;
+	--content-width: 72rem;
+	--content-height: calc(
+		100vh - var(--banner-height) - var(--header-height) - (var(--page-top) * 2)
+	);
+
+	--color-base: 32deg 57% 95%;
+	--color-surface: 35deg 100% 98%;
+	--color-overlay: 33deg 43% 91%;
+	--color-muted: 257deg 9% 61%;
+	--color-subtle: 248deg 12% 52%;
+	--color-text: 248deg 19% 40%;
+	--color-love: 343deg 35% 55%;
+	--color-gold: 35deg 81% 56%;
+	--color-rose: 3deg 53% 67%;
+	--color-pine: 197deg 53% 34%;
+	--color-foam: 189deg 30% 48%;
+	--color-iris: 268deg 21% 57%;
+
+	--astro-code-color-text: hsl(var(--color-text));
+	--astro-code-color-background: hsl(var(--color-surface));
+	--astro-code-token-constant: hsl(var(--color-gold));
+	--astro-code-token-string: hsl(var(--color-gold));
+	--astro-code-token-comment: hsl(var(--color-subtle));
+	--astro-code-token-keyword: hsl(var(--color-foam));
+	--astro-code-token-parameter: hsl(var(--color-iris));
+	--astro-code-token-function: hsl(var(--color-rose));
+	--astro-code-token-string-expression: hsl(var(--color-pine));
+	--astro-code-token-punctuation: hsl(var(--color-muted));
+	--astro-code-token-link: hsl(var(--color-iris));
+}
+
+@media screen(sm) {
+	:root {
+		--page-gutter: 32px;
+		--footer-height: 72px;
+	}
+}
+
+@media screen(md) {
+	:root {
+		--page-top: 96px;
+		--page-gutter: 48px;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-base: 249deg 22% 12%;
+		--color-surface: 247deg 23% 15%;
+		--color-overlay: 248deg 25% 18%;
+		--color-muted: 249deg 12% 47%;
+		--color-subtle: 248deg 15% 61%;
+		--color-text: 245deg 50% 91%;
+		--color-love: 343deg 76% 68%;
+		--color-gold: 35deg 88% 72%;
+		--color-rose: 2deg 55% 83%;
+		--color-pine: 197deg 49% 38%;
+		--color-foam: 189deg 43% 73%;
+		--color-iris: 267deg 57% 78%;
+	}
+}
+
+::selection {
+	background: hsl(var(--color-muted) / 0.2);
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	color: hsl(var(--color-text));
+	background: hsl(var(--color-base));
+	font-weight: 450;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[id] {
+	scroll-margin-top: var(--page-top);
+}
+
+.animate-enter {
+	opacity: 0;
+	animation: enter 500ms forwards;
+	animation-delay: calc(var(--stagger) * 200ms);
+}
+
+@keyframes enter {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-delay: -1ms !important;
+		animation-duration: 1ms !important;
+		animation-iteration-count: 1 !important;
+		background-attachment: initial !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0s !important;
+		transition-delay: 0s !important;
+	}
+}
+
+/* Global article styles, intended for markdown pages */
+article {
+	@apply max-w-prose;
+}
+article > *:not(:first-child) {
+	@apply mt-7;
+}
+article h2 {
+	@apply text-lg font-semibold tracking-tight;
+}
+article h3 {
+	@apply font-semibold tracking-tight;
+}
+article h2:not(:first-child),
+article h3,
+article h4,
+article h5 {
+	@apply mt-14;
+}
+article a {
+	@apply inline font-medium text-iris underline-offset-2 after:inline-block after:whitespace-pre hover:underline;
+}
+article a[href^="http"] {
+	@apply after:content-['_↗'];
+}
+article a:hover {
+	@apply underline;
+}
+article blockquote {
+	@apply border-l-2 pl-3 text-subtle;
+}
+article ul,
+article ol {
+	@apply pl-6 leading-loose;
+}
+article ul {
+	@apply list-disc;
+}
+article ol {
+	@apply list-decimal;
+}
+article li > pre {
+	@apply mb-1.5;
+}
+article pre {
+	@apply rounded-xl p-4;
+}
+article code {
+	@apply rounded bg-surface p-1 font-mono text-sm font-medium;
+}
+
+details summary::-webkit-details-marker {
+	display: none;
+}
+
+.scheme-muted {
+	@apply bg-muted/10 text-muted;
+}
+.scheme-subtle {
+	@apply bg-subtle/10 text-subtle;
+}
+.scheme-text {
+	@apply bg-text/10 text-text;
+}
+.scheme-love {
+	@apply bg-love/10 text-love;
+}
+.scheme-gold {
+	@apply bg-gold/10 text-gold;
+}
+.scheme-rose {
+	@apply bg-rose/10 text-rose;
+}
+.scheme-pine {
+	@apply bg-pine/10 text-pine;
+}
+.scheme-foam {
+	@apply bg-foam/10 text-foam;
+}
+.scheme-iris {
+	@apply bg-iris/10 text-iris;
+}
+
+[cmdk-dialog] {
+	@apply fixed inset-0 z-20 pt-[10vh];
+}
+
+[cmdk-overlay] {
+	@apply fixed inset-0 bg-black/10 backdrop-blur-sm;
+}
+
+[cmdk-root] {
+	@apply absolute inset-x-0 bottom-0 z-30 mx-auto max-w-xl overflow-hidden rounded-b-none rounded-t-xl border before:absolute before:inset-0 before:z-[-1] before:bg-surface supports-[backdrop-filter]:before:bg-surface/95 supports-[backdrop-filter]:before:backdrop-blur-md sm:bottom-auto sm:rounded-b-xl;
+}
+
+[cmdk-input-container] {
+	@apply relative flex h-14 items-center space-x-3 px-3 sm:h-16 sm:px-5;
+}
+
+[cmdk-input] {
+	@apply h-full w-full bg-transparent text-[16px] placeholder:text-muted focus:outline-none sm:text-sm;
+}
+
+[cmdk-list] {
+	@apply relative h-[min(330px,var(--cmdk-list-height))] max-h-[30dvh] scroll-pe-2 scroll-ps-2 overflow-auto overscroll-contain border-t px-3 transition-[height] sm:max-h-[330px] sm:px-5;
+}
+
+[cmdk-group] {
+	@apply space-y-1;
+}
+[cmdk-group]:not([hidden]) + [cmdk-group]:not([hidden]) {
+	@apply mt-6;
+}
+
+[cmdk-group-heading] {
+	@apply select-none text-sm font-semibold tracking-tight text-subtle;
+}
+
+[cmdk-item] {
+	@apply -mx-1.5 flex cursor-pointer items-center space-x-2 rounded-lg px-1.5 py-3 text-sm font-medium transition focus:outline-none sm:-mx-2.5 sm:px-2.5;
+}
+[cmdk-item][data-selected="true"] {
+	@apply bg-muted/10 text-text;
+}
+[cmdk-item][data-selected="true"] > * {
+	@apply text-text;
+}
+[cmdk-item] svg {
+	width: 18px;
+	height: 18px;
+	stroke-width: 1.5px;
+}
+
+[cmdk-empty] {
+	@apply -mx-1.5 space-y-6 sm:-mx-3;
+}
+
+@keyframes fadeUpIn {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.animate-fade-up {
+	animation: fadeUpIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+	animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animation-delay-100 {
+	animation-delay: 100ms;
+}
+
+.animation-delay-300 {
+	animation-delay: 300ms;
+}
+
+.animation-delay-500 {
+	animation-delay: 500ms;
+}

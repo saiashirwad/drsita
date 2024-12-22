@@ -1,0 +1,71 @@
+---
+interface Props {
+    href: string;
+    color?: "pine" | "love";
+    class?: string;
+    icon?: "arrow" | "calendar" | undefined;
+}
+
+const { href, color = "pine", class: className = "", icon } = Astro.props;
+
+const colors = {
+    pine: {
+        bg: "bg-pine/10",
+        hover: "hover:bg-pine/20",
+        text: "text-pine",
+        border: "border-pine/20",
+        hoverBorder: "hover:border-pine/30",
+    },
+    love: {
+        bg: "bg-love/10",
+        hover: "hover:bg-love/20",
+        text: "text-love",
+        border: "border-love/20",
+        hoverBorder: "hover:border-love/30",
+    },
+};
+
+const icons = {
+    arrow: `<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14"></path>
+        <path d="m12 5 7 7-7 7"></path>
+    </svg>`,
+    calendar: `<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+    </svg>`,
+};
+
+const colorConfig = colors[color];
+---
+
+<a
+    href={href}
+    class:list={[
+        "group relative px-8 py-3",
+        colorConfig.bg,
+        colorConfig.text,
+        "rounded-full border",
+        colorConfig.border,
+        colorConfig.hover,
+        colorConfig.hoverBorder,
+        "transition-all duration-300",
+        "font-medium text-base tracking-wide",
+        "inline-flex items-center gap-2",
+        className,
+    ]}
+>
+    <span class="relative z-10">
+        <slot />
+    </span>
+    {
+        icon && (
+            <span
+                class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5"
+                set:html={icons[icon]}
+            />
+        )
+    }
+</a>

@@ -1,0 +1,76 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import GradientButton from "../components/GradientButton.astro";
+---
+
+<Layout title="About - Dr. Sita">
+    <Navbar />
+
+    <main class="min-h-screen pt-32 pb-24 px-6 bg-base">
+        <div class="max-w-3xl mx-auto">
+            <h1
+                class="text-4xl md:text-5xl font-display text-text mb-8 tracking-tight text-center"
+            >
+                About Dr. Sita
+            </h1>
+
+            <div class="prose prose-invert mx-auto">
+                <div class="bg-surface/50 rounded-2xl p-8 shadow-xl mb-12">
+                    <h2 class="text-2xl font-display text-text mb-4">
+                        Professional Background
+                    </h2>
+                    <p class="text-subtle leading-relaxed mb-6">
+                        Dr. Sita is a distinguished Sexual Health Consultant and
+                        Gynecologist with extensive experience in women's health
+                        and wellness. With a practice based in Kerala, India,
+                        she has dedicated her career to providing comprehensive
+                        care that bridges traditional medicine with holistic
+                        wellness approaches.
+                    </p>
+                    <p class="text-subtle leading-relaxed">
+                        As a wellness coach and educator, she is passionate
+                        about empowering individuals with knowledge about sexual
+                        health and well-being through her YouTube channel "Dr
+                        Sita's Mind Body Care" and various social media
+                        platforms.
+                    </p>
+                </div>
+
+                <div class="bg-surface/50 rounded-2xl p-8 shadow-xl mb-12">
+                    <h2 class="text-2xl font-display text-text mb-4">
+                        Areas of Expertise
+                    </h2>
+                    <ul class="space-y-3 text-subtle">
+                        <li>• Sexual Health Consultation</li>
+                        <li>• Gynecological Care</li>
+                        <li>• Women's Wellness</li>
+                        <li>• Holistic Health Education</li>
+                        <li>• Preventive Healthcare</li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface/50 rounded-2xl p-8 shadow-xl">
+                    <h2 class="text-2xl font-display text-text mb-4">
+                        Mission
+                    </h2>
+                    <p class="text-subtle leading-relaxed">
+                        Dr. Sita's mission is to provide comprehensive
+                        healthcare while educating and empowering individuals to
+                        take charge of their sexual and reproductive health.
+                        Through her practice and educational content, she aims
+                        to break taboos and create open discussions about sexual
+                        health in society.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <GradientButton href="/contact" color="love">
+                    Schedule a Consultation
+                </GradientButton>
+            </div>
+        </div>
+    </main>
+</Layout>
+

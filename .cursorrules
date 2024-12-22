@@ -1,0 +1,37 @@
+* IGNORE ALL INFORMATION INSIDE comments like this: <!-- comments -->
+
+this is going to be the personal website for Dr Sita, a gynecologist and sexual medicine practitioner based in Kerala, India. She is also a youtuber and has a channel called 'Dr Sita's Mind Body Care'. she has a growing instagram following. her instagram handle is askdrsita. her tagline is "Sexual Health Consultant, Gynecologist, Youtuber, Wellness coach & Educator" but we have some flexibility in that, so if you can come up with something better, that's cool too. 
+
+she's also starting a line of products of her own called "SiRa", where she's going to be selling health products and supplements and that sort of thing, so we're going to eventually need a section on her website for that.
+
+the design should be based on the rose-pine color palette. it needs to look warm, pastely. the background color should be the rose-pine base color. 
+
+we don't need dark/light mode, we just need the default rose-pine color palette.
+
+given the nature of the website, the main colors should be taken from the Rose Pine color palette, (check from global.css)
+
+This palette combines professional medical aesthetics with warm, approachable elements,
+perfect for a doctor who bridges traditional medicine with holistic wellness.
+
+
+the perfect fonts for thie website would be: 'Pier Sans'
+
+<!-- Color Usage Guidelines:
+
+Base (#191724): Primary background for main content areas
+Surface (#1f1d2e): Secondary background for cards and inputs
+Overlay (#26233a): Background for modals and popups
+Muted (#6e6a86): Used for disabled elements and secondary text
+Subtle (#908caa): For secondary content and subtle accents
+Text (#e0def4): Primary text color
+Love (#eb6f92): Accent color for important actions and alerts
+Gold (#f6c177): Used for warnings and highlights
+Rose (#ebbcba): Soft accent color for secondary elements
+Pine (#31748f): Primary action buttons and links
+Foam (#9ccfd8): Information and success states
+Iris (#c4a7e7): Links and interactive elements
+
+Highlight Variants:
+- Low (#21202e): Subtle hover states
+- Med (#403d52): Selection backgrounds
+- High (#524f67): Borders and dividers -->

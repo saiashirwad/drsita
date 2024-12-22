@@ -1,209 +1,138 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
+import GradientButton from "./GradientButton.astro";
+import Navbar from "./Navbar.astro";
+import BackgroundShapes from "./BackgroundShapes.astro";
 ---
 
-<div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
-		<section id="hero">
-			<a href="https://astro.build"
-				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
+<Navbar />
+
+<div
+	class="min-h-screen flex items-center justify-center px-6 pt-32 pb-24 bg-base"
+>
+	<BackgroundShapes />
+	<main
+		class="max-w-6xl w-full mx-auto grid md:grid-cols-2 gap-12 items-center"
+	>
+		<!-- Text Content -->
+		<div class="space-y-8">
+			<div class="space-y-4">
+				<h1
+					class="opacity-0 animate-fade-up text-5xl md:text-6xl lg:text-7xl font-display text-text tracking-tight"
+				>
+					Hi, I'm Dr. Sita
+				</h1>
+				<p
+					class="opacity-0 animate-fade-up animation-delay-300 text-3xl md:text-4xl text-subtle/90 font-light"
+				>
+					Sexual Health Consultant, Youtuber, Wellness coach &
+					Educator
+				</p>
+			</div>
+
+			<p
+				class="opacity-0 animate-fade-up animation-delay-500 text-xl text-subtle leading-relaxed max-w-xl"
 			>
-			<h1>
-				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
-			</h1>
-			<section id="links">
-				<a class="button" href="https://docs.astro.build">Read our docs</a>
-				<a href="https://astro.build/chat"
-					>Join our Discord <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
-						><path
-							fill="currentColor"
-							d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"
-						></path></svg
-					>
-				</a>
-			</section>
-		</section>
+				I empower individuals to take charge of their sexual and
+				reproductive health through comprehensive care, education, and
+				holistic wellness approaches.
+			</p>
+
+			<div
+				class="opacity-0 animate-fade-up animation-delay-500 flex flex-col sm:flex-row gap-4 pt-4"
+			>
+				<GradientButton href="/about" color="pine" icon="arrow">
+					Learn More
+				</GradientButton>
+				<GradientButton href="/contact" color="love" icon="calendar">
+					Book a Consultation
+				</GradientButton>
+			</div>
+		</div>
+
+		<!-- Image/Visual Side -->
+		<div class="relative hidden md:block">
+			<div class="relative w-[400px] h-[400px] mx-auto">
+				<img
+					src="portrait.jpeg"
+					alt="Dr. Sita"
+					class="w-full h-full object-cover rounded-2xl shadow-2xl opacity-0 animate-fade-in animation-delay-500"
+				/>
+				<!-- Decorative Elements -->
+				<div
+					class="absolute inset-0 rounded-2xl bg-gradient-to-tr from-pine/20 to-love/20 animate-pulse opacity-0 animate-fade-in animation-delay-500"
+				>
+				</div>
+				<div
+					class="absolute -bottom-6 -right-6 w-24 h-24 bg-rose/10 rounded-full blur-xl opacity-0 animate-fade-in animation-delay-500"
+				>
+				</div>
+				<div
+					class="absolute -top-6 -left-6 w-32 h-32 bg-pine/10 rounded-full blur-xl opacity-0 animate-fade-in animation-delay-500"
+				>
+				</div>
+			</div>
+		</div>
 	</main>
 
-	<a href="https://astro.build/blog/astro-5/" id="news" class="box">
-		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
-			><path
-				d="M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z"
-				fill="#111827"></path></svg
+	<!-- Social Links -->
+	<div class="absolute bottom-12 left-0 right-0">
+		<div
+			class="flex justify-center gap-8 opacity-0 animate-fade-up animation-delay-500"
 		>
-		<h2>What's New in Astro 5.0?</h2>
-		<p>
-			From content layers to server islands, click to learn more about the new features and
-			improvements in Astro 5.0
-		</p>
-	</a>
+			<a
+				href="https://www.youtube.com/@DrSitasMindBodyCare"
+				class="group flex flex-col items-center text-subtle/70 hover:text-pine transition-all duration-300"
+				aria-label="YouTube Channel"
+			>
+				<div
+					class="p-3 rounded-full bg-surface/50 group-hover:bg-surface/80 transition-colors duration-300"
+				>
+					<svg
+						class="w-6 h-6"
+						viewBox="0 0 24 24"
+						fill="currentColor"
+					>
+						<path
+							d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+						></path>
+					</svg>
+				</div>
+				<span
+					class="mt-2 text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-y-1 group-hover:translate-y-0 transition-all duration-300"
+				>
+					YouTube
+				</span>
+			</a>
+			<a
+				href="https://www.instagram.com/askdrsita"
+				class="group flex flex-col items-center text-subtle/70 hover:text-pine transition-all duration-300"
+				aria-label="Instagram Profile"
+			>
+				<div
+					class="p-3 rounded-full bg-surface/50 group-hover:bg-surface/80 transition-colors duration-300"
+				>
+					<svg
+						class="w-6 h-6"
+						viewBox="0 0 24 24"
+						fill="currentColor"
+					>
+						<path
+							d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"
+						></path>
+					</svg>
+				</div>
+				<span
+					class="mt-2 text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-y-1 group-hover:translate-y-0 transition-all duration-300"
+				>
+					Instagram
+				</span>
+			</a>
+		</div>
+	</div>
 </div>
 
 <style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
-	}
-
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
-	}
-
-	main {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-	}
-
-	#hero {
-		display: flex;
-		align-items: start;
-		flex-direction: column;
-		justify-content: center;
-		padding: 16px;
-	}
-
-	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
-	}
-
-	#links {
-		display: flex;
-		gap: 16px;
-	}
-
-	#links a {
-		display: flex;
-		align-items: center;
-		padding: 10px 12px;
-		color: #111827;
+	a {
 		text-decoration: none;
-		transition: color 0.2s;
-	}
-
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
-
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
-
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
-
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
-
-	pre {
-		font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
-			'DejaVu Sans Mono', monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
-	}
-
-	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
-	}
-
-	p {
-		color: #4b5563;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.006em;
-		margin: 0;
-	}
-
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
-	}
-
-	.box {
-		padding: 16px;
-		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
-	}
-
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
-		text-decoration: none;
-		transition: background 0.2s;
-		backdrop-filter: blur(50px);
-	}
-
-	#news:hover {
-		background: rgba(255, 255, 255, 0.55);
-	}
-
-	@media screen and (max-height: 368px) {
-		#news {
-			display: none;
-		}
-	}
-
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
-
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
-
-		#links {
-			flex-wrap: wrap;
-		}
-
-		#links a.button {
-			padding: 14px 18px;
-		}
-
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
-		}
-
-		h1 {
-			line-height: 1.5;
-		}
 	}
 </style>
