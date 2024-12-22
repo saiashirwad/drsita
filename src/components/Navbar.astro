@@ -1,17 +1,18 @@
 ---
 import { Icon } from "astro-icon/components";
 
-const links = [
+type Link = {
+    href: string;
+    label: string;
+    children?: Link[];
+};
+
+const links: Link[] = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     {
+        href: "/services",
         label: "Services",
-        children: [
-            { href: "/services", label: "Overview" },
-            { href: "/couples-therapy", label: "Couples Therapy" },
-            { href: "/holistic-approach", label: "Holistic Approach" },
-            { href: "/retreats", label: "Retreats" },
-        ],
     },
     {
         href: "/academy",
