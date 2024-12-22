@@ -123,25 +123,90 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 	</div>
 
 	<!-- Featured Content Section -->
-	<section class="w-full max-w-container-lg mx-auto pb-32 px-4 sm:px-6">
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-			<!-- YouTube Channel - Large Card -->
-			<div
-				class="group relative transform hover:-translate-y-2 transition-all duration-300 md:row-span-2 h-auto"
-			>
+	<section class="w-full max-w-container-xl mx-auto pb-32 px-4 sm:px-6">
+		<div class="space-y-6">
+			<!-- Card Template (repeat for each card) -->
+			<div class="relative">
 				<div
-					class="absolute inset-0 bg-gradient-to-br from-love/20 via-transparent to-base/90 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"
+					class="bg-surface/30 rounded-3xl p-6 sm:p-12 border border-highlight-med/10 backdrop-blur-xl"
 				>
-				</div>
-				<div
-					class="relative bg-surface/30 rounded-3xl p-12 h-full border border-highlight-med/10 backdrop-blur-xl shadow-2xl shadow-love/5 group-hover:border-love/20 group-hover:bg-surface/40 transition-all duration-300"
-				>
-					<div class="h-full flex flex-col">
+					<!-- Mobile Layout -->
+					<div class="sm:hidden space-y-4">
+						<!-- Header with Icon -->
+						<div class="flex items-center gap-4">
+							<div
+								class="w-12 h-12 flex items-center justify-center"
+							>
+								<svg
+									class="w-6 h-6 text-love"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.5"
+								>
+									<path
+										d="M14 12L10.5 14V10L14 12Z"
+										fill="currentColor"
+										stroke="currentColor"
+										stroke-width="1.5"
+										stroke-linejoin="round"></path>
+									<rect
+										x="3"
+										y="6"
+										width="18"
+										height="12"
+										rx="2"
+										stroke="currentColor"></rect>
+								</svg>
+							</div>
+							<h3 class="text-2xl font-display text-text">
+								YouTube Channel
+							</h3>
+						</div>
+
+						<!-- Stats -->
+						<div class="flex items-center gap-2">
+							<span
+								class="text-3xl font-bold bg-gradient-to-r from-love via-gold to-love bg-clip-text text-transparent"
+								>1.3M+</span
+							>
+							<span class="text-lg text-subtle/90"
+								>subscribers</span
+							>
+						</div>
+
+						<!-- Description -->
+						<p class="text-base text-subtle/90 leading-relaxed">
+							Empowering millions through educational content on
+							sexual health, wellness, and mindful living across
+							three channels in Malayalam and English.
+						</p>
+
+						<!-- Link -->
+						<a
+							href="/youtube"
+							class="inline-flex items-center gap-2 text-love hover:text-love transition-colors duration-300 text-lg"
+						>
+							<span>Watch Latest Videos</span>
+							<svg
+								class="w-5 h-5"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path d="M5 12h14m-7-7 7 7-7 7"></path>
+							</svg>
+						</a>
+					</div>
+
+					<!-- Desktop Layout -->
+					<div class="hidden sm:flex items-start gap-8">
 						<div
-							class="bg-love/10 w-20 h-20 rounded-2xl flex items-center justify-center mb-8 transform group-hover:scale-110 transition-transform duration-300"
+							class="w-16 h-16 rounded-xl flex items-center justify-center"
 						>
 							<svg
-								class="w-10 h-10 text-love"
+								class="w-8 h-8 text-love"
 								viewBox="0 0 24 24"
 								fill="none"
 								stroke="currentColor"
@@ -163,99 +228,36 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 							</svg>
 						</div>
 
-						<div class="flex-grow">
-							<h3 class="text-4xl font-display text-text mb-4">
-								YouTube Channel
-							</h3>
-							<div class="flex items-center gap-3 mb-6">
-								<span
-									class="text-5xl font-bold bg-gradient-to-r from-love via-gold to-love bg-clip-text text-transparent bg-[length:200%_auto] group-hover:bg-right transition-all duration-500"
-									>1M+</span
-								>
-								<span class="text-2xl text-subtle/90"
-									>subscribers</span
-								>
+						<div class="flex-grow space-y-8">
+							<div class="flex items-center justify-between">
+								<h3 class="text-4xl font-display text-text">
+									YouTube Channel
+								</h3>
+								<div class="flex items-center gap-3">
+									<span
+										class="text-5xl font-bold bg-gradient-to-r from-love via-gold to-love bg-clip-text text-transparent bg-[length:200%_auto] group-hover:bg-right transition-all duration-500"
+										>1.3M+</span
+									>
+									<span class="text-2xl text-subtle/90"
+										>subscribers</span
+									>
+								</div>
 							</div>
-							<p
-								class="text-xl text-subtle/90 leading-relaxed mb-8"
-							>
-								Join our growing community learning about sexual
-								health and wellness through engaging video
-								content.
-							</p>
-						</div>
-
-						<a
-							href="https://www.youtube.com/@drsitamindbodycare"
-							class="inline-flex items-center gap-2 text-love hover:text-love transition-colors duration-300 text-xl group/link"
-						>
-							<span
-								class="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover/link:after:scale-x-100"
-								>Watch Latest Videos</span
-							>
-							<svg
-								class="w-6 h-6 transform group-hover/link:translate-x-2 transition-transform duration-300"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path d="M5 12h14m-7-7 7 7-7 7"></path>
-							</svg>
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<!-- Conference Speaking -->
-			<div
-				class="group relative transform hover:-translate-y-2 transition-all duration-300 h-auto"
-			>
-				<div
-					class="absolute inset-0 bg-gradient-to-br from-foam/20 via-transparent to-base/90 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"
-				>
-				</div>
-				<div
-					class="relative bg-surface/30 rounded-3xl p-8 h-full border border-highlight-med/10 backdrop-blur-xl shadow-2xl shadow-foam/5 group-hover:border-foam/20 group-hover:bg-surface/40 transition-all duration-300"
-				>
-					<div class="flex flex-col h-full">
-						<div
-							class="bg-foam/10 w-16 h-16 rounded-2xl flex-shrink-0 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300"
-						>
-							<svg
-								class="w-8 h-8 text-foam"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="1.5"
-							>
-								<path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-								<path
-									d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-								></path>
-							</svg>
-						</div>
-
-						<div>
-							<h3 class="text-2xl font-display text-text mb-2">
-								Conference Speaking
-							</h3>
-							<p
-								class="text-lg text-subtle/90 leading-relaxed mb-4"
-							>
-								Keynote speaker at international health
-								conferences
+							<p class="text-xl text-subtle/90 leading-relaxed">
+								Empowering millions through educational content
+								on sexual health, wellness, and mindful living
+								across three channels in Malayalam and English.
 							</p>
 							<a
-								href="/speaking"
-								class="inline-flex items-center gap-2 text-foam hover:text-foam transition-colors duration-300 text-lg group/link"
+								href="/youtube"
+								class="inline-flex items-center gap-2 text-love hover:text-love transition-colors duration-300 text-xl group/link"
 							>
 								<span
 									class="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover/link:after:scale-x-100"
-									>View Speaking</span
+									>Watch Latest Videos</span
 								>
 								<svg
-									class="w-5 h-5 transform group-hover/link:translate-x-2 transition-transform duration-300"
+									class="w-6 h-6 transform group-hover/link:translate-x-2 transition-transform duration-300"
 									viewBox="0 0 24 24"
 									fill="none"
 									stroke="currentColor"
@@ -269,20 +271,195 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 				</div>
 			</div>
 
-			<!-- Online Courses -->
-			<div
-				class="group relative transform hover:-translate-y-2 transition-all duration-300 h-auto"
-			>
+			<!-- Couple's Therapy Card -->
+			<div class="relative">
 				<div
-					class="absolute inset-0 bg-gradient-to-br from-iris/20 via-transparent to-base/90 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"
+					class="bg-surface/30 rounded-3xl p-6 sm:p-12 border border-highlight-med/10 backdrop-blur-xl"
 				>
-				</div>
-				<div
-					class="relative bg-surface/30 rounded-3xl p-8 h-full border border-highlight-med/10 backdrop-blur-xl shadow-2xl shadow-iris/5 group-hover:border-iris/20 group-hover:bg-surface/40 transition-all duration-300"
-				>
-					<div class="flex flex-col h-full">
+					<!-- Mobile Layout -->
+					<div class="sm:hidden space-y-4">
+						<div class="flex items-center gap-4">
+							<div
+								class="w-12 h-12 flex items-center justify-center"
+							>
+								<svg
+									class="w-6 h-6 text-pine"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.5"
+								>
+									<path
+										d="M13 20v-5h-2v5h2zm-2-8h2v2h-2v-2zm10-7v16l-5 2v-2h-2v-2h2v-6h-2V9h2V7h-2V5h2V3h2v2h3zm-14 2V5h2V3h2v2h3v16l-5 2v-2H7v-2h2v-6H7V9h2z"
+									></path>
+								</svg>
+							</div>
+							<h3 class="text-2xl font-display text-text">
+								Couple's Therapy
+							</h3>
+						</div>
+
+						<div class="flex items-center gap-2">
+							<span
+								class="text-3xl font-bold bg-gradient-to-r from-pine via-foam to-pine bg-clip-text text-transparent"
+								>500+</span
+							>
+							<span class="text-lg text-subtle/90"
+								>success stories</span
+							>
+						</div>
+
+						<p class="text-base text-subtle/90 leading-relaxed">
+							Pioneer in treating unconsummated marriages and
+							intimate health challenges through our innovative
+							therapeutic approach.
+						</p>
+
+						<a
+							href="/services#couples-therapy"
+							class="inline-flex items-center gap-2 text-pine hover:text-pine transition-colors duration-300 text-lg"
+						>
+							<span>Learn About Couple's Therapy</span>
+							<svg
+								class="w-5 h-5"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path d="M5 12h14m-7-7 7 7-7 7"></path>
+							</svg>
+						</a>
+					</div>
+
+					<!-- Desktop Layout -->
+					<div class="hidden sm:flex items-start gap-8">
 						<div
-							class="bg-iris/10 w-16 h-16 rounded-2xl flex-shrink-0 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300"
+							class="w-16 h-16 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300"
+						>
+							<svg
+								class="w-8 h-8 text-pine"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.5"
+							>
+								<path
+									d="M13 20v-5h-2v5h2zm-2-8h2v2h-2v-2zm10-7v16l-5 2v-2h-2v-2h2v-6h-2V9h2V7h-2V5h2V3h2v2h3zm-14 2V5h2V3h2v2h3v16l-5 2v-2H7v-2h2v-6H7V9h2z"
+								></path>
+							</svg>
+						</div>
+
+						<div class="flex-grow space-y-8">
+							<div class="flex items-center justify-between">
+								<h3 class="text-4xl font-display text-text">
+									Couple's Therapy
+								</h3>
+								<div class="flex items-center gap-3">
+									<span
+										class="text-5xl font-bold bg-gradient-to-r from-pine via-foam to-pine bg-clip-text text-transparent bg-[length:200%_auto] group-hover:bg-right transition-all duration-500"
+										>500+</span
+									>
+									<span class="text-2xl text-subtle/90"
+										>success stories</span
+									>
+								</div>
+							</div>
+							<p class="text-xl text-subtle/90 leading-relaxed">
+								Pioneer in treating unconsummated marriages and
+								intimate health challenges through our
+								innovative therapeutic approach, combining
+								medical expertise with holistic healing.
+							</p>
+							<a
+								href="/services#couples-therapy"
+								class="inline-flex items-center gap-2 text-pine hover:text-pine transition-colors duration-300 text-xl group/link"
+							>
+								<span
+									class="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover/link:after:scale-x-100"
+									>Learn About Couple's Therapy</span
+								>
+								<svg
+									class="w-6 h-6 transform group-hover/link:translate-x-2 transition-transform duration-300"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d="M5 12h14m-7-7 7 7-7 7"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Academy Card -->
+			<div class="relative">
+				<div
+					class="bg-surface/30 rounded-3xl p-6 sm:p-12 border border-highlight-med/10 backdrop-blur-xl"
+				>
+					<!-- Mobile Layout -->
+					<div class="sm:hidden space-y-4">
+						<div class="flex items-center gap-4">
+							<div
+								class="w-12 h-12 flex items-center justify-center"
+							>
+								<svg
+									class="w-6 h-6 text-iris"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.5"
+								>
+									<path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+									<path
+										d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+									></path>
+								</svg>
+							</div>
+							<h3 class="text-2xl font-display text-text">
+								Dr. Sita's Academy
+							</h3>
+						</div>
+
+						<div class="flex items-center gap-2">
+							<span
+								class="text-3xl font-bold bg-gradient-to-r from-iris via-foam to-iris bg-clip-text text-transparent"
+								>20+</span
+							>
+							<span class="text-lg text-subtle/90"
+								>specialized courses</span
+							>
+						</div>
+
+						<p class="text-base text-subtle/90 leading-relaxed">
+							Comprehensive online courses for both public and
+							healthcare professionals, covering sexual wellness,
+							pregnancy care, and mental health.
+						</p>
+
+						<a
+							href="/academy"
+							class="inline-flex items-center gap-2 text-iris hover:text-iris transition-colors duration-300 text-lg"
+						>
+							<span>Explore Courses</span>
+							<svg
+								class="w-5 h-5"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path d="M5 12h14m-7-7 7 7-7 7"></path>
+							</svg>
+						</a>
+					</div>
+
+					<!-- Desktop Layout -->
+					<div class="hidden sm:flex items-start gap-8">
+						<div
+							class="w-16 h-16 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300"
 						>
 							<svg
 								class="w-8 h-8 text-iris"
@@ -298,29 +475,37 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 							</svg>
 						</div>
 
-						<div>
-							<h3 class="text-2xl font-display text-text mb-2">
-								Online Courses
-							</h3>
-							<div class="flex items-center gap-2 mb-4">
-								<span
-									class="text-3xl font-bold bg-gradient-to-r from-iris via-foam to-iris bg-clip-text text-transparent bg-[length:200%_auto] group-hover:bg-right transition-all duration-500"
-									>10+</span
-								>
-								<span class="text-lg text-subtle/90"
-									>courses</span
-								>
+						<div class="flex-grow space-y-8">
+							<div class="flex items-center justify-between">
+								<h3 class="text-4xl font-display text-text">
+									Dr. Sita's Academy
+								</h3>
+								<div class="flex items-center gap-3">
+									<span
+										class="text-5xl font-bold bg-gradient-to-r from-iris via-foam to-iris bg-clip-text text-transparent bg-[length:200%_auto] group-hover:bg-right transition-all duration-500"
+										>20+</span
+									>
+									<span class="text-2xl text-subtle/90"
+										>specialized courses</span
+									>
+								</div>
 							</div>
+							<p class="text-xl text-subtle/90 leading-relaxed">
+								Comprehensive online courses for both public and
+								healthcare professionals, covering sexual
+								wellness, pregnancy care, mental health, and
+								professional development.
+							</p>
 							<a
-								href="/courses"
-								class="inline-flex items-center gap-2 text-iris hover:text-iris transition-colors duration-300 text-lg group/link"
+								href="/academy"
+								class="inline-flex items-center gap-2 text-iris hover:text-iris transition-colors duration-300 text-xl group/link"
 							>
 								<span
 									class="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover/link:after:scale-x-100"
-									>Browse Courses</span
+									>Explore Courses</span
 								>
 								<svg
-									class="w-5 h-5 transform group-hover/link:translate-x-2 transition-transform duration-300"
+									class="w-6 h-6 transform group-hover/link:translate-x-2 transition-transform duration-300"
 									viewBox="0 0 24 24"
 									fill="none"
 									stroke="currentColor"
@@ -334,20 +519,72 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 				</div>
 			</div>
 
-			<!-- SiRa Products -->
-			<div
-				class="group relative transform hover:-translate-y-2 transition-all duration-300 md:col-span-2 h-auto"
-			>
+			<!-- SiRa Products Card -->
+			<div class="relative">
 				<div
-					class="absolute inset-0 bg-gradient-to-br from-gold/20 via-transparent to-base/90 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"
+					class="bg-surface/30 rounded-3xl p-6 sm:p-12 border border-highlight-med/10 backdrop-blur-xl"
 				>
-				</div>
-				<div
-					class="relative bg-surface/30 rounded-3xl p-8 border border-highlight-med/10 backdrop-blur-xl shadow-2xl shadow-gold/5 group-hover:border-gold/20 group-hover:bg-surface/40 transition-all duration-300"
-				>
-					<div class="flex items-start gap-6">
+					<!-- Mobile Layout -->
+					<div class="sm:hidden space-y-4">
+						<div class="flex items-center gap-4">
+							<div
+								class="w-12 h-12 flex items-center justify-center"
+							>
+								<svg
+									class="w-6 h-6 text-gold"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.5"
+								>
+									<path
+										d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+									></path>
+									<line x1="7" y1="7" x2="7.01" y2="7"></line>
+								</svg>
+							</div>
+							<h3 class="text-2xl font-display text-text">
+								SiRa Products
+							</h3>
+						</div>
+
+						<div class="flex items-center gap-2">
+							<span
+								class="text-3xl font-bold bg-gradient-to-r from-gold via-rose to-gold bg-clip-text text-transparent"
+								>20+</span
+							>
+							<span class="text-lg text-subtle/90"
+								>wellness products</span
+							>
+						</div>
+
+						<p class="text-base text-subtle/90 leading-relaxed">
+							Carefully curated collection of nutraceuticals,
+							supplements, and wellness products for optimal
+							health.
+						</p>
+
+						<a
+							href="/products"
+							class="inline-flex items-center gap-2 text-gold hover:text-gold transition-colors duration-300 text-lg"
+						>
+							<span>Shop Products</span>
+							<svg
+								class="w-5 h-5"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path d="M5 12h14m-7-7 7 7-7 7"></path>
+							</svg>
+						</a>
+					</div>
+
+					<!-- Desktop Layout -->
+					<div class="hidden sm:flex items-start gap-8">
 						<div
-							class="bg-gold/10 w-16 h-16 rounded-2xl flex-shrink-0 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300"
+							class="w-16 h-16 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300"
 						>
 							<svg
 								class="w-8 h-8 text-gold"
@@ -363,47 +600,44 @@ import BackgroundShapes from "./BackgroundShapes.astro";
 							</svg>
 						</div>
 
-						<div class="flex-grow">
-							<div class="flex items-center justify-between mb-4">
-								<div>
-									<h3
-										class="text-2xl font-display text-text mb-2"
-									>
-										SiRa Products
-									</h3>
-									<div class="flex items-center gap-2">
-										<span
-											class="text-3xl font-bold bg-gradient-to-r from-gold via-rose to-gold bg-clip-text text-transparent bg-[length:200%_auto] group-hover:bg-right transition-all duration-500"
-											>20+</span
-										>
-										<span class="text-lg text-subtle/90"
-											>products</span
-										>
-									</div>
-								</div>
-								<a
-									href="/products"
-									class="inline-flex items-center gap-2 text-gold hover:text-gold transition-colors duration-300 text-lg group/link"
-								>
+						<div class="flex-grow space-y-8">
+							<div class="flex items-center justify-between">
+								<h3 class="text-4xl font-display text-text">
+									SiRa Products
+								</h3>
+								<div class="flex items-center gap-3">
 									<span
-										class="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover/link:after:scale-x-100"
-										>View Products</span
+										class="text-5xl font-bold bg-gradient-to-r from-gold via-rose to-gold bg-clip-text text-transparent bg-[length:200%_auto] group-hover:bg-right transition-all duration-500"
+										>20+</span
 									>
-									<svg
-										class="w-5 h-5 transform group-hover/link:translate-x-2 transition-transform duration-300"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2"
+									<span class="text-2xl text-subtle/90"
+										>wellness products</span
 									>
-										<path d="M5 12h14m-7-7 7 7-7 7"></path>
-									</svg>
-								</a>
+								</div>
 							</div>
-							<p class="text-lg text-subtle/90 leading-relaxed">
-								Discover our line of carefully curated health
-								products and supplements.
+							<p class="text-xl text-subtle/90 leading-relaxed">
+								Carefully curated collection of nutraceuticals,
+								supplements, and wellness products designed to
+								support your journey to optimal health.
 							</p>
+							<a
+								href="/products"
+								class="inline-flex items-center gap-2 text-gold hover:text-gold transition-colors duration-300 text-xl group/link"
+							>
+								<span
+									class="relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 group-hover/link:after:scale-x-100"
+									>Shop Products</span
+								>
+								<svg
+									class="w-6 h-6 transform group-hover/link:translate-x-2 transition-transform duration-300"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d="M5 12h14m-7-7 7 7-7 7"></path>
+								</svg>
+							</a>
 						</div>
 					</div>
 				</div>
