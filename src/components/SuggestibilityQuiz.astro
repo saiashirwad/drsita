@@ -4,77 +4,180 @@
 
 <div class="max-w-4xl mx-auto px-2 sm:px-4 py-4 sm:py-8 relative">
   <div
-    class="bg-surface rounded-xl sm:rounded-2xl p-4 sm:p-8 shadow-xl backdrop-blur-sm animate-fade-in"
+    class="bg-surface rounded-xl sm:rounded-2xl p-4 sm:p-8 shadow-xl backdrop-blur-sm animate-fade-in min-h-[60vh] flex flex-col"
   >
-    <h2
-      class="text-2xl sm:text-3xl font-pier-sans text-text mb-4 sm:mb-6 animate-slide-down"
+    <!-- Start Screen -->
+    <div
+      id="startScreen"
+      class="flex-1 flex flex-col items-center justify-center text-center animate-fade-in"
     >
-      Suggestibility Assessment
-    </h2>
-
-    <p class="text-subtle mb-6 sm:mb-8 p-4 italic animate-fade-in text-sm">
-      This questionnaire helps understand how you take in and interpret
-      information. Most questions relate to your teenage years, as these traits
-      typically stabilize during adolescence. There are no right or wrong
-      answers - simply respond based on your experiences or how you believe you
-      would have responded during your teenage years.
-    </p>
-
-    <form id="suggestibilityForm" class="space-y-8 sm:space-y-12">
-      <!-- Questionnaire 1 -->
-      <div class="animate-slide-up">
-        <h3 class="text-xl sm:text-2xl font-pier-sans text-rose mb-4 sm:mb-6">
-          Questionnaire 1
-        </h3>
-        <div class="space-y-4 sm:space-y-8" id="questionnaire1">
-          <!-- Questions will be inserted here via JavaScript -->
-        </div>
-      </div>
-
-      <!-- Questionnaire 2 -->
-      <div class="animate-slide-up">
-        <h3 class="text-xl sm:text-2xl font-pier-sans text-pine mb-4 sm:mb-6">
-          Questionnaire 2
-        </h3>
-        <div class="space-y-4 sm:space-y-8" id="questionnaire2">
-          <!-- Questions will be inserted here via JavaScript -->
-        </div>
-      </div>
-
-      <!-- Results Section -->
-      <div
-        class="mt-6 sm:mt-8 p-4 sm:p-6 bg-overlay rounded-lg sm:rounded-xl animate-fade-in"
-      >
-        <h3 class="text-xl sm:text-2xl font-pier-sans text-foam mb-3 sm:mb-4">
-          Your Results
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-          <div class="space-y-1 sm:space-y-2">
-            <p class="text-subtle text-sm">Physical Suggestibility:</p>
-            <div class="text-2xl sm:text-3xl font-pier-sans text-gold">
-              <span id="physicalScore">-</span>%
-            </div>
-          </div>
-          <div class="space-y-1 sm:space-y-2">
-            <p class="text-subtle text-sm">Emotional Suggestibility:</p>
-            <div class="text-2xl sm:text-3xl font-pier-sans text-love">
-              <span id="emotionalScore">-</span>%
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <h2 class="text-2xl sm:text-3xl font-pier-sans text-text mb-6">
+        Suggestibility Assessment
+      </h2>
+      <p class="text-subtle mb-8 max-w-2xl">
+        Discover your unique blend of physical and emotional suggestibility.
+        This assessment will help you understand how you process and respond to
+        different types of information and experiences.
+      </p>
       <button
-        type="submit"
-        class="w-full py-2 sm:py-3 px-4 sm:px-6 bg-pine hover:bg-pine/90 text-text rounded-lg transition-all duration-300 text-sm"
+        id="startButton"
+        class="py-2 sm:py-3 px-6 sm:px-8 bg-pine hover:bg-pine/90 text-text rounded-lg transition-all duration-300 text-sm hover:scale-105"
       >
-        Calculate Results
+        Begin Assessment
       </button>
-    </form>
+    </div>
+
+    <!-- Consent Screen -->
+    <div
+      id="consentScreen"
+      class="flex-1 flex flex-col items-center justify-center text-center hidden animate-fade-in"
+    >
+      <h2 class="text-2xl sm:text-3xl font-pier-sans text-text mb-6">
+        Before We Begin
+      </h2>
+      <div class="text-subtle mb-8 max-w-2xl space-y-4">
+        <p>
+          This assessment is designed to help understand your suggestibility
+          patterns. Please note:
+        </p>
+        <ul class="text-left space-y-2 list-disc list-inside">
+          <li>
+            Your responses will help determine your suggestibility profile
+          </li>
+          <li>The assessment takes about 5-10 minutes to complete</li>
+          <li>Answer honestly - there are no right or wrong answers</li>
+          <li>Your results are for informational purposes only</li>
+        </ul>
+      </div>
+      <button
+        id="consentButton"
+        class="py-2 sm:py-3 px-6 sm:px-8 bg-pine hover:bg-pine/90 text-text rounded-lg transition-all duration-300 text-sm hover:scale-105"
+      >
+        I Understand, Let's Begin
+      </button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quizScreen" class="hidden">
+      <h2
+        class="text-2xl sm:text-3xl font-pier-sans text-text mb-4 sm:mb-6 animate-slide-down"
+      >
+        Suggestibility Assessment
+      </h2>
+
+      <p class="text-subtle mb-6 sm:mb-8 p-4 italic animate-fade-in text-sm">
+        This questionnaire helps understand how you take in and interpret
+        information. Most questions relate to your teenage years, as these
+        traits typically stabilize during adolescence. There are no right or
+        wrong answers - simply respond based on your experiences or how you
+        believe you would have responded during your teenage years.
+      </p>
+
+      <form id="suggestibilityForm" class="space-y-8 sm:space-y-12">
+        <!-- Questionnaire 1 -->
+        <div class="animate-slide-up">
+          <h3 class="text-xl sm:text-2xl font-pier-sans text-rose mb-4 sm:mb-6">
+            Questionnaire 1
+          </h3>
+          <div class="space-y-4 sm:space-y-8" id="questionnaire1">
+            <!-- Questions will be inserted here via JavaScript -->
+          </div>
+        </div>
+
+        <!-- Questionnaire 2 -->
+        <div class="animate-slide-up">
+          <h3 class="text-xl sm:text-2xl font-pier-sans text-pine mb-4 sm:mb-6">
+            Questionnaire 2
+          </h3>
+          <div class="space-y-4 sm:space-y-8" id="questionnaire2">
+            <!-- Questions will be inserted here via JavaScript -->
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full py-2 sm:py-3 px-4 sm:px-6 bg-pine hover:bg-pine/90 text-text rounded-lg transition-all duration-300 text-sm"
+        >
+          Calculate Results
+        </button>
+      </form>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="resultsScreen" class="hidden animate-fade-in">
+      <h2
+        class="text-2xl sm:text-3xl font-pier-sans text-foam mb-6 text-center"
+      >
+        Your Suggestibility Profile
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-overlay/50 p-6 rounded-xl">
+          <h3 class="text-xl font-pier-sans text-gold mb-2">
+            Physical Suggestibility
+          </h3>
+          <div class="text-4xl font-pier-sans text-gold mb-4">
+            <span id="physicalScoreResult">-</span>%
+          </div>
+          <p class="text-subtle text-sm">
+            Physical suggestibility relates to how you respond to physical
+            sensations and environmental cues.
+          </p>
+        </div>
+
+        <div class="bg-overlay/50 p-6 rounded-xl">
+          <h3 class="text-xl font-pier-sans text-love mb-2">
+            Emotional Suggestibility
+          </h3>
+          <div class="text-4xl font-pier-sans text-love mb-4">
+            <span id="emotionalScoreResult">-</span>%
+          </div>
+          <p class="text-subtle text-sm">
+            Emotional suggestibility indicates how you process and respond to
+            emotional and social cues.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button
+          id="retakeButton"
+          class="py-2 sm:py-3 px-6 sm:px-8 bg-pine hover:bg-pine/90 text-text rounded-lg transition-all duration-300 text-sm hover:scale-105"
+        >
+          Take Assessment Again
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 
 <script>
+  // Screen management
+  const startScreen = document.getElementById("startScreen")!;
+  const consentScreen = document.getElementById("consentScreen")!;
+  const quizScreen = document.getElementById("quizScreen")!;
+  const resultsScreen = document.getElementById("resultsScreen")!;
+
+  // Button handlers
+  document.getElementById("startButton")?.addEventListener("click", () => {
+    startScreen.classList.add("hidden");
+    consentScreen.classList.remove("hidden");
+  });
+
+  document.getElementById("consentButton")?.addEventListener("click", () => {
+    consentScreen.classList.add("hidden");
+    quizScreen.classList.remove("hidden");
+  });
+
+  document.getElementById("retakeButton")?.addEventListener("click", () => {
+    resultsScreen.classList.add("hidden");
+    startScreen.classList.remove("hidden");
+    const form = document.getElementById(
+      "suggestibilityForm",
+    ) as HTMLFormElement;
+    form.reset();
+  });
+
   const questionnaire1Data = [
     {
       id: 1,
@@ -260,11 +363,12 @@
   function createQuestionElement(question: any, questionnaireNum: number) {
     const div = document.createElement("div");
     div.className =
-      "p-3 sm:p-6 bg-overlay/50 rounded-lg hover:bg-overlay/70 transition-all duration-300 group";
+      "p-3 sm:p-6 bg-overlay/50 rounded-lg hover:bg-overlay/70 transition-all duration-300 group question-container";
     div.innerHTML = `
       <div class="space-y-2 sm:space-y-4">
         <div class="flex-1">
           <p class="text-text text-sm">${question.text}</p>
+          <p class="text-love text-xs mt-1 opacity-0 validation-message">Please select an answer</p>
         </div>
         <div class="flex gap-4 sm:gap-6 pt-1 sm:pt-2">
           <label class="option-label inline-flex items-center">
@@ -273,6 +377,7 @@
               name="q${questionnaireNum}_${question.id}"
               value="yes"
               class="form-radio"
+              required
             />
             <span class="ml-2 sm:ml-3 text-text text-sm">Yes</span>
           </label>
@@ -282,6 +387,7 @@
               name="q${questionnaireNum}_${question.id}"
               value="no"
               class="form-radio"
+              required
             />
             <span class="ml-2 sm:ml-3 text-text text-sm">No</span>
           </label>
@@ -309,6 +415,70 @@
     .addEventListener("submit", (e) => {
       e.preventDefault();
 
+      // Reset previous validation states
+      document.querySelectorAll(".validation-message").forEach((msg) => {
+        msg.classList.add("opacity-0");
+      });
+      document.querySelectorAll(".question-container").forEach((container) => {
+        container.classList.remove("invalid");
+      });
+
+      // Check if all questions are answered
+      let allAnswered = true;
+      const totalQuestions =
+        questionnaire1Data.length + questionnaire2Data.length;
+      let answeredQuestions = 0;
+
+      // Check Questionnaire 1
+      questionnaire1Data.forEach((q) => {
+        const radios = document.querySelectorAll(`input[name="q1_${q.id}"]`);
+        const isAnswered = Array.from(radios).some(
+          (radio) => (radio as HTMLInputElement).checked,
+        );
+        const container = (radios[0] as HTMLInputElement).closest(
+          ".question-container",
+        );
+        const validationMsg = container?.querySelector(".validation-message");
+
+        if (!isAnswered) {
+          allAnswered = false;
+          container?.classList.add("invalid");
+          validationMsg?.classList.remove("opacity-0");
+        } else {
+          answeredQuestions++;
+        }
+      });
+
+      // Check Questionnaire 2
+      questionnaire2Data.forEach((q) => {
+        const radios = document.querySelectorAll(`input[name="q2_${q.id}"]`);
+        const isAnswered = Array.from(radios).some(
+          (radio) => (radio as HTMLInputElement).checked,
+        );
+        const container = (radios[0] as HTMLInputElement).closest(
+          ".question-container",
+        );
+        const validationMsg = container?.querySelector(".validation-message");
+
+        if (!isAnswered) {
+          allAnswered = false;
+          container?.classList.add("invalid");
+          validationMsg?.classList.remove("opacity-0");
+        } else {
+          answeredQuestions++;
+        }
+      });
+
+      if (!allAnswered) {
+        // Scroll to the first unanswered question
+        const firstInvalid = document.querySelector(".invalid");
+        if (firstInvalid) {
+          firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+        return;
+      }
+
+      // If all questions are answered, proceed with score calculation
       let score1 = 0;
       let score2 = 0;
 
@@ -332,22 +502,22 @@
       });
 
       // Calculate percentages
-      const totalPossibleScore = score1 + score2;
-      const physicalPercentage = Math.round(
-        (score1 / totalPossibleScore) * 100,
-      );
+      const totalScore = score1 + score2;
+      const physicalPercentage = Math.round((score1 / totalScore) * 100);
       const emotionalPercentage = 100 - physicalPercentage;
 
-      // Update display
-      document.getElementById("physicalScore")!.textContent =
+      // Update display with the new IDs
+      document.getElementById("physicalScoreResult")!.textContent =
         physicalPercentage.toString();
-      document.getElementById("emotionalScore")!.textContent =
+      document.getElementById("emotionalScoreResult")!.textContent =
         emotionalPercentage.toString();
 
-      // Smooth scroll to results
-      document
-        .querySelector(".text-foam")!
-        .scrollIntoView({ behavior: "smooth" });
+      // Show results screen
+      quizScreen.classList.add("hidden");
+      resultsScreen.classList.remove("hidden");
+
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
 </script>
 
@@ -461,5 +631,22 @@
 
   .animate-slide-down {
     animation: slide-down 0.8s ease-out forwards;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .question-container {
+    transition: all 0.3s ease;
+  }
+
+  .question-container.invalid {
+    border: 1px solid rgb(235 111 146 / 0.3); /* Love color */
+    background-color: rgb(235 111 146 / 0.05);
+  }
+
+  .validation-message {
+    transition: opacity 0.3s ease;
   }
 </style>
