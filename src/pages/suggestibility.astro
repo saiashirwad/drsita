@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SuggestibilityQuiz from "../components/SuggestibilityQuiz.astro";
+---
+
+<Layout title="Suggestibility Assessment | Dr. Sita">
+  <main class="min-h-screen py-12 relative">
+    <div class="max-w-7xl mx-auto">
+      <h1
+        class="text-4xl md:text-5xl font-pier-sans text-text text-center mb-8"
+      >
+        Suggestibility Assessment
+      </h1>
+      <p class="text-subtle text-center max-w-2xl mx-auto mb-12 px-4">
+        Discover your unique blend of physical and emotional suggestibility.
+        This assessment helps understand how you process and respond to
+        different types of information and experiences.
+      </p>
+
+      <SuggestibilityQuiz />
+    </div>
+  </main>
+</Layout>

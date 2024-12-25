@@ -1,0 +1,465 @@
+---
+
+---
+
+<div class="max-w-4xl mx-auto px-2 sm:px-4 py-4 sm:py-8 relative">
+  <div
+    class="bg-surface rounded-xl sm:rounded-2xl p-4 sm:p-8 shadow-xl backdrop-blur-sm animate-fade-in"
+  >
+    <h2
+      class="text-2xl sm:text-3xl font-pier-sans text-text mb-4 sm:mb-6 animate-slide-down"
+    >
+      Suggestibility Assessment
+    </h2>
+
+    <p class="text-subtle mb-6 sm:mb-8 p-4 italic animate-fade-in text-sm">
+      This questionnaire helps understand how you take in and interpret
+      information. Most questions relate to your teenage years, as these traits
+      typically stabilize during adolescence. There are no right or wrong
+      answers - simply respond based on your experiences or how you believe you
+      would have responded during your teenage years.
+    </p>
+
+    <form id="suggestibilityForm" class="space-y-8 sm:space-y-12">
+      <!-- Questionnaire 1 -->
+      <div class="animate-slide-up">
+        <h3 class="text-xl sm:text-2xl font-pier-sans text-rose mb-4 sm:mb-6">
+          Questionnaire 1
+        </h3>
+        <div class="space-y-4 sm:space-y-8" id="questionnaire1">
+          <!-- Questions will be inserted here via JavaScript -->
+        </div>
+      </div>
+
+      <!-- Questionnaire 2 -->
+      <div class="animate-slide-up">
+        <h3 class="text-xl sm:text-2xl font-pier-sans text-pine mb-4 sm:mb-6">
+          Questionnaire 2
+        </h3>
+        <div class="space-y-4 sm:space-y-8" id="questionnaire2">
+          <!-- Questions will be inserted here via JavaScript -->
+        </div>
+      </div>
+
+      <!-- Results Section -->
+      <div
+        class="mt-6 sm:mt-8 p-4 sm:p-6 bg-overlay rounded-lg sm:rounded-xl animate-fade-in"
+      >
+        <h3 class="text-xl sm:text-2xl font-pier-sans text-foam mb-3 sm:mb-4">
+          Your Results
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <div class="space-y-1 sm:space-y-2">
+            <p class="text-subtle text-sm">Physical Suggestibility:</p>
+            <div class="text-2xl sm:text-3xl font-pier-sans text-gold">
+              <span id="physicalScore">-</span>%
+            </div>
+          </div>
+          <div class="space-y-1 sm:space-y-2">
+            <p class="text-subtle text-sm">Emotional Suggestibility:</p>
+            <div class="text-2xl sm:text-3xl font-pier-sans text-love">
+              <span id="emotionalScore">-</span>%
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full py-2 sm:py-3 px-4 sm:px-6 bg-pine hover:bg-pine/90 text-text rounded-lg transition-all duration-300 text-sm"
+      >
+        Calculate Results
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const questionnaire1Data = [
+    {
+      id: 1,
+      text: "Have you ever walked in your sleep during your adult life?",
+      weight: 10,
+    },
+    {
+      id: 2,
+      text: "As a teenager did you feel comfortable expressing your feelings to one or both of your parents or friends?",
+      weight: 10,
+    },
+    {
+      id: 3,
+      text: "Do you have a tendency to look directly into a person's eyes and/or move closely to them when discussing an interesting subject?",
+      weight: 5,
+    },
+    {
+      id: 4,
+      text: "Do you feel that most people, when you first meet them, are uncritical of your appearance?",
+      weight: 5,
+    },
+    {
+      id: 5,
+      text: "In a group situation, with people that you have just met, would you feel comfortable drawing attention to yourself by initiating a conversation?",
+      weight: 5,
+    },
+    {
+      id: 6,
+      text: "Do you feel comfortable holding hands or hugging someone you are in a relationship with in front of other people?",
+      weight: 5,
+    },
+    {
+      id: 7,
+      text: "When someone talks about feeling warm physically, do you begin to feel warm also?",
+      weight: 5,
+    },
+    {
+      id: 8,
+      text: "Do you tend to occasionally tune out when someone is talking to you because you are anxious to come up with your side, and at times not hear what the other person said?",
+      weight: 5,
+    },
+    {
+      id: 9,
+      text: "Do you feel that you learn and comprehend better by seeing and/or reading than by hearing?",
+      weight: 5,
+    },
+    {
+      id: 10,
+      text: "In a new class or lecture situation do you usually feel comfortable asking questions in front of the group?",
+      weight: 5,
+    },
+    {
+      id: 11,
+      text: "When expressing your ideas do you find it important to relate all the details leading up to the subject so the other person can understand it completely?",
+      weight: 5,
+    },
+    { id: 12, text: "Do you enjoy relating to children?", weight: 5 },
+    {
+      id: 13,
+      text: "Do you find it easy to be at ease and comfortable with your body movements, even when faced with unfamiliar people and circumstances?",
+      weight: 5,
+    },
+    {
+      id: 14,
+      text: "Do you prefer reading fiction rather than non-fiction?",
+      weight: 5,
+    },
+    {
+      id: 15,
+      text: "If you were to imagine sucking on a sour, bitter, juicy, yellow lemon, would your mouth water?",
+      weight: 5,
+    },
+    {
+      id: 16,
+      text: "If you feel that you deserve to be complimented for something well done, do you feel comfortable if the compliment is given to you in front of other people?",
+      weight: 5,
+    },
+    {
+      id: 17,
+      text: "Do you feel that you are a good conversationalist?",
+      weight: 5,
+    },
+    {
+      id: 18,
+      text: "Do you feel comfortable when complimentary attention is drawn to your physical body or appearance?",
+      weight: 5,
+    },
+  ];
+
+  const questionnaire2Data = [
+    {
+      id: 1,
+      text: "Have you ever awakened in the middle of the night and felt that you could not move your body and/or talk?",
+      weight: 10,
+    },
+    {
+      id: 2,
+      text: "As a child, did you feel that you were more affected by the tone of voice of your parents than by what they actually said?",
+      weight: 10,
+    },
+    {
+      id: 3,
+      text: "If someone you are associated with talks about a fear that you too have experienced, do you have a tendency to have an apprehensive or fearful feeling also?",
+      weight: 5,
+    },
+    {
+      id: 4,
+      text: "After having an argument with someone, do you have a tendency to dwell on what you could or should have said?",
+      weight: 5,
+    },
+    {
+      id: 5,
+      text: "Do you tend to occasionally tune out when someone is talking to you and do not hear what was said because your mind drifts to something totally unrelated?",
+      weight: 5,
+    },
+    {
+      id: 6,
+      text: "Do you sometimes desire to be complimented for a job well done, but feel embarrassed or uncomfortable when complimented?",
+      weight: 5,
+    },
+    {
+      id: 7,
+      text: "Do you often have a fear or dread of not being able to carry on a conversation with someone you just met?",
+      weight: 5,
+    },
+    {
+      id: 8,
+      text: "Do you feel self-conscious when attention is drawn to your physical body or appearance?",
+      weight: 5,
+    },
+    {
+      id: 9,
+      text: "If you have a choice, would you rather avoid being around children most of the time?",
+      weight: 5,
+    },
+    {
+      id: 10,
+      text: "Do you feel that you are not relaxed or loose in body movements, especially when faced with unfamiliar people or circumstances?",
+      weight: 5,
+    },
+    {
+      id: 11,
+      text: "Do you prefer reading non-fiction rather than fiction?",
+      weight: 5,
+    },
+    {
+      id: 12,
+      text: "If someone describes a very bitter taste, do you have difficulty experiencing the physical feeling of it?",
+      weight: 5,
+    },
+    {
+      id: 13,
+      text: "Do you generally feel that you see yourself less favorably than others see you?",
+      weight: 5,
+    },
+    {
+      id: 14,
+      text: "Do you tend to feel awkward or self-conscious initiating touch (holding hands, kissing, etc.) with someone you are in a relationship with in front of other people?",
+      weight: 5,
+    },
+    {
+      id: 15,
+      text: "In a new class or lecture situation do you usually feel uncomfortable asking questions in front of the group even though you may desire further explanation?",
+      weight: 5,
+    },
+    {
+      id: 16,
+      text: "Do you feel uneasy if someone you have just met looks directly in the eyes when talking to you, especially if the conversation is about you?",
+      weight: 5,
+    },
+    {
+      id: 17,
+      text: "In a group situation with people you have just met, would you feel uncomfortable drawing attention to yourself by initiating a conversation?",
+      weight: 5,
+    },
+    {
+      id: 18,
+      text: "If you are in a relationship, or are very close to someone, do you find it difficult or embarrassing to verbalize your love for them?",
+      weight: 5,
+    },
+  ];
+
+  function createQuestionElement(question: any, questionnaireNum: number) {
+    const div = document.createElement("div");
+    div.className =
+      "p-3 sm:p-6 bg-overlay/50 rounded-lg hover:bg-overlay/70 transition-all duration-300 group";
+    div.innerHTML = `
+      <div class="space-y-2 sm:space-y-4">
+        <div class="flex-1">
+          <p class="text-text text-sm">${question.text}</p>
+        </div>
+        <div class="flex gap-4 sm:gap-6 pt-1 sm:pt-2">
+          <label class="option-label inline-flex items-center">
+            <input
+              type="radio"
+              name="q${questionnaireNum}_${question.id}"
+              value="yes"
+              class="form-radio"
+            />
+            <span class="ml-2 sm:ml-3 text-text text-sm">Yes</span>
+          </label>
+          <label class="option-label inline-flex items-center">
+            <input
+              type="radio"
+              name="q${questionnaireNum}_${question.id}"
+              value="no"
+              class="form-radio"
+            />
+            <span class="ml-2 sm:ml-3 text-text text-sm">No</span>
+          </label>
+        </div>
+      </div>
+    `;
+    return div;
+  }
+
+  // Populate questions
+  const q1Container = document.getElementById("questionnaire1")!;
+  const q2Container = document.getElementById("questionnaire2")!;
+
+  questionnaire1Data.forEach((q) => {
+    q1Container.appendChild(createQuestionElement(q, 1));
+  });
+
+  questionnaire2Data.forEach((q) => {
+    q2Container.appendChild(createQuestionElement(q, 2));
+  });
+
+  // Handle form submission
+  document
+    .getElementById("suggestibilityForm")!
+    .addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      let score1 = 0;
+      let score2 = 0;
+
+      // Calculate scores
+      questionnaire1Data.forEach((q) => {
+        const radio = document.querySelector(
+          `input[name="q1_${q.id}"]:checked`,
+        ) as HTMLInputElement;
+        if (radio && radio.value === "yes") {
+          score1 += q.weight;
+        }
+      });
+
+      questionnaire2Data.forEach((q) => {
+        const radio = document.querySelector(
+          `input[name="q2_${q.id}"]:checked`,
+        ) as HTMLInputElement;
+        if (radio && radio.value === "yes") {
+          score2 += q.weight;
+        }
+      });
+
+      // Calculate percentages
+      const totalPossibleScore = score1 + score2;
+      const physicalPercentage = Math.round(
+        (score1 / totalPossibleScore) * 100,
+      );
+      const emotionalPercentage = 100 - physicalPercentage;
+
+      // Update display
+      document.getElementById("physicalScore")!.textContent =
+        physicalPercentage.toString();
+      document.getElementById("emotionalScore")!.textContent =
+        emotionalPercentage.toString();
+
+      // Smooth scroll to results
+      document
+        .querySelector(".text-foam")!
+        .scrollIntoView({ behavior: "smooth" });
+    });
+</script>
+
+<style>
+  /* Custom radio button styles */
+  .form-radio {
+    appearance: none;
+    padding: 0;
+    print-color-adjust: exact;
+    display: inline-block;
+    vertical-align: middle;
+    background-origin: border-box;
+    user-select: none;
+    flex-shrink: 0;
+    height: 1rem;
+    width: 1rem;
+    @screen sm {
+      height: 1.2rem;
+      width: 1.2rem;
+    }
+    border-radius: 50%;
+    border: 2px solid rgb(110 106 134);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    background-color: rgb(31 29 46 / 0.5);
+  }
+
+  .form-radio:hover {
+    border-color: rgb(246 193 119 / 0.5);
+    transform: scale(1.05);
+  }
+
+  .form-radio:checked {
+    background-color: rgb(246 193 119);
+    border-color: rgb(246 193 119);
+  }
+
+  .form-radio:checked:after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    background-color: rgb(31 29 46);
+  }
+
+  .form-radio:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(246, 193, 119, 0.3);
+  }
+
+  /* Option label styles */
+  .option-label {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .option-label:hover {
+    background: rgb(31 29 46 / 0.3);
+  }
+
+  .option-label:has(.form-radio:checked) {
+    background: rgb(246 193 119 / 0.1);
+  }
+
+  /* Remove the text color change on selection */
+  .option-label:has(.form-radio:checked) span {
+    color: inherit;
+  }
+
+  /* Animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+  }
+
+  .animate-slide-down {
+    animation: slide-down 0.8s ease-out forwards;
+  }
+</style>
