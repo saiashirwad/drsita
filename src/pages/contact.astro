@@ -4,34 +4,187 @@ import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
 import Section from "../components/Section.astro";
 import Button from "../components/Button.astro";
+
+const contactInfo = {
+  emails: [
+    {
+      label: "General Enquiries",
+      email: "mindbodytonicwithdrsita@gmail.com",
+      icon: "mdi:email",
+    },
+    {
+      label: "Appointments & Scheduling",
+      email: "appointments@drsita.com", // Replace with actual email
+      icon: "mdi:calendar",
+    },
+  ],
+  phones: [
+    {
+      label: "WhatsApp",
+      number: "+91 XXXXX XXXXX", // Replace with actual number
+      icon: "mdi:whatsapp",
+    },
+    {
+      label: "Hospital",
+      number: "+91 XXXXX XXXXX", // Replace with actual number
+      icon: "mdi:phone",
+    },
+  ],
+  address: {
+    name: "Dr Sita's Mind Body Care",
+    hospital: "Devikripa Hospital",
+    location: "Thrissur, Kerala",
+    icon: "mdi:map-marker",
+  },
+};
 ---
 
 <BaseLayout title="Contact - Dr. Sita">
   <Navbar />
 
-  <main class="min-h-screen flex items-center justify-center">
-    <div class="text-center">
-      <h1
-        class="text-6xl md:text-7xl font-display text-text tracking-tight opacity-0 animate-fade-up mb-8"
-      >
-        Get in Touch
-      </h1>
-      <p
-        class="text-2xl text-subtle opacity-0 animate-fade-up animation-delay-100 leading-relaxed mb-12 max-w-xl mx-auto"
-      >
-        Schedule a consultation and take the first step towards better health
-        and wellness
-      </p>
-      <div class="opacity-0 animate-fade-up animation-delay-200">
-        <Button
-          href="https://cal.com/dr-sita"
-          external
-          color="love"
-          icon="mdi:calendar"
+  <main>
+    <Hero
+      title="Get in Touch"
+      subtitle="Whether you're interested in a retreat, workshop, or consultation, we're here to guide you on your journey to holistic health and well-being."
+    />
+
+    <Section>
+      <div class="grid grid-cols-1 gap-8 max-w-6xl mx-auto">
+        <!-- Contact Information Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Contact Information -->
+          <div class="space-y-12">
+            <!-- Email Section -->
+            <div>
+              <h3 class="text-2xl font-display text-text mb-6">Email Us</h3>
+              <div class="space-y-4">
+                {
+                  contactInfo.emails.map((item) => (
+                    <a
+                      href={`mailto:${item.email}`}
+                      class="flex items-center p-4 bg-surface/30 rounded-2xl border border-highlight-med/10 hover:border-highlight-med/20 transition-all group"
+                    >
+                      <div class="bg-iris/10 w-12 h-12 rounded-xl flex items-center justify-center mr-4">
+                        <svg
+                          class="w-6 h-6 text-iris"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="text-subtle text-sm">{item.label}</div>
+                        <div class="text-text group-hover:text-iris transition-colors">
+                          {item.email}
+                        </div>
+                      </div>
+                    </a>
+                  ))
+                }
+              </div>
+            </div>
+
+            <!-- Phone Section -->
+            <div>
+              <h3 class="text-2xl font-display text-text mb-6">Call Us</h3>
+              <div class="space-y-4">
+                {
+                  contactInfo.phones.map((item) => (
+                    <a
+                      href={`tel:${item.number.replace(/\s/g, "")}`}
+                      class="flex items-center p-4 bg-surface/30 rounded-2xl border border-highlight-med/10 hover:border-highlight-med/20 transition-all group"
+                    >
+                      <div class="bg-foam/10 w-12 h-12 rounded-xl flex items-center justify-center mr-4">
+                        <svg
+                          class="w-6 h-6 text-foam"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="text-subtle text-sm">{item.label}</div>
+                        <div class="text-text group-hover:text-foam transition-colors">
+                          {item.number}
+                        </div>
+                      </div>
+                    </a>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+
+          <!-- Address Section -->
+          <div>
+            <h3 class="text-2xl font-display text-text mb-6">Visit Us</h3>
+            <div
+              class="p-4 bg-surface/30 rounded-2xl border border-highlight-med/10"
+            >
+              <div class="flex items-center mb-4">
+                <div
+                  class="bg-gold/10 w-12 h-12 rounded-xl flex items-center justify-center mr-4"
+                >
+                  <svg
+                    class="w-6 h-6 text-gold"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    ></path>
+                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-text font-medium">
+                    {contactInfo.address.name}
+                  </div>
+                  <div class="text-subtle">{contactInfo.address.hospital}</div>
+                  <div class="text-subtle">{contactInfo.address.location}</div>
+                </div>
+              </div>
+              <Button href="#" color="gold" class="w-full" icon="mdi:map">
+                Get Directions
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Appointment Booking -->
+        <div
+          class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10"
         >
-          Schedule a Consultation
-        </Button>
+          <h3
+            id="schedule-appointment"
+            class="text-3xl font-display text-text mb-6"
+          >
+            Schedule a Consultation
+          </h3>
+          <p class="text-subtle/90 mb-8">
+            Take the first step towards better health and wellness. Book a
+            consultation with Dr. Sita to discuss your concerns and create a
+            personalized plan for your journey.
+          </p>
+          <Button
+            href="https://cal.com/dr-sita"
+            external
+            color="love"
+            icon="mdi:calendar"
+            class="w-full justify-center"
+          >
+            Book an Appointment
+          </Button>
+        </div>
       </div>
-    </div>
+    </Section>
   </main>
 </BaseLayout>
