@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Button from "../components/Button.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+---
+
+<BaseLayout title="Batch Therapy | Dr. Sita">
+  <Navbar />
+
+  <main>
+    <Hero
+      title="Batch Therapy"
+      subtitle="A groundbreaking approach to sexual wellness and intimate relationships"
+    />
+
+    <!-- Introduction Section -->
+    <Section>
+      <SectionHeader title="About Batch Therapy" />
+      <div class="max-w-3xl">
+        <p class="text-xl text-subtle/90 leading-relaxed mb-8">
+          Dr. Sitalakshmi A is the proud creator of Batch Therapy, a
+          groundbreaking and comprehensive therapy designed to address the
+          multifaceted challenges of sexual dysfunction and intimacy issues.
+          Originally developed for couples with unconsummated marriages, Batch
+          Therapy has evolved to cater to individuals and couples experiencing a
+          wide range of male and female sexual dysfunctions.
+        </p>
+        <p class="text-xl text-subtle/90 leading-relaxed">
+          Through a personalized combination of counseling, education,
+          mindfulness, yoga, and acupuncture, Dr. Sita has redefined how
+          intimacy and emotional connection can be restored.
+        </p>
+      </div>
+    </Section>
+
+    <!-- Vision Section -->
+    <Section>
+      <SectionHeader title="Our Vision" />
+      <div class="max-w-3xl">
+        <p class="text-xl text-subtle/90 leading-relaxed">
+          My vision is to provide individuals and couples with a safe,
+          judgment-free space to overcome personal and relationship challenges.
+          Whether it's rediscovering intimacy after decades of marriage,
+          preparing for a healthy partnership before marriage, or addressing
+          specific psychosexual concerns, my programs are designed to empower
+          participants to heal, grow, and thrive.
+        </p>
+      </div>
+    </Section>
+
+    <!-- Programs Section -->
+    <Section>
+      <SectionHeader title="Specialized Programs" />
+
+      <div class="space-y-16 max-w-3xl">
+        <div>
+          <h3 class="text-2xl font-display text-text mb-4">
+            Unconsummated Marriages
+          </h3>
+          <p class="text-xl text-subtle/90 leading-relaxed">
+            Helping couples build emotional and physical intimacy through
+            specialized therapy and guidance. Our program provides a safe and
+            supportive environment for couples to address their concerns and
+            work towards a fulfilling relationship.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-display text-text mb-4">
+            Sexual Dysfunction
+          </h3>
+          <p class="text-xl text-subtle/90 leading-relaxed">
+            Treating erectile dysfunction, premature ejaculation, vaginismus,
+            and other sexual health concerns through our comprehensive approach
+            that combines medical expertise with holistic healing methods.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-display text-text mb-4">
+            Restoring Intimacy
+          </h3>
+          <p class="text-xl text-subtle/90 leading-relaxed">
+            Rekindling love and connection for couples in their forties and
+            fifties through specialized programs. We help couples navigate the
+            challenges of long-term relationships and rediscover their bond.
+          </p>
+        </div>
+      </div>
+    </Section>
+
+    <!-- CTA Section -->
+    <Section class="py-32">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-display text-text mb-8">
+          Begin your healing journey today
+        </h2>
+        <Button href="/contact" color="love" icon="mdi:heart-pulse">
+          Schedule a Consultation
+        </Button>
+      </div>
+    </Section>
+  </main>
+</BaseLayout>
