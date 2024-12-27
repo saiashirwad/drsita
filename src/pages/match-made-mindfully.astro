@@ -1,0 +1,147 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+import FindingLifePartner from "../components/FindingLifePartner";
+import Button from "../components/Button.astro";
+---
+
+<BaseLayout title="Match Made Mindfully - Dr. Sita">
+  <Navbar />
+
+  <main>
+    <Hero
+      title="Match Made Mindfully"
+      subtitle="A Practical Seminar on Choosing Your Life Partner"
+    />
+
+    <!-- Quick Registration Button -->
+    <Section class="pb-0">
+      <div class="text-center space-x-4">
+        <Button href="#registration-form" color="love" icon="mdi:arrow-down">
+          Register Now
+        </Button>
+        <Button href="#about-program" color="iris" icon="mdi:information">
+          Learn More
+        </Button>
+      </div>
+    </Section>
+
+    <!-- Program Overview -->
+    <Section>
+      <div class="max-w-3xl mx-auto mb-16">
+        <div
+          id="about-program"
+          class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
+        >
+          <h2 class="text-3xl font-display text-text mb-8">
+            About the Program
+          </h2>
+
+          <div class="space-y-8">
+            <p class="text-xl text-subtle/90 leading-relaxed">
+              Join Dr. Sita for an insightful seminar designed to help you make
+              one of life's most important decisions. This program combines
+              psychological insights, practical wisdom, and interactive sessions
+              to guide you through the partner selection process.
+            </p>
+
+            <div>
+              <h3 class="text-2xl font-display text-foam mb-4">
+                What You'll Learn
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <div class="w-2 h-2 rounded-full bg-foam mt-2.5"></div>
+                  <span class="text-lg text-subtle/90"
+                    >Understanding your core values and non-negotiables in a
+                    relationship</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-2 h-2 rounded-full bg-foam mt-2.5"></div>
+                  <span class="text-lg text-subtle/90"
+                    >Identifying and addressing red flags early in relationships</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-2 h-2 rounded-full bg-foam mt-2.5"></div>
+                  <span class="text-lg text-subtle/90"
+                    >Navigating family expectations while staying true to your
+                    needs</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-2 h-2 rounded-full bg-foam mt-2.5"></div>
+                  <span class="text-lg text-subtle/90"
+                    >Building emotional maturity and relationship readiness</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-display text-iris mb-4">
+                Program Format
+              </h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <div class="w-2 h-2 rounded-full bg-iris mt-2.5"></div>
+                  <span class="text-lg text-subtle/90"
+                    >Interactive workshops and group discussions</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-2 h-2 rounded-full bg-iris mt-2.5"></div>
+                  <span class="text-lg text-subtle/90"
+                    >Practical exercises and case studies</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-2 h-2 rounded-full bg-iris mt-2.5"></div>
+                  <span class="text-lg text-subtle/90"
+                    >Q&A sessions with Dr. Sita</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-2 h-2 rounded-full bg-iris mt-2.5"></div>
+                  <span class="text-lg text-subtle/90"
+                    >Take-home materials and resources</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-love/10 rounded-2xl p-6">
+              <h3 class="text-xl font-display text-love mb-3">
+                Who Should Attend?
+              </h3>
+              <p class="text-lg text-subtle/90 leading-relaxed">
+                This seminar is ideal for individuals who are considering
+                marriage, currently in the partner selection process, or want to
+                develop a better understanding of what makes relationships work.
+                Whether you're seeking an arranged marriage or choosing your own
+                partner, this program will provide valuable insights and
+                practical tools.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Registration Form -->
+      <div class="max-w-3xl mx-auto">
+        <div
+          id="registration-form"
+          class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl"
+        >
+          <h2 class="text-3xl font-display text-text mb-8">
+            Register Your Interest
+          </h2>
+          <FindingLifePartner client:load />
+        </div>
+      </div>
+    </Section>
+  </main>
+</BaseLayout>
