@@ -1,0 +1,91 @@
+---
+import Button from "../components/Button.astro";
+import Hero from "../components/Hero.astro";
+import Navbar from "../components/Navbar.astro";
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import EventsList from "../components/EventsList";
+
+type Event = {
+  id: number;
+  title: string;
+  date: string;
+  location: string;
+  description: string;
+  category: string;
+  status: string;
+};
+
+const upcomingEvents: Event[] = [
+  {
+    id: 1,
+    title: "2-3 Week Couples Retreat",
+    date: "Coming Soon",
+    location: "Thrissur, Kerala",
+    description:
+      "Intensive program for couples dealing with intimacy challenges.",
+    category: "Retreats",
+    status: "upcoming",
+  },
+  {
+    id: 2,
+    title: "One-Day Awareness Workshop",
+    date: "Coming Soon",
+    location: "Online",
+    description: "Introduction to holistic approaches for sexual wellness.",
+    category: "Workshops",
+    status: "upcoming",
+  },
+  {
+    id: 3,
+    title: "Mental Health & Self-Nurturing Workshop",
+    date: "Coming Soon",
+    location: "Bangalore",
+    description: "Learn practical tools for stress management and self-care.",
+    category: "Workshops",
+    status: "upcoming",
+  },
+] as const;
+
+const categories = ["All Events", "Retreats", "Workshops", "Seminars"] as const;
+---
+
+<BaseLayout title="Events | Dr. Sita">
+  <Navbar />
+
+  <main>
+    <Hero
+      title="Upcoming Events"
+      subtitle="Join us for transformative experiences in wellness and healing"
+    />
+
+    <!-- Events Section -->
+    <Section>
+      <EventsList
+        client:load
+        initialEvents={upcomingEvents}
+        categories={categories}
+      />
+    </Section>
+
+    <!-- Newsletter Section -->
+    <Section>
+      <div class="text-center max-w-3xl mx-auto">
+        <SectionHeader title="Stay Updated" />
+        <p class="text-xl text-subtle/90 leading-relaxed mb-8">
+          Subscribe to receive notifications about new events and early-bird
+          registrations.
+        </p>
+        <div class="flex gap-4 justify-center">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="px-6 py-3 rounded-full bg-surface/50 border border-highlight-med/10 focus:border-highlight-med/20 outline-none text-text w-full max-w-sm"
+          />
+          <Button href="#" color="iris">Subscribe</Button>
+        </div>
+      </div>
+    </Section>
+  </main>
+</BaseLayout>

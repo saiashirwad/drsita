@@ -1,0 +1,84 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Button from "../components/Button.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+---
+
+<BaseLayout title="Unconsummated Marriage Therapy | Dr. Sita">
+  <Navbar />
+
+  <main>
+    <Hero
+      title="Unconsummated Marriage Therapy"
+      subtitle="Compassionate support and proven solutions for couples facing intimacy challenges"
+    />
+
+    <!-- Introduction Section -->
+    <Section>
+      <SectionHeader title="Understanding Unconsummated Marriages" />
+      <div class="max-w-3xl">
+        <p class="text-xl text-subtle/90 leading-relaxed mb-8">
+          An unconsummated marriage can be a source of deep emotional distress
+          for couples. At Dr. Sita's Mind Body Care, we provide a safe,
+          judgment-free environment where couples can address their concerns and
+          work towards building physical and emotional intimacy.
+        </p>
+        <p class="text-xl text-subtle/90 leading-relaxed">
+          Our comprehensive approach combines medical expertise with
+          psychological support, helping couples overcome challenges such as
+          vaginismus, erectile dysfunction, or anxiety-related intimacy issues.
+        </p>
+      </div>
+    </Section>
+
+    <!-- Coming Soon Section -->
+    <Section>
+      <SectionHeader title="Programs Coming Soon" />
+      <div class="max-w-3xl">
+        <p class="text-xl text-subtle/90 leading-relaxed mb-8">
+          We are currently developing comprehensive programs including:
+        </p>
+        <ul class="text-xl text-subtle/90 leading-relaxed space-y-6">
+          <li>
+            <span class="text-foam">2-3 Week Intensive Retreat</span>
+            <p class="mt-2">
+              A transformative program combining counseling, mindfulness, and
+              holistic healing approaches.
+            </p>
+          </li>
+          <li>
+            <span class="text-foam">One-Day Assessment Program</span>
+            <p class="mt-2">
+              Initial consultation and personalized treatment planning sessions.
+            </p>
+          </li>
+          <li>
+            <span class="text-foam">Online Support Groups</span>
+            <p class="mt-2">
+              Virtual community support and educational resources.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </Section>
+
+    <!-- CTA Section -->
+    <Section class="py-32">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-display text-text mb-8">
+          Register Your Interest
+        </h2>
+        <p class="text-xl text-subtle/90 leading-relaxed mb-8">
+          Be the first to know when our programs launch. Join our waiting list
+          for early access and special offers.
+        </p>
+        <Button href="/contact" color="love" icon="mdi:heart-pulse">
+          Join Waiting List
+        </Button>
+      </div>
+    </Section>
+  </main>
+</BaseLayout>
