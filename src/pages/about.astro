@@ -7,6 +7,8 @@ import SectionHeader from "../components/SectionHeader.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import type { Colors } from "../utils/colors";
 
+import BackgroundShapes from "../components/BackgroundShapes.astro";
+
 type Hero = {
   title: string;
   subtitle: string;
@@ -98,7 +100,6 @@ const cta: Cta = {
 
 <BaseLayout title="About | Dr. Sita">
   <Navbar />
-
   <main>
     <Hero title={hero.title} subtitle={hero.subtitle} action={hero.cta} />
 
