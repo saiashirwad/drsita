@@ -2,9 +2,9 @@
   "testimonials": [
     {
       "id": 1,
-      "quote": "Dr. Sita's Batch Therapy program transformed our relationship. Her holistic approach helped us overcome challenges we'd been facing for years.",
+      "quote": "Dr. Sita's Samyojana Therapy program transformed our relationship. Her holistic approach helped us overcome challenges we'd been facing for years.",
       "author": "Couple from Mumbai",
-      "program": "Batch Therapy Program",
+      "program": "Samyojana Therapy Program",
       "rating": 5,
       "category": "couples",
       "icon": "chat",
@@ -132,9 +132,9 @@
     },
     {
       "id": 14,
-      "quote": "The combination of traditional and modern therapeutic approaches in Batch Therapy makes it uniquely effective.",
+      "quote": "The combination of traditional and modern therapeutic approaches in Samyojana Therapy makes it uniquely effective.",
       "author": "Therapy Participant",
-      "program": "Batch Therapy",
+      "program": "Samyojana Therapy",
       "rating": 5,
       "category": "therapy",
       "icon": "puzzle",
