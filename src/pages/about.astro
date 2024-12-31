@@ -34,8 +34,9 @@ const hero: Hero = {
 const story = {
   title: "How I got where I am now",
   paragraphs: [
-    "As a distinguished Sexual Health Consultant and Gynecologist based in Kerala, India, I've dedicated my career to breaking barriers in sexual health education and care. My journey began with a vision to create a more open and informed society where discussions about sexual health are normalized and accessible.",
-    "Through my YouTube channel \"Dr Sita's Mind Body Care\" and social media presence, I've found innovative ways to reach and educate people about important health topics. This platform has allowed me to extend my impact beyond the clinic, creating a community where learning about health is engaging and accessible.",
+    "As a pioneer in integrative health, I blend traditional medical expertise with holistic therapies. My journey in medicine began with obtaining my MD and DGO in Obstetrics & Gynecology in 1997, followed by specialized training in Psychosexual Medicine and Clinical Hypnotherapy.",
+    "I'm deeply passionate about helping individuals and couples overcome physical, emotional, and psychological challenges to lead fulfilling lives. Through my practice, I've developed a unique approach that combines modern medicine with holistic practices to provide complete, personalized healthcare.",
+    "My mission is to empower people with the tools and knowledge they need to achieve holistic well-being—bridging science with mindfulness, physical health, and emotional balance. Through my YouTube channel \"Dr Sita's Mind Body Care\" and social media presence, I've found innovative ways to reach and educate people about important health topics.",
   ],
 };
 
@@ -72,6 +73,30 @@ const expertise = {
     "Holistic Health Education",
     "Preventive Healthcare",
     "Wellness Coaching",
+  ],
+};
+
+const professional = {
+  title: "Professional Background",
+  qualifications: [
+    {
+      title: "Education & Specializations",
+      items: [
+        "MD and DGO in Obstetrics & Gynecology (1997)",
+        "Fellowship in Psychosexual Medicine",
+        "Clinical Hypnotherapist",
+        "Expert in integrative wellness",
+      ],
+    },
+    {
+      title: "Professional Affiliations",
+      items: [
+        "Thrissur Obstetrics & Gynecological Society (TOGS)",
+        "International Association of Sexual Medicine Practitioners (IASMP)",
+        "European Society of Sexual Medicine (ESSM)",
+        "PCOS Society of India",
+      ],
+    },
   ],
 };
 
@@ -128,6 +153,30 @@ const cta: Cta = {
               <p class="text-2xl text-subtle/90 leading-relaxed">
                 {value.description}
               </p>
+            </div>
+          ))
+        }
+      </div>
+    </Section>
+
+    <!-- Professional Background -->
+    <Section>
+      <SectionHeader title={professional.title} class="mb-16" />
+      <div class="grid gap-16">
+        {
+          professional.qualifications.map((qualification) => (
+            <div class="space-y-8">
+              <h3 class="text-2xl font-display text-text">
+                {qualification.title}
+              </h3>
+              <ul class="space-y-4">
+                {qualification.items.map((item) => (
+                  <li class="flex items-center gap-4 text-subtle/90">
+                    <div class="w-2 h-2 rounded-full bg-rose" />
+                    <span class="text-xl">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))
         }
