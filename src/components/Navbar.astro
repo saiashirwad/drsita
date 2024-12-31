@@ -63,7 +63,7 @@ const currentPath = Astro.url.pathname;
                 </a>
               ) : (
                 <div class="relative group">
-                  <button class="text-subtle group-hover:text-text transition-colors duration-300 font-medium tracking-wide text-sm hover:text-pine flex items-center gap-1">
+                  <button class="text-subtle group-hover:text-text transition-colors duration-300 font-medium tracking-wide hover:text-pine flex items-center gap-1">
                     {link.label}
                     <Icon
                       name="mdi:chevron-down"
@@ -75,7 +75,7 @@ const currentPath = Astro.url.pathname;
                       {link.children.map((child) => (
                         <a
                           href={child.href}
-                          class="block px-4 py-2 text-subtle hover:text-pine transition-colors duration-300 text-sm"
+                          class="block px-4 py-2 text-subtle hover:text-pine transition-colors duration-300"
                         >
                           {child.label}
                         </a>
