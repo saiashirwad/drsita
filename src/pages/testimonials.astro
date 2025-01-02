@@ -129,25 +129,22 @@ const allTestimonials = testimonials;
         testimonialCard.className =
           "bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300";
         testimonialCard.innerHTML = `
-                    <div class="bg-${testimonial.color}/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
-                        <astro-icon name="mdi:message-text" class="w-8 h-8 text-${testimonial.color}"></astro-icon>
+                    <blockquote class="text-xl text-subtle/90 leading-relaxed mb-6">
+                        "${testimonial.quote}"
+                    </blockquote>
+                    <div class="text-${testimonial.color} mb-3">
+                        <p class="font-display">${testimonial.author}</p>
+                        <p class="text-sm text-subtle/70">${testimonial.program}</p>
                     </div>
-                    <div class="flex gap-2 mb-6">
+                    <div class="flex gap-2">
                         ${Array(testimonial.rating)
                           .fill()
                           .map(
                             () => `
-                            <astro-icon name="mdi:star" class="w-6 h-6 text-gold"></astro-icon>
+                            <astro-icon name="mdi:star" class="w-5 h-5 text-gold"></astro-icon>
                         `,
                           )
                           .join("")}
-                    </div>
-                    <blockquote class="text-xl text-subtle/90 leading-relaxed mb-6">
-                        "${testimonial.quote}"
-                    </blockquote>
-                    <div class="text-${testimonial.color}">
-                        <p class="font-display">${testimonial.author}</p>
-                        <p class="text-sm text-subtle/70">${testimonial.program}</p>
                     </div>
                 `;
         testimonialGrid.appendChild(testimonialCard);
