@@ -1,3 +1,25 @@
+<!-- Tree background --><!-- <div
+  class="fixed inset-0 w-full h-full overflow-hidden pointer-events-none hidden lg:flex items-center justify-end pr-12"
+  style="z-index: -2;"
+>
+  <div class="relative">
+    <!-- Multiple layered glows for enhanced effect -->
+<div class="absolute inset-0 bg-pine/5 blur-3xl rounded-full animate-glow-slow">
+</div>
+<div
+  class="absolute inset-0 bg-foam/5 blur-2xl rounded-full animate-glow-medium"
+>
+</div>
+<div class="absolute inset-0 bg-gold/5 blur-xl rounded-full animate-glow-fast">
+</div>
+<img
+  src="/tree-logo.svg"
+  alt=""
+  class="w-auto h-[40vh] object-contain relative opacity-[0.15] animate-tree-shine"
+/>
+
+-->
+
 <div
   class="fixed inset-0 w-full h-full overflow-hidden pointer-events-none"
   style="z-index: -1;"
@@ -128,6 +150,54 @@
     }
   }
 
+  @keyframes glow-slow {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.05;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.08;
+    }
+  }
+
+  @keyframes glow-medium {
+    0%,
+    100% {
+      transform: scale(1.05);
+      opacity: 0.05;
+    }
+    50% {
+      transform: scale(0.95);
+      opacity: 0.08;
+    }
+  }
+
+  @keyframes glow-fast {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.05;
+    }
+    50% {
+      transform: scale(1.15);
+      opacity: 0.1;
+    }
+  }
+
+  @keyframes tree-shine {
+    0%,
+    100% {
+      opacity: 0.15;
+      filter: brightness(1);
+    }
+    50% {
+      opacity: 0.2;
+      filter: brightness(1.2);
+    }
+  }
+
   .animate-float-slow {
     animation: float-slow 6s ease-in-out infinite;
   }
@@ -150,5 +220,21 @@
 
   .animate-pulse-medium {
     animation: pulse-medium 4s ease-in-out infinite;
+  }
+
+  .animate-glow-slow {
+    animation: glow-slow 8s ease-in-out infinite;
+  }
+
+  .animate-glow-medium {
+    animation: glow-medium 6s ease-in-out infinite;
+  }
+
+  .animate-glow-fast {
+    animation: glow-fast 4s ease-in-out infinite;
+  }
+
+  .animate-tree-shine {
+    animation: tree-shine 5s ease-in-out infinite;
   }
 </style>

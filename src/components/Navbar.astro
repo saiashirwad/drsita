@@ -39,13 +39,24 @@ const currentPath = Astro.url.pathname;
   class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-lg border-b border-highlight-low"
 >
   <div class="container mx-auto px-4 md:px-0">
-    <div class="flex items-center justify-between h-12">
-      <!-- Logo -->
+    <div class="flex items-center justify-between h-16">
       <a
         href="/"
-        class="text-text hover:text-pine transition-colors duration-300"
+        class="text-text hover:text-pine transition-colors duration-300 relative"
       >
-        <h1 class="text-base font-display text-subtle">Dr. Sita</h1>
+        <div
+          class="absolute inset-0 bg-pine/20 blur-xl rounded-full animate-pulse-slow"
+        >
+        </div>
+        <div
+          class="absolute inset-0 bg-foam/20 blur-lg rounded-full animate-pulse opacity-75"
+        >
+        </div>
+        <img
+          src="/tree.svg"
+          alt="Dr. Sita's Logo"
+          class="h-12 w-auto relative animate-tree-shine hover:brightness-125 transition-all duration-300"
+        />
       </a>
 
       <!-- Desktop Navigation -->
