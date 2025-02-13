@@ -1,10 +1,5 @@
-@font-face {
-	font-family: "Pier Sans";
-	font-display: fallback;
-	font-style: normal;
-	font-weight: bold;
-	src: url("/assets/fonts/PierSans-Bold.otf") format("opentype");
-}
+/* Import Inter from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -30,9 +25,16 @@
 		--color-highlight-high: 82 79 103;
 	}
 
+	/* Set Inter as the default font */
+	html {
+		font-family: 'Inter', system-ui, -apple-system, sans-serif;
+	}
+
+	/* Enable Inter's contextual alternates for better readability */
 	body {
 		@apply bg-base text-text;
 		background-color: #232136; /* Rose Pine Moon base color */
+		font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 	}
 }
 
@@ -67,14 +69,14 @@
 	--astro-code-token-link: hsl(var(--color-iris));
 }
 
-@media screen(sm) {
+@media screen and (min-width: 640px) {
 	:root {
 		--page-gutter: 32px;
 		--footer-height: 72px;
 	}
 }
 
-@media screen(md) {
+@media screen and (min-width: 768px) {
 	:root {
 		--page-top: 96px;
 		--page-gutter: 48px;
