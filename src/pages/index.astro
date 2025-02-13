@@ -5,254 +5,254 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-	<SocialIcons />
+  <SocialIcons />
 
-	<!-- Hero Section -->
-	<div
-		class="sm:px-6 md:px-0 relative flex items-center pt-24 pb-20 container mx-auto gap-6 md:gap-12 lg:min-h-screen"
-	>
-		<!-- Text Content -->
-		<div class="space-y-12 md:space-y-16">
-			<div class="space-y-8 md:space-y-16">
-				<div class="flex flex-col md:flex-row items-center gap-6 md:gap-6">
-					<h1
-						class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display text-text tracking-tight leading-[1.2] md:leading-[2] text-center md:text-left"
-					>
-						Dr. Sita
-					</h1>
+  <!-- Hero Section -->
+  <div
+    class="sm:px-6 md:px-0 relative flex items-center pt-24 pb-20 container mx-auto gap-6 md:gap-12 lg:min-h-screen"
+  >
+    <!-- Text Content -->
+    <div class="space-y-12 md:space-y-16">
+      <div class="space-y-8 md:space-y-16">
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-6">
+          <h1
+            class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display text-text tracking-tight leading-[1.2] md:leading-[2] text-center md:text-left"
+          >
+            Dr. Sita
+          </h1>
 
-					<div class="mt-4 md:mt-0">
-						<div class="relative">
-							<!-- Softer glow effect -->
-							<div
-								class="absolute -inset-0.5 rounded-full bg-gradient-to-br from-rose/20 via-love/20 to-pine/20 blur-md"
-							>
-							</div>
-							<!-- Portrait container -->
-							<div class="relative rounded-full bg-surface/10 p-[2px]">
-								<div
-									class="rounded-full overflow-hidden w-[7em] md:w-[14em] h-[7em] md:h-[14em] relative"
-								>
-									<img
-										src="/portrait.png"
-										alt="Dr. Sita"
-										class="w-full h-full object-cover"
-									/>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+          <div class="mt-4 md:mt-0">
+            <div class="relative">
+              <!-- Softer glow effect -->
+              <div
+                class="absolute -inset-0.5 rounded-full bg-gradient-to-br from-rose/20 via-love/20 to-pine/20 blur-md"
+              >
+              </div>
+              <!-- Portrait container -->
+              <div class="relative rounded-full bg-surface/10 p-[2px]">
+                <div
+                  class="rounded-full overflow-hidden w-[7em] md:w-[14em] h-[7em] md:h-[14em] relative"
+                >
+                  <img
+                    src="/portrait.png"
+                    alt="Dr. Sita"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-				<p
-					class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-center md:text-left px-2 md:px-0 leading-loose"
-					style="line-height: 1.2"
-				>
-					<span
-						class="inline-block text-rose animate-fade-in opacity-0"
-						style="animation-delay: 0s">Gynecologist,</span
-					>
-					<span
-						class="inline-block text-love animate-fade-in opacity-0"
-						style="animation-delay: 0.5s">Sexual Health Consultant,</span
-					>
-					<span
-						class="inline-block text-pine animate-fade-in opacity-0"
-						style="animation-delay: 1s">Youtuber,</span
-					>
-					<span
-						class="inline-block text-foam animate-fade-in opacity-0"
-						style="animation-delay: 1.5s">Wellness Coach,</span
-					>
-					<span
-						class="inline-block text-iris animate-fade-in opacity-0"
-						style="animation-delay: 2s">Educator,</span
-					>
-					<span
-						class="inline-block text-gold animate-fade-in opacity-0"
-						style="animation-delay: 2.5s">Hypnotherapist</span
-					>
-				</p>
-			</div>
+        <p
+          class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium text-center md:text-left px-2 md:px-0 leading-loose"
+          style="line-height: 1.2"
+        >
+          <span
+            class="inline-block text-rose animate-fade-in opacity-0"
+            style="animation-delay: 0s">Gynecologist,</span
+          >
+          <span
+            class="inline-block text-love animate-fade-in opacity-0"
+            style="animation-delay: 0.5s">Sexual Health Consultant,</span
+          >
+          <span
+            class="inline-block text-pine animate-fade-in opacity-0"
+            style="animation-delay: 1s">Youtuber,</span
+          >
+          <span
+            class="inline-block text-foam animate-fade-in opacity-0"
+            style="animation-delay: 1.5s">Wellness Coach,</span
+          >
+          <span
+            class="inline-block text-iris animate-fade-in opacity-0"
+            style="animation-delay: 2s">Educator,</span
+          >
+          <span
+            class="inline-block text-gold animate-fade-in opacity-0"
+            style="animation-delay: 2.5s">Hypnotherapist</span
+          >
+        </p>
+      </div>
 
-			<div
-				class="flex flex-col sm:flex-row gap-4 md:gap-6 px-2 md:px-0 animate-fade-in opacity-0"
-				style="animation-delay: 3s"
-			>
-				<Button
-					href="/samyojana-therapy"
-					color="gold"
-					icon="mdi:account-group"
-					class="text-lg"
-				>
-					Samyojana Therapy
-				</Button>
-				<Button href="/events" color="foam" icon="mdi:calendar" class="text-lg">
-					Events
-				</Button>
-				<Button
-					href="https://cal.com/dr-sita"
-					external
-					color="rose"
-					icon="mdi:calendar"
-					class="text-lg"
-				>
-					Book a Consultation
-				</Button>
-				<Button
-					href="https://www.youtube.com/@drsitamindbodycare"
-					external
-					color="love"
-					icon="mdi:youtube"
-					class="text-lg"
-				>
-					Youtube
-				</Button>
-			</div>
-		</div>
-	</div>
+      <div
+        class="flex flex-col sm:flex-row gap-4 md:gap-6 px-2 md:px-0 animate-fade-in opacity-0"
+        style="animation-delay: 3s"
+      >
+        <Button
+          href="/sangama-therapy"
+          color="gold"
+          icon="mdi:account-group"
+          class="text-lg"
+        >
+          Sangama Therapy
+        </Button>
+        <Button href="/events" color="foam" icon="mdi:calendar" class="text-lg">
+          Events
+        </Button>
+        <Button
+          href="https://cal.com/dr-sita"
+          external
+          color="rose"
+          icon="mdi:calendar"
+          class="text-lg"
+        >
+          Book a Consultation
+        </Button>
+        <Button
+          href="https://www.youtube.com/@drsitamindbodycare"
+          external
+          color="love"
+          icon="mdi:youtube"
+          class="text-lg"
+        >
+          Youtube
+        </Button>
+      </div>
+    </div>
+  </div>
 
-	<section class="container mx-auto py-8 md:py-32 p-4 md:p-0">
-		<div class="flex flex-col gap-24 md:gap-48">
-			<div class="flex flex-col gap-8 opacity-0 translate-y-8" data-scroll>
-				<p
-					class="text-4xl md:text-6xl lg:text-7xl text-subtle leading-relaxed max-w-5xl"
-					style="line-height: 1.2"
-				>
-					Dr. Sitalakshmi bridges modern medicine with holistic wellness,
-					bringing over
-					<span class="text-text">25 years of expertise</span> as a Gynecologist
-					and Wellness Coach.
-				</p>
-				<div>
-					<Button
-						href="/testimonials"
-						color="pine"
-						icon="mdi:human-greeting-variant"
-						class="text-lg"
-					>
-						Read Testimonials
-					</Button>
-				</div>
-			</div>
+  <section class="container mx-auto py-8 md:py-32 p-4 md:p-0">
+    <div class="flex flex-col gap-24 md:gap-48">
+      <div class="flex flex-col gap-8 opacity-0 translate-y-8" data-scroll>
+        <p
+          class="text-4xl md:text-6xl lg:text-7xl text-subtle leading-relaxed max-w-5xl"
+          style="line-height: 1.2"
+        >
+          Dr. Sitalakshmi bridges modern medicine with holistic wellness,
+          bringing over
+          <span class="text-text">25 years of expertise</span> as a Gynecologist
+          and Wellness Coach.
+        </p>
+        <div>
+          <Button
+            href="/testimonials"
+            color="pine"
+            icon="mdi:human-greeting-variant"
+            class="text-lg"
+          >
+            Read Testimonials
+          </Button>
+        </div>
+      </div>
 
-			<div class="flex flex-col gap-8 opacity-0 translate-y-8" data-scroll>
-				<p
-					class="text-4xl md:text-6xl lg:text-7xl text-subtle leading-relaxed max-w-5xl"
-					style="line-height: 1.2"
-				>
-					Her innovative Samyojana Therapy combines evidence-based medicine with
-					mindfulness and yoga, helping
-					<span class="text-text">hundreds of couples</span> rediscover intimacy.
-				</p>
-				<div>
-					<Button
-						href="/samyojana-therapy"
-						color="love"
-						icon="mdi:account-group"
-						class="text-lg"
-					>
-						Learn about Samyojana Therapy
-					</Button>
-				</div>
-			</div>
+      <div class="flex flex-col gap-8 opacity-0 translate-y-8" data-scroll>
+        <p
+          class="text-4xl md:text-6xl lg:text-7xl text-subtle leading-relaxed max-w-5xl"
+          style="line-height: 1.2"
+        >
+          Her innovative Sangama Therapy combines evidence-based medicine with
+          mindfulness and yoga, helping
+          <span class="text-text">hundreds of couples</span> rediscover intimacy.
+        </p>
+        <div>
+          <Button
+            href="/sangama-therapy"
+            color="love"
+            icon="mdi:account-group"
+            class="text-lg"
+          >
+            Learn about Sangama Therapy
+          </Button>
+        </div>
+      </div>
 
-			<div class="flex flex-col gap-8 opacity-0 translate-y-8" data-scroll>
-				<p
-					class="text-4xl md:text-6xl lg:text-7xl text-subtle leading-relaxed max-w-5xl"
-					style="line-height: 1.2"
-				>
-					Reaching <span class="text-text">1.3M+ subscribers</span> through her YouTube
-					channels, she empowers individuals with essential knowledge for complete
-					wellbeing.
-				</p>
-				<div>
-					<Button
-						href="https://www.youtube.com/@drsitamindbodycare"
-						external
-						color="gold"
-						icon="mdi:youtube"
-						class="text-lg"
-					>
-						Visit our YouTube Channel
-					</Button>
-				</div>
-			</div>
-		</div>
-	</section>
+      <div class="flex flex-col gap-8 opacity-0 translate-y-8" data-scroll>
+        <p
+          class="text-4xl md:text-6xl lg:text-7xl text-subtle leading-relaxed max-w-5xl"
+          style="line-height: 1.2"
+        >
+          Reaching <span class="text-text">1.3M+ subscribers</span> through her YouTube
+          channels, she empowers individuals with essential knowledge for complete
+          wellbeing.
+        </p>
+        <div>
+          <Button
+            href="https://www.youtube.com/@drsitamindbodycare"
+            external
+            color="gold"
+            icon="mdi:youtube"
+            class="text-lg"
+          >
+            Visit our YouTube Channel
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	<script>
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						// @ts-ignore
-						entry.target.style.opacity = "1";
-						// @ts-ignore
-						entry.target.style.transform = "translateY(0)";
-						// @ts-ignore
-						entry.target.style.transition = "all 0.6s ease-out";
-					}
-				});
-			},
-			{
-				threshold: 0.1,
-			},
-		);
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // @ts-ignore
+            entry.target.style.opacity = "1";
+            // @ts-ignore
+            entry.target.style.transform = "translateY(0)";
+            // @ts-ignore
+            entry.target.style.transition = "all 0.6s ease-out";
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
 
-		document
-			.querySelectorAll("[data-scroll]")
-			.forEach((el) => observer.observe(el));
-	</script>
+    document
+      .querySelectorAll("[data-scroll]")
+      .forEach((el) => observer.observe(el));
+  </script>
 
-	<style>
-		a {
-			text-decoration: none;
-		}
+  <style>
+    a {
+      text-decoration: none;
+    }
 
-		@keyframes gentle-breathe {
-			0%,
-			100% {
-				transform: scale(1);
-				opacity: 1;
-			}
-			50% {
-				transform: scale(1.02);
-				opacity: 0.95;
-			}
-		}
+    @keyframes gentle-breathe {
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.02);
+        opacity: 0.95;
+      }
+    }
 
-		.breathing-icon {
-			animation: gentle-breathe 6s ease-in-out infinite;
-		}
+    .breathing-icon {
+      animation: gentle-breathe 6s ease-in-out infinite;
+    }
 
-		@keyframes fade-in {
-			from {
-				opacity: 0;
-			}
-			to {
-				opacity: 1;
-			}
-		}
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
 
-		.animate-fade-in-1 {
-			animation: fade-in 0.5s ease-out forwards;
-			animation-delay: 2.7s;
-		}
+    .animate-fade-in-1 {
+      animation: fade-in 0.5s ease-out forwards;
+      animation-delay: 2.7s;
+    }
 
-		.animate-fade-in-2 {
-			animation: fade-in 0.5s ease-out forwards;
-			animation-delay: 2.9s;
-		}
+    .animate-fade-in-2 {
+      animation: fade-in 0.5s ease-out forwards;
+      animation-delay: 2.9s;
+    }
 
-		.animate-fade-in-3 {
-			animation: fade-in 0.5s ease-out forwards;
-			animation-delay: 3.1s;
-		}
+    .animate-fade-in-3 {
+      animation: fade-in 0.5s ease-out forwards;
+      animation-delay: 3.1s;
+    }
 
-		.animate-fade-in-4 {
-			animation: fade-in 0.5s ease-out forwards;
-			animation-delay: 3.3s;
-		}
-	</style>
+    .animate-fade-in-4 {
+      animation: fade-in 0.5s ease-out forwards;
+      animation-delay: 3.3s;
+    }
+  </style>
 </BaseLayout>
