@@ -4,6 +4,7 @@ import BackgroundShapes from "../components/BackgroundShapes.astro";
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
 import { testimonials } from "../data/testimonials";
+import { videoTestimonials } from "../data/video-testimonials";
 
 interface Testimonial {
   id: number;
@@ -42,7 +43,6 @@ interface Testimonial {
       </div>
     </section>
 
-    <!-- Testimonials -->
     <div class="max-w-3xl mx-auto">
       <div class="flex flex-col gap-8">
         {
@@ -66,7 +66,6 @@ interface Testimonial {
       </div>
     </div>
 
-    <!-- Video Testimonials -->
     <section class="py-24 px-6 bg-surface/30">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-4xl md:text-5xl font-display text-text mb-8">
@@ -75,12 +74,20 @@ interface Testimonial {
         <p class="text-2xl text-subtle/90 mb-12">
           Watch stories of transformation from our community members.
         </p>
-        <div class="relative aspect-video rounded-3xl overflow-hidden">
-          <div
-            class="absolute inset-0 bg-surface/30 backdrop-blur-sm flex items-center justify-center"
-          >
-            <p class="text-xl text-subtle/90">Coming Soon</p>
-          </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {
+            videoTestimonials.map((url) => (
+              <div class="relative aspect-video rounded-3xl overflow-hidden">
+                <iframe
+                  src={url.replace("watch?v=", "embed/")}
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  class="absolute inset-0 w-full h-full"
+                />
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>
