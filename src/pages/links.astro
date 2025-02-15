@@ -1,0 +1,135 @@
+---
+import Button from "../components/Button.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Dr. Sita - Links & Social Media">
+  <main class="min-h-screen py-12 px-6 max-w-2xl mx-auto">
+    <!-- Profile Header -->
+    <div class="text-center mb-12">
+      <img
+        src="/images/profile.jpg"
+        alt="Dr. Sita"
+        class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-rose"
+      />
+      <h1 class="text-3xl font-display text-text mb-2">Dr. Sitalakshmi A</h1>
+      <p class="text-subtle/90 text-lg mb-4">
+        Sexual Health Consultant, Gynecologist, Wellness Coach & Educator
+      </p>
+    </div>
+
+    <!-- Links Grid -->
+    <div class="space-y-4">
+      <!-- YouTube Channels -->
+      <div class="space-y-3">
+        <Button
+          href="https://youtube.com/@DrSitasMindBodyCare"
+          color="love"
+          class="w-full justify-between"
+          icon="mdi:youtube"
+        >
+          Dr. Sita's Mind Body Care (Malayalam)
+        </Button>
+        <Button
+          href="https://youtube.com/@DrSitasMindBodyCareEnglish"
+          color="love"
+          class="w-full justify-between"
+          icon="mdi:youtube"
+        >
+          Dr. Sita's Mind Body Care (English)
+        </Button>
+        <Button
+          href="https://youtube.com/@MindBodyPositivewithDrSita"
+          color="love"
+          class="w-full justify-between"
+          icon="mdi:youtube"
+        >
+          Mind Body Positive with Dr. Sita
+        </Button>
+      </div>
+
+      <!-- Social Media -->
+      <div class="space-y-3">
+        <Button
+          href="https://instagram.com/askdrsita"
+          color="iris"
+          class="w-full justify-between"
+          icon="mdi:instagram"
+        >
+          Ask Dr. Sita (@askdrsita)
+        </Button>
+        <Button
+          href="https://instagram.com/mindbodypositivewithdrsita"
+          color="iris"
+          class="w-full justify-between"
+          icon="mdi:instagram"
+        >
+          Mind Body Positive (@mindbodypositivewithdrsita)
+        </Button>
+        <Button
+          href="https://facebook.com/mindbodypositivewithdrsita"
+          color="pine"
+          class="w-full justify-between"
+          icon="mdi:facebook"
+        >
+          Mind Body Positive with Dr. Sita
+        </Button>
+      </div>
+
+      <!-- Website Links -->
+      <div class="space-y-3">
+        <Button
+          href="/sangama-therapy"
+          color="foam"
+          class="w-full justify-between"
+          icon="mdi:heart-pulse"
+        >
+          Sangama Therapy Programs
+        </Button>
+        <Button
+          href="/store"
+          color="gold"
+          class="w-full justify-between"
+          icon="mdi:shopping"
+        >
+          SiRa Health Products
+        </Button>
+        <Button
+          href="/academy"
+          color="rose"
+          class="w-full justify-between"
+          icon="mdi:school"
+        >
+          Dr. Sita's Academy
+        </Button>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="space-y-3">
+        <Button
+          href="mailto:mindbodytonicwithdrsita@gmail.com"
+          color="muted"
+          class="w-full justify-between"
+          icon="mdi:email"
+        >
+          Email Us
+        </Button>
+        <Button
+          href="/contact"
+          color="muted"
+          class="w-full justify-between"
+          icon="mdi:calendar"
+        >
+          Book a Consultation
+        </Button>
+      </div>
+
+      <!-- Location -->
+      <div class="mt-8 text-center text-subtle/90">
+        <p>Dr Sita's Mind Body Care</p>
+        <p>Devikripa Hospital</p>
+        <p>Thrissur, Kerala, India</p>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
