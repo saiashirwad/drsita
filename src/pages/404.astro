@@ -1,0 +1,28 @@
+---
+import Button from "../components/Button.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Page Not Found - Dr. Sita">
+  <main class="min-h-screen flex items-center justify-center p-4">
+    <div class="text-center max-w-2xl mx-auto">
+      <h1 class="text-8xl font-display text-love mb-6">404</h1>
+
+      <h2 class="text-3xl font-display text-foam mb-8">
+        Oops! This page seems to have wandered off
+      </h2>
+
+      <p class="text-xl text-subtle/90 leading-relaxed mb-12">
+        Don't worry - sometimes even pages need a moment to find their balance.
+        Let's guide you back to a place of wellness and healing.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button href="/" color="pine" icon="mdi:home"> Return Home </Button>
+        <Button href="/contact" color="iris" icon="mdi:message">
+          Contact Us
+        </Button>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
