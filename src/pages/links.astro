@@ -1,16 +1,16 @@
 ---
 import Button from "../components/Button.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<BaseLayout title="Dr. Sita - Links & Social Media">
+<Layout title="Dr. Sita - Links & Social Media">
   <main class="min-h-screen py-12 px-6 max-w-2xl mx-auto">
     <!-- Profile Header -->
     <div class="text-center mb-12">
       <img
-        src="/images/profile.jpg"
+        src="portrait.png"
         alt="Dr. Sita"
-        class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-rose"
+        class="w-32 h-32 rounded-full mx-auto mb-6"
       />
       <h1 class="text-3xl font-display text-text mb-2">Dr. Sitalakshmi A</h1>
       <p class="text-subtle/90 text-lg mb-4">
@@ -124,7 +124,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </Button>
       </div>
 
-      <!-- Location -->
       <div class="mt-8 text-center text-subtle/90">
         <p>Dr Sita's Mind Body Care</p>
         <p>Devikripa Hospital</p>
@@ -132,4 +131,4 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
     </div>
   </main>
-</BaseLayout>
+</Layout>
