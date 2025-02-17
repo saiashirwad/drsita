@@ -5,6 +5,42 @@ import Hero from "../components/Hero.astro";
 import Section from "../components/Section.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import Button from "../components/Button.astro";
+
+const talks = [
+  {
+    event: "Doordarshan",
+    topic: "Importance of Adolescent Sexual Education",
+    when: "June 20 2024",
+  },
+  {
+    event: "Josh Talks, Eranakulam",
+    topic:
+      "My journey from a gynecologist to a sexual health consultant and my message to people who are starting a new career at any point in their lives",
+    when: "May 18 2024",
+  },
+  {
+    event: "TOGSICON (organized by TOGS, Thrissur)",
+    when: "July 2024",
+    topic: "Cross Talk about Sex and Sexuality",
+  },
+  {
+    event: "South Zone FOGSI Conference, Mahabalipuram",
+    when: "",
+    topic: "Holistic and Comprehensive management of Vaginismus",
+  },
+  {
+    event: "International Sexual Health Practitioners Society, Delhi",
+    when: "September 11, 2024",
+    topic: "A Novel Approach to Managing Vaginismus on an In-Patient Basis",
+  },
+
+  {
+    event: "Pune",
+    when: "September 28, 2024",
+    topic:
+      "How to manage sexual dysfunction in couples by creating positive relationships",
+  },
+];
 ---
 
 <BaseLayout title="Speaking - Dr. Sita">
@@ -16,86 +52,18 @@ import Button from "../components/Button.astro";
       subtitle="Bringing expertise in sexual health and wellness to global audiences through engaging talks and presentations."
     />
 
-    <!-- Featured Talks -->
     <Section>
       <SectionHeader title="Recent Speaking Engagements" class="mb-16" />
-
-      <div class="grid gap-8">
-        <div
-          class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300"
-        >
-          <div
-            class="bg-foam/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8"
-          >
-            <svg
-              class="w-8 h-8 text-foam"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <path
-                d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-              ></path>
-            </svg>
-          </div>
-          <h3 class="text-3xl font-display text-foam mb-4">
-            International Women's Health Summit 2023
-          </h3>
-          <p class="text-xl text-subtle/90 leading-relaxed">
-            Keynote speaker on "Breaking Barriers in Sexual Health Education"
-          </p>
-        </div>
-
-        <div
-          class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300"
-        >
-          <div
-            class="bg-love/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8"
-          >
-            <svg
-              class="w-8 h-8 text-love"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <path
-                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-              ></path>
-            </svg>
-          </div>
-          <h3 class="text-3xl font-display text-love mb-4">TEDx Kerala 2023</h3>
-          <p class="text-xl text-subtle/90 leading-relaxed">
-            "Revolutionizing Health Education Through Digital Media"
-          </p>
-        </div>
-
-        <div
-          class="bg-surface/30 rounded-[32px] p-12 border border-highlight-med/10 backdrop-blur-xl hover:border-highlight-med/20 transition-all duration-300"
-        >
-          <div
-            class="bg-iris/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-8"
-          >
-            <svg
-              class="w-8 h-8 text-iris"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <path
-                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-              ></path>
-            </svg>
-          </div>
-          <h3 class="text-3xl font-display text-iris mb-4">
-            Global Wellness Conference 2022
-          </h3>
-          <p class="text-xl text-subtle/90 leading-relaxed">
-            Panel discussion on "Holistic Approaches to Women's Health"
-          </p>
-        </div>
+      <div class="grid gap-16">
+        {
+          talks.map((talk) => (
+            <div class="">
+              <h3 class="text-3xl font-display text-foam mb-4">{talk.event}</h3>
+              <p class="text-xl text-subtle/90 leading-relaxed">{talk.topic}</p>
+              <p class="text-xl text-subtle/90 leading-relaxed">{talk.when}</p>
+            </div>
+          ))
+        }
       </div>
     </Section>
 
