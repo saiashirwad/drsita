@@ -5,15 +5,15 @@ import type { Colors } from "../utils/colors";
 interface Props {
   title: string;
   subtitle: string;
-  action?: {
+  actions?: {
     text: string;
     href: string;
     color: Colors;
     icon: string;
-  };
+  }[];
 }
 
-const { title, subtitle, action } = Astro.props;
+const { title, subtitle, actions } = Astro.props;
 ---
 
 <section
@@ -30,14 +30,15 @@ const { title, subtitle, action } = Astro.props;
     >
       {subtitle}
     </p>
-    {
-      action && (
-        <div class="mt-12 opacity-0 animate-fade-up animation-delay-200">
-          <Button href={action.href} color={action.color} icon={action.icon}>
-            {action.text}
-          </Button>
-        </div>
-      )
-    }
+    <div class="flex justify-center gap-4 mt-12">
+      {
+        actions &&
+          actions.map((action) => (
+            <Button href={action.href} color={action.color} icon={action.icon}>
+              {action.text}
+            </Button>
+          ))
+      }
+    </div>
   </div>
 </section>
