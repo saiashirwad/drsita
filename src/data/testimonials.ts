@@ -12,6 +12,26 @@ type Testimonial = {
 export const testimonials: Testimonial[] = [
 	{
 		quote:
+			"Thank you Sita Maam for saving our life when it was on the verge of losing due to vaginismus. The holistic approach over here addressed both physical and emotional challenges. Also very much thankful to Ramu sir for his support. Here we felt like being cared at home. The staff created a supportive and non-judgmental environment, making a challenging journey feel manageable. We will forever be grateful to this hospital and its amazing team.",
+		author: "Athira Chandran",
+		program: "Vaginismus Treatment",
+		category: "therapy",
+		icon: "heart",
+		color: "love",
+		isGoogleReview: true,
+	},
+	{
+		quote:
+			"Recently visited Devikripa hospital for vaginismus treatment under the care of Dr Sitalakshmi and Dr Ramachandran. Had a very good experience from the hospital authorities. All the staffs and nurses were very supportive and understanding. Very much satisfied with the results.",
+		author: "Anupriya Ramesh",
+		program: "Vaginismus Treatment",
+		category: "therapy",
+		icon: "heart",
+		color: "love",
+		isGoogleReview: true,
+	},
+	{
+		quote:
 			"We spent two weeks at DeviKripa Hospital for batch treatment, and it became a truly unforgettable experience. Dr. Sita and Dr. Ramachandran are extremely approachable, and their patience and genuine attentiveness to our concerns were incredibly touching.  The staff were incredibly supportive and respectful, offering valuable mental support without any judgment. We are deeply thankful for the step-by-step approach taken by the highly skilled doctors at the hospital, which helped us overcome our issue. We truly owe our renewed life to them.",
 		author: "Devi D",
 		program: "Batch Therapy",
