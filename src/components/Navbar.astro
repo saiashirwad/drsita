@@ -177,9 +177,9 @@ const currentPath = Astro.url.pathname;
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 0) {
-      navbar.classList.add("bg-surface/80", "backdrop-blur-lg", "border-b");
+      navbar?.classList.add("bg-surface/80", "backdrop-blur-lg", "border-b");
     } else {
-      navbar.classList.remove("bg-surface/80", "backdrop-blur-lg", "border-b");
+      navbar?.classList.remove("bg-surface/80", "backdrop-blur-lg", "border-b");
     }
   });
 </script>
