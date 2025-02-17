@@ -12,6 +12,16 @@ type Testimonial = {
 export const testimonials: Testimonial[] = [
 	{
 		quote:
+			"One of the best decision that we visited devikripa hospital for vaginismus treatment. We can't thank you enough for the special, excellent care of Dr Sita mam, Dr Ramu sir and nurses. Thank you so much for making me feel happy and healthy at every stage of treatment. Thanks to all who helped to successfully completed the treatment.",
+		author: "Amritha B",
+		program: "Vaginismus Treatment",
+		category: "therapy",
+		icon: "heart",
+		color: "love",
+		isGoogleReview: true,
+	},
+	{
+		quote:
 			"Thank you Sita Maam for saving our life when it was on the verge of losing due to vaginismus. The holistic approach over here addressed both physical and emotional challenges. Also very much thankful to Ramu sir for his support. Here we felt like being cared at home. The staff created a supportive and non-judgmental environment, making a challenging journey feel manageable. We will forever be grateful to this hospital and its amazing team.",
 		author: "Athira Chandran",
 		program: "Vaginismus Treatment",
