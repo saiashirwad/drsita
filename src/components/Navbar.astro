@@ -36,7 +36,8 @@ const currentPath = Astro.url.pathname;
 ---
 
 <nav
-  class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-lg border-b border-highlight-low"
+  id="navbar"
+  class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-colors duration-300 border-b-0"
 >
   <div class="container mx-auto px-4 md:px-0">
     <div class="flex items-center justify-between h-16">
@@ -170,5 +171,15 @@ const currentPath = Astro.url.pathname;
     menuCloseIcon?.classList.toggle("hidden");
     mobileMenuButton.setAttribute("aria-expanded", isMenuOpen.toString());
     document.body.style.overflow = isMenuOpen ? "hidden" : "";
+  });
+
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      navbar.classList.add("bg-surface/80", "backdrop-blur-lg", "border-b");
+    } else {
+      navbar.classList.remove("bg-surface/80", "backdrop-blur-lg", "border-b");
+    }
   });
 </script>
