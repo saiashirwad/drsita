@@ -5,33 +5,19 @@ import Navbar from "../components/Navbar.astro";
 import { testimonials } from "../data/testimonials";
 import { videoTestimonials } from "../data/video-testimonials";
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<Layout title="Testimonials - Dr. Sita">
+<BaseLayout title="Testimonials - Dr. Sita">
   <Navbar />
-
   <main class="bg-base min-h-screen">
-    <!-- Hero Section -->
-    <section
-      class="min-h-[40vh] relative flex items-center justify-center pt-32 pb-24 px-6"
-    >
-      <BackgroundShapes />
-      <div class="max-w-6xl mx-auto w-full">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1
-            class="text-6xl md:text-7xl lg:text-8xl font-display text-text tracking-tight opacity-0 animate-fade-up mb-8"
-          >
-            Success Stories
-          </h1>
-          <p
-            class="text-3xl md:text-4xl text-subtle/90 font-light max-w-3xl mx-auto opacity-0 animate-fade-up animation-delay-100 leading-relaxed"
-          >
-            Real experiences from our community of healing and transformation.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="py-24 px-6">
+    <Hero
+      title="Success Stories"
+      subtitle="Real experiences from our community of healing and transformation."
+    />
+
+    <section class="pb-24 px-6">
       <div class="max-w-4xl mx-auto text-center">
         <div class="relative">
           <!-- Carousel container -->
@@ -113,7 +99,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </main>
-</Layout>
+</BaseLayout>
 
 <!-- Add carousel script -->
 <script>
