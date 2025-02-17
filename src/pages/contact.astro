@@ -49,14 +49,13 @@ const contactInfo = {
     />
 
     <Section>
-      <div class="grid grid-cols-1 gap-8 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 gap-8 max-w-md mx-auto">
         <!-- Contact Information Grid -->
         <div class="grid grid-cols-1 gap-8">
           <!-- Contact Information -->
           <div class="space-y-12">
             <!-- Email Section -->
             <div>
-              <h3 class="text-2xl font-display text-text mb-6">Email Us</h3>
               <div class="space-y-4">
                 {
                   contactInfo.emails.map((item) => (
@@ -89,7 +88,6 @@ const contactInfo = {
 
             <!-- Phone Section -->
             <div>
-              <h3 class="text-2xl font-display text-text mb-6">Call Us</h3>
               <div class="space-y-4">
                 {
                   contactInfo.phones.map((item) => (
@@ -123,7 +121,6 @@ const contactInfo = {
 
           <!-- Address Section -->
           <div>
-            <h3 class="text-2xl font-display text-text mb-6">Visit Us</h3>
             <div
               class="p-4 bg-surface/30 rounded-2xl border border-highlight-med/10"
             >
