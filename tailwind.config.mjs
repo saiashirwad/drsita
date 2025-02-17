@@ -24,7 +24,7 @@ module.exports = {
 				content: "var(--content-height)",
 			},
 			fontFamily: {
-				display: ["Pier Sans", ...defaultTheme.fontFamily.sans],
+				display: ["Inter", ...defaultTheme.fontFamily.sans],
 			},
 			colors: {
 				base: "#232136",
