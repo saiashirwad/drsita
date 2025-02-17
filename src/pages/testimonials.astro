@@ -31,7 +31,65 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </section>
+    <section class="py-24 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="relative">
+          <!-- Carousel container -->
+          <div class="overflow-hidden rounded-3xl">
+            <div
+              id="carousel"
+              class="flex transition-transform duration-500 ease-in-out"
+            >
+              {
+                videoTestimonials.map((url) => (
+                  <div class="w-full flex-shrink-0">
+                    <div class="relative aspect-video">
+                      <iframe
+                        src={`https://www.youtube.com/embed/${url}?autoplay=0&mute=1&controls=1`}
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        class="absolute inset-0 w-full h-full"
+                      />
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
 
+          <!-- Navigation buttons -->
+          <button
+            id="prevBtn"
+            class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-surface/80 hover:bg-surface text-text p-3 rounded-full backdrop-blur-sm transition-colors"
+            aria-label="Previous slide"
+          >
+            <Icon name="mdi:chevron-left" class="w-6 h-6" />
+          </button>
+
+          <button
+            id="nextBtn"
+            class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-surface/80 hover:bg-surface text-text p-3 rounded-full backdrop-blur-sm transition-colors"
+            aria-label="Next slide"
+          >
+            <Icon name="mdi:chevron-right" class="w-6 h-6" />
+          </button>
+
+          <!-- Dots navigation -->
+          <div class="flex justify-center gap-2 mt-6">
+            {
+              videoTestimonials.map((_, index) => (
+                <button
+                  class="carousel-dot w-3 h-3 rounded-full bg-subtle/30 transition-colors"
+                  data-index={index}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
     <div class="max-w-3xl mx-auto">
       <div class="flex flex-col gap-8">
         {
@@ -54,31 +112,57 @@ import Layout from "../layouts/Layout.astro";
         }
       </div>
     </div>
-
-    <section class="py-24 px-6 bg-surface/30">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl font-display text-text mb-8">
-          Video Testimonials
-        </h2>
-        <p class="text-2xl text-subtle/90 mb-12">
-          Watch stories of transformation from our community members.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {
-            videoTestimonials.map((url) => (
-              <div class="relative aspect-video rounded-3xl overflow-hidden">
-                <iframe
-                  src={url.replace("watch?v=", "embed/")}
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                  class="absolute inset-0 w-full h-full"
-                />
-              </div>
-            ))
-          }
-        </div>
-      </div>
-    </section>
   </main>
 </Layout>
+
+<!-- Add carousel script -->
+<script>
+  const carousel = document.getElementById("carousel");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const dots = document.querySelectorAll(".carousel-dot");
+
+  let currentIndex = 0;
+  const slideCount = dots.length;
+
+  function updateCarousel() {
+    if (carousel) {
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      // Update dots
+      dots.forEach((dot, index) => {
+        if (index === currentIndex) {
+          dot.classList.add("bg-text");
+          dot.classList.remove("bg-subtle/30");
+        } else {
+          dot.classList.remove("bg-text");
+          dot.classList.add("bg-subtle/30");
+        }
+      });
+    }
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slideCount;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+    updateCarousel();
+  }
+
+  // Event listeners
+  prevBtn?.addEventListener("click", prevSlide);
+  nextBtn?.addEventListener("click", nextSlide);
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentIndex = index;
+      updateCarousel();
+    });
+  });
+
+  // Optional: Auto-advance slides
+  setInterval(nextSlide, 8000);
+</script>
